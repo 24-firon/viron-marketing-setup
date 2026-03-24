@@ -1,0 +1,161 @@
+{
+  "name": "VIRON – Auto-Moderation: Negative Kommentare löschen",
+  "flow": [
+    {
+      "id": 1,
+      "module": "instagram:WatchComments",
+      "version": 1,
+      "parameters": {
+        "hookId": "{{DEIN_INSTAGRAM_WEBHOOK_ID}}",
+        "accountId": "{{DEIN_IG_ACCOUNT_ID}}"
+      },
+      "metadata": {
+        "designer": { "x": 0, "y": 0 },
+        "restore": {
+          "parameters": {
+            "hookId": { "label": "VIRON IG Webhook" }
+          }
+        }
+      },
+      "note": "Trigger: neuer Kommentar auf Instagram"
+    },
+    {
+      "id": 2,
+      "module": "openai:CreateCompletion",
+      "version": 1,
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Du bist ein Moderations-Assistent für Social Media. Analysiere den folgenden Kommentar und antworte NUR mit einem JSON-Objekt im Format: {\"toxic\": true/false, \"category\": \"spam|hate|insult|threat|neutral\", \"confidence\": 0.0-1.0}. Werte 'toxic: true' wenn: Beleidigungen, Hassrede, Spam, Bedrohungen, oder stark negative Markenerwähnungen vorliegen. Werte 'toxic: false' bei neutralen Kommentaren, Kritik ohne Beleidigungen, Fragen oder positivem Feedback."
+          },
+          {
+            "role": "user",
+            "content": "{{1.text}}"
+          }
+        ],
+        "temperature": 0.1,
+        "max_tokens": 100
+      },
+      "metadata": {
+        "designer": { "x": 300, "y": 0 }
+      },
+      "note": "OpenAI Sentiment-Analyse – gibt JSON zurück"
+    },
+    {
+      "id": 3,
+      "module": "json:ParseJSON",
+      "version": 1,
+      "parameters": {
+        "json": "{{2.choices[].message.content}}"
+      },
+      "metadata": {
+        "designer": { "x": 600, "y": 0 }
+      },
+      "note": "JSON aus OpenAI-Antwort parsen"
+    },
+    {
+      "id": 4,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "routes": [
+        {
+          "label": "Toxic → Löschen",
+          "flow": [
+            {
+              "id": 5,
+              "module": "instagram:DeleteComment",
+              "version": 1,
+              "parameters": {
+                "commentId": "{{1.id}}",
+                "mediaId": "{{1.media_id}}"
+              },
+              "metadata": {
+                "designer": { "x": 900, "y": -100 }
+              },
+              "note": "Kommentar auf Instagram löschen"
+            },
+            {
+              "id": 6,
+              "module": "google-sheets:AddRow",
+              "version": 1,
+              "parameters": {
+                "spreadsheetId": "{{DEIN_GOOGLE_SHEET_ID}}",
+                "sheetName": "Gelöschte Kommentare",
+                "values": {
+                  "Datum": "{{formatDate(now; \"DD.MM.YYYY HH:mm\")}}",
+                  "Kommentar": "{{1.text}}",
+                  "Autor": "{{1.username}}",
+                  "Kategorie": "{{3.category}}",
+                  "Confidence": "{{3.confidence}}",
+                  "Post-ID": "{{1.media_id}}",
+                  "Aktion": "Gelöscht"
+                }
+              },
+              "metadata": {
+                "designer": { "x": 1200, "y": -100 }
+              },
+              "note": "Lösch-Log in Google Sheets speichern"
+            }
+          ],
+          "filter": {
+            "name": "Ist toxisch",
+            "conditions": [
+              [
+                {
+                  "a": "{{3.toxic}}",
+                  "b": "true",
+                  "o": "text:equal"
+                },
+                {
+                  "a": "{{3.confidence}}",
+                  "b": "0.75",
+                  "o": "number:greater"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "label": "Clean → Ignorieren",
+          "flow": [],
+          "filter": {
+            "name": "Nicht toxisch",
+            "conditions": [
+              [
+                {
+                  "a": "{{3.toxic}}",
+                  "b": "false",
+                  "o": "text:equal"
+                }
+              ]
+            ]
+          }
+        }
+      ],
+      "metadata": {
+        "designer": { "x": 600, "y": 200 }
+      }
+    }
+  ],
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "eu1.make.com"
+  }
+}
