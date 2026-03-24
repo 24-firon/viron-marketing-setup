@@ -10,10 +10,11 @@
 
 | # | Task | Assigned | Status | Notes |
 |---|------|----------|--------|-------|
-| QA-1 | MG-1: OpenAI-Referenz Zeile ~443 entfernen | Sonnet | ⏳ Pending Operator-Go | 10 Min |
-| QA-2 | Pillars-MG-1: Zapier als Fallback framen (nicht gleichwertig) | Sonnet | ⏳ Pending Operator-Go | 20 Min |
-| QA-3 | MG-3 + MG-4: QA-Check durchführen | Haiku Three | ⏳ Pending Operator-Go | 2–3h |
-| QA-4 | INVENTAR.md: Social-Content-Batch-3 einpflegen | Haiku One | ⏳ Pending | 30 Min |
+| QA-1 | MG-1: OpenAI-Referenz Zeile ~443 entfernen | Sonnet | ✅ Done | 24.03. |
+| QA-2 | Pillars-MG-1: Zapier als Fallback framen (nicht gleichwertig) | Sonnet | ✅ Done | 24.03. |
+| QA-3 | MG-3 + MG-4: QA-Check durchführen | Haiku Three | ✅ Done | 24.03. |
+| QA-4 | INVENTAR.md: Social-Content-Batch-3 einpflegen | Haiku One | ✅ Done | 24.03. |
+| S-0 | Symlinks reparieren (.claude/skills & .agent/skills) | Sonnet | ✅ Done | 24.03. |
 
 ---
 
