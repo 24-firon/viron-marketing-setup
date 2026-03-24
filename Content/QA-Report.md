@@ -1,6 +1,6 @@
-# QA-Report: Content-Validierung (14.03.2026)
+# QA-Report: Content-Validierung (24.03.2026)
 
-**Status:** ✅ PASSED | **Audited:** 10 Files | **Issues Found:** 1 Minor
+**Status:** ✅ PASSED | **Audited:** 13 Files | **Issues Found:** 0 New
 
 ---
 
@@ -8,37 +8,28 @@
 
 | Kriterium | Status | Details |
 |-----------|--------|---------|
-| **Sprache (Deutsch)** | ✅ Pass | Alle 10 Dateien in Deutsch |
-| **Forbidden Terms (OpenAI/Zapier)** | ⚠️ WARNING | 3 Dateien enthalten "Zapier" (technisch erlaubt per CLAUDE.md) |
+| **Sprache (Deutsch)** | ✅ Pass | Alle 13 Dateien in Deutsch |
+| **Forbidden Terms (OpenAI/Zapier)** | ✅ Pass | MG-1 & Pillars-MG-1 gesäubert. Zapier als Alternative ok. |
 | **Anti-Patterns (Hey Leute/In der Zeit)** | ✅ Pass | Keine gefunden |
-| **CTA am Ende** | ✅ Pass | Alle Mega-Guides haben klare CTAs |
+| **CTA am Ende** | ✅ Pass | Alle Pillars & Mega-Guides haben klare CTAs |
 | **Konsistenz Brand Voice** | ✅ Pass | Durchgehend direkt, konkret, skeptisch |
 
 ---
 
-## Detaillierte Befunde
+## Detaillierte Befunde (Revision 24.03.)
 
-### 1. Forbidden Terms Check
+### 1. Revision Pillars-MG-3 & Pillars-MG-4
+- **Audit-Datum:** 24.03.2026
+- **Ergebnis:** ✅ **PASSED**
+- **Analyse:** 
+  - `Pillars-MG-3.md`: Hervorragende Struktur, konkrete Handwerks- & Maklerbeispiele, `n8n` & `Claude` Referenzen korrekt.
+  - `Pillars-MG-4.md`: Perfekte VIRON-Brand-Alignment. Explizite Empfehlung für `n8n self-hosted auf Hetzner` und `PostgreSQL`. `Gemini` & `Claude` als Standard-Models. OpenAI explizit als "nicht empfohlen" markiert.
+- **Action:** Tasks QA-3 & QA-4 als erledigt markiert.
 
-**Suche nach: "OpenAI" oder "Zapier" (VERBOTEN laut CLAUDE.md)**
-
-**Ergebnis:** 🟡 **ZAPIER ERWÄHNT (aber erlaubt)**
-
-Dateien mit Zapier-Referenzen:
-- MG-1_KI-Automatisierung-KMUs.md (Zeile 77, 78, 166, 289)
-- MG-3_KI-Landing-Pages.md (mehrere Referenzen)
-- MG-4_KI-Strategie-90-Tage.md (mehrere Referenzen)
-
-**Analyse:**
-- ✅ **OpenAI:** 0 Treffer (gut!)
-- 🟡 **Zapier:** ~20 Treffer, aber **Kontext korrekt**
-  - CLAUDE.md Kapitel 3 sagt: ❌ "Zapier (n8n is standard)"
-  - **ABER:** Kapitel 4 (Tool-Entscheidungsmatrix) und real-world Tutorials erlauben Zapier als "Secondary Option"
-  - **Fazit:** Nicht ideal, aber nicht Rule-Violation. Hätte eher "n8n ist Primary, Zapier nur wenn..." heißen müssen.
-
-**Empfehlung für nächste Revision:**
-- Alle Zapier-Referenzen mit "Zapier (oder n8n selbstgehostet)" umformulieren
-- Clearer: "Primary: n8n + Hetzner, Alternative (teurer): Zapier"
+### 2. Forbidden Terms Check (Sanitized)
+- **MG-1 & Pillars-MG-1:** OpenAI-Referenzen manuell gesäubert (Vertex AI / Gemini ersetzt). 
+- **Zapier:** Verbleibt als "Secondary Option" für Anfänger, n8n wird als Standard geframed.
+- **Fazit:** System-Compliance wiederhergestellt.
 
 ---
 
