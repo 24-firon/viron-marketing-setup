@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Online Marketing 2026: Interaktives Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-link.active {
+            color: #38bdf8;
+            border-bottom: 2px solid #38bdf8;
+        }
+
+        .funnel-step {
+            transition: all 0.3s ease;
+        }
+        
+        .funnel-step:hover, .funnel-step.active {
+            transform: translateX(10px);
+            border-color: #38bdf8;
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Chosen Palette: Cyberpunk Corporate (Deep Slate, Cyan, Purple, Pink, Emerald) -->
+    <!-- Application Structure Plan: Dieses SPA nutzt ein Dashboard-Layout mit einer fixierten Top-Navigation (Sticky Nav) für schnelle Erreichbarkeit. Die Struktur ist thematisch in Sektionen unterteilt: 1. Executive Summary (Makro-Lage & Budget), 2. GEO vs SEO (Wandel der Suche), 3. Autonome Funnels (Interaktive Prozessdarstellung) und 4. Daten & Compliance (EU AI Act). Dieses Design wurde gewählt, um die komplexen, mehrschichtigen Informationen des Reports in logische, konsumierbare "Häppchen" zu zerlegen. Der Nutzer kann vertikal scrollen oder gezielt über die Navigation springen. Die Interaktivität (Tabs, klickbare Funnel-Schritte) zwingt den Nutzer, sich aktiv mit den Unterschieden zwischen klassischem Marketing und dem Stand 2026 auseinanderzusetzen. -->
+    <!-- Visualization & Content Choices: 
+        1. Makro/Budget -> Informieren -> Doughnut Chart (Chart.js) -> Zeigt die drastische Umverteilung von manuellem Aufwand zu KI-Infrastruktur.
+        2. SEO vs GEO -> Vergleichen -> Radar Chart (Chart.js) -> Ideal, um die Verschiebung der strategischen Prioritäten über mehrere Dimensionen (Keywords vs. Entitäten) darzustellen. Interaktive Toggle-Buttons erlauben den direkten Vorher/Nachher-Vergleich.
+        3. Autonomer Funnel -> Organisieren -> Interaktives HTML/CSS Prozess-Layout -> Veranschaulicht den Flow. Klicks auf Schritte enthüllen tiefere qualitative Insights aus dem Report. Keine SVG/Mermaid Nutzung, reine DOM-Manipulation.
+        4. Daten & Compliance -> Wandel -> Stacked Bar Chart (Chart.js) -> Zeigt perfekt den durch den EU AI Act erzwungenen Shift von Third-Party zu First/Zero-Party Daten über die Zeit. 
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <nav class="fixed top-0 w-full z-50 glass-panel border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                    MARKETING 2026
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#executive" class="nav-link text-slate-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Executive Delta</a>
+                        <a href="#geo" class="nav-link text-slate-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Von SEO zu GEO</a>
+                        <a href="#funnel" class="nav-link text-slate-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Autonomer Funnel</a>
+                        <a href="#compliance" class="nav-link text-slate-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">Daten & AI Act</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
+
+        <section id="executive" class="scroll-mt-24">
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">KI als Infrastruktur:<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Der Paradigmenwechsel 2026</span></h1>
+                <p class="text-lg text-slate-400 max-w-3xl leading-relaxed">
+                    Willkommen im interaktiven Report-Dashboard. Diese Sektion fasst die Makro-Lage zusammen. Bis Anfang 2026 hat sich KI von einer "Add-on-Automatisierung" zur grundlegenden Infrastruktur für alle digitalen Kanäle gewandelt. Performance-Lücken entstehen nicht mehr durch fehlenden Tool-Zugang, sondern durch mangelnde Datenqualität. Erkunden Sie unten, wie sich Budgets und strategische Schwerpunkte drastisch verschoben haben.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="glass-panel p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-cyan-400 mb-6 flex items-center">📊 Budget-Allokation 2026 vs 2024</h3>
+                    <div class="chart-container">
+                        <canvas id="budgetChart"></canvas>
+                    </div>
+                    <p class="mt-6 text-sm text-slate-400 text-center">
+                        Manuelles Kampagnen-Management schrumpft massiv zugunsten von Dateninfrastruktur und Modell-Training.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-cyan-500">
+                        <h4 class="text-lg font-bold text-white mb-2">Die 3 Säulen der Transformation</h4>
+                        <ul class="space-y-4 mt-4">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 text-xl mr-3">🚀</span>
+                                <div>
+                                    <strong class="block text-slate-200">Generative Engine Optimization (GEO)</strong>
+                                    <span class="text-sm text-slate-400">KI-Antwortmaschinen ersetzen klassische Suchmaschinen-Ergebnisseiten.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-purple-400 text-xl mr-3">⚙️</span>
+                                <div>
+                                    <strong class="block text-slate-200">Autonome Agenten</strong>
+                                    <span class="text-sm text-slate-400">Übernahme von Gebotsstrategien, A/B-Testing und E-Mail-Nurturing auf Autopilot.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-pink-400 text-xl mr-3">⚖️</span>
+                                <div>
+                                    <strong class="block text-slate-200">EU AI Act & Governance</strong>
+                                    <span class="text-sm text-slate-400">Strenge Regulierung von KI-gestütztem Profiling erzwingt First-Party-Daten-Strategien.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass-panel p-6 rounded-xl text-center">
+                            <div class="text-3xl font-extrabold text-purple-400 mb-1">85%</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wide">Automatisierte Workflows</div>
+                        </div>
+                        <div class="glass-panel p-6 rounded-xl text-center">
+                            <div class="text-3xl font-extrabold text-pink-400 mb-1">Zero</div>
+                            <div class="text-xs text-slate-400 uppercase tracking-wide">Third-Party Data Relevanz</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="geo" class="scroll-mt-24 pt-8 border-t border-slate-800">
+            <div class="mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Von SEO zu <span class="text-purple-400">Generative Engine Optimization (GEO)</span></h2>
+                <p class="text-lg text-slate-400 max-w-3xl leading-relaxed">
+                    Diese Sektion visualisiert das Ende des klassischen SEO. Da KI-Antwortmaschinen (Google AI Overviews, Perplexity, Gemini) die primären Entdeckungsflächen geworden sind, ändert sich die Methodik grundlegend. Nutzen Sie die Buttons unten, um die Schwerpunktverlagerung von isolierten Keywords hin zu Kontext und Entitätsauflösung interaktiv im Netzdiagramm nachzuvollziehen.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="glass-panel p-6 rounded-xl">
+                        <h3 class="text-xl font-bold text-white mb-4">Fokus-Vergleich</h3>
+                        <p class="text-sm text-slate-400 mb-6">Wählen Sie eine Ära, um die Prioritäten in der Suchmaschinen-Strategie zu sehen.</p>
+                        
+                        <div class="flex flex-col space-y-3">
+                            <button id="btn-seo" class="px-4 py-3 rounded-lg text-left font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                                🔍 Klassisches SEO (Pre-2024)
+                            </button>
+                            <button id="btn-geo" class="px-4 py-3 rounded-lg text-left font-semibold transition-all bg-purple-900/50 text-purple-200 border border-purple-500 shadow-[0_0_15px_rgba(168,85,247,0.2)] focus:outline-none focus:ring-2 focus:ring-purple-400">
+                                🧠 GEO (Status Quo 2026)
+                            </button>
+                            <button id="btn-both" class="px-4 py-3 rounded-lg text-left font-semibold transition-all bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-slate-500">
+                                👁️ Beide anzeigen
+                            </button>
+                        </div>
+
+                        <div id="geo-insight-box" class="mt-6 p-4 rounded-lg bg-purple-900/20 border border-purple-500/30 text-sm text-purple-200">
+                            <strong>Insight:</strong> GEO priorisiert semantische Nähe, zitierfähige Fakten (Statistiken, Zitate) und die Einbindung in Wissensgraphen über simple Keyword-Dichte.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-8 glass-panel p-8 rounded-2xl">
+                    <div class="chart-container">
+                        <canvas id="geoRadarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="funnel" class="scroll-mt-24 pt-8 border-t border-slate-800">
+            <div class="mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Der <span class="text-pink-400">Autonome Marketing-Funnel</span></h2>
+                <p class="text-lg text-slate-400 max-w-3xl leading-relaxed">
+                    Hier analysieren wir die operative Ebene. Die traditionelle, manuelle Lead-Generierung wurde durch KI-gesteuerte End-to-End-Prozesse abgelöst. Klicken Sie auf die einzelnen Phasen des Funnels auf der linken Seite, um im Detailpanel rechts zu erfahren, wie Agenten diese spezifischen Aufgaben im Jahr 2026 autonom erledigen.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="flex flex-col space-y-4 relative">
+                    <div class="absolute left-6 top-10 bottom-10 w-1 bg-slate-700 rounded-full z-0 hidden sm:block"></div>
+                    
+                    <div class="funnel-step active cursor-pointer z-10 glass-panel p-6 rounded-xl border-l-4 border-cyan-400 flex items-center" data-step="1">
+                        <div class="w-12 h-12 rounded-full bg-cyan-900/50 border border-cyan-400 flex items-center justify-center text-xl mr-4 shrink-0 hidden sm:flex">1</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-cyan-400">Prädiktive Akquise</h3>
+                            <p class="text-sm text-slate-400 mt-1">Echtzeit-Identifikation von Intent-Signalen.</p>
+                        </div>
+                    </div>
+
+                    <div class="funnel-step cursor-pointer z-10 glass-panel p-6 rounded-xl border-l-4 border-slate-600 flex items-center" data-step="2">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-xl mr-4 shrink-0 hidden sm:flex text-slate-400">2</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Generatives Nurturing</h3>
+                            <p class="text-sm text-slate-400 mt-1">Hyper-personalisierte 1:1 Content-Erstellung.</p>
+                        </div>
+                    </div>
+
+                    <div class="funnel-step cursor-pointer z-10 glass-panel p-6 rounded-xl border-l-4 border-slate-600 flex items-center" data-step="3">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-xl mr-4 shrink-0 hidden sm:flex text-slate-400">3</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Adaptive Konvertierung</h3>
+                            <p class="text-sm text-slate-400 mt-1">Dynamisches Pricing und Landing-Page-Morphing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="funnel-step cursor-pointer z-10 glass-panel p-6 rounded-xl border-l-4 border-slate-600 flex items-center" data-step="4">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-600 flex items-center justify-center text-xl mr-4 shrink-0 hidden sm:flex text-slate-400">4</div>
+                        <div>
+                            <h3 class="text-lg font-bold text-white">Predictive Retention</h3>
+                            <p class="text-sm text-slate-400 mt-1">Churn-Prävention durch Verhaltensanalyse.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl flex flex-col justify-center min-h-[400px]">
+                    <div id="funnel-detail-content">
+                        <div class="inline-block px-3 py-1 rounded-full bg-cyan-900/50 text-cyan-400 text-sm font-semibold mb-4 tracking-wide uppercase">Phase 1: Akquise</div>
+                        <h3 class="text-3xl font-bold text-white mb-6">Intent-Erfassung auf Autopilot</h3>
+                        <p class="text-slate-300 leading-relaxed mb-6 text-lg">
+                            Anstatt auf passive Formular-Einsendungen zu warten, analysieren Agenten über APIs soziale Interaktionen, Firmennews und offene Web-Datennetze. Sie erstellen proaktiv Listen von Accounts, die hohe Kaufbereitschaft (Intent) zeigen, bevor diese überhaupt eine Suche starten.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center text-slate-400"><span class="text-cyan-500 mr-2">✓</span> Wegfall von manuellen Persona-Recherchen</li>
+                            <li class="flex items-center text-slate-400"><span class="text-cyan-500 mr-2">✓</span> Autonome Budget-Allokation in Programmatic SEA</li>
+                            <li class="flex items-center text-slate-400"><span class="text-cyan-500 mr-2">✓</span> Real-Time Bidding basierend auf Predictive Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="scroll-mt-24 pt-8 border-t border-slate-800">
+            <div class="mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">EU AI Act & <span class="text-emerald-400">First-Party Daten-Shift</span></h2>
+                <p class="text-lg text-slate-400 max-w-3xl leading-relaxed">
+                    Der regulatorische Rahmen (insb. der EU AI Act, voll gültig seit Aug 2026) hat das Ökosystem transformiert. Das Diagramm unten veranschaulicht, wie regulatorischer Druck den drastischen Wandel von eingekauften Third-Party-Daten hin zu transparent erhobenen Zero- und First-Party-Daten erzwungen hat. Interagieren Sie mit der Legende, um Datenquellen ein- oder auszublenden.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-8 glass-panel p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-white mb-6">Evolution der Datenquellen im Marketing (2023 - 2026)</h3>
+                    <div class="chart-container">
+                        <canvas id="dataShiftChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-emerald-500">
+                        <h4 class="text-lg font-bold text-emerald-400 mb-3">Rechtliche Imperative 2026</h4>
+                        <p class="text-sm text-slate-300 mb-4">
+                            Künstliche Intelligenz darf in der EU nicht mehr unbemerkt manipulieren. Profiling und automatisierte Entscheidungsfindung (z.B. in Programmatic Ads oder Dynamic Pricing) erfordern explizite Zustimmung und Transparenz.
+                        </p>
+                        <div class="bg-slate-800 rounded p-4 border border-slate-700">
+                            <strong class="text-white block mb-1">Zero-Party Data Fokus:</strong>
+                            <span class="text-xs text-slate-400">Daten, die ein Kunde proaktiv und bewusst teilt (z.B. durch interaktive Quizzes, Präferenz-Center), befeuern nun die generativen Modelle.</span>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-panel p-6 rounded-xl bg-gradient-to-br from-emerald-900/20 to-slate-900 border border-emerald-500/20">
+                         <h4 class="font-bold text-white mb-2 flex items-center"><span class="text-emerald-400 mr-2">⚖️</span> Compliance als USP</h4>
+                         <p class="text-sm text-slate-400">Marken, die rechtssichere "Data Clean Rooms" etabliert haben und KI-Modelle ausschließlich auf einwilligungsbasierten Daten trainieren, verzeichnen 2026 höhere Conversion-Raten durch massiv gestiegenes Nutzervertrauen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const wrapLabel = (text, maxChars) => {
+            if (text.length <= maxChars) return text;
+            const words = text.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxChars) {
+                    if (currentLine !== '') lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            if (currentLine !== '') lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#94a3b8';
+
+        const chartOptionsBase = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    labels: { color: '#e2e8f0', font: { size: 12 } }
+                },
+                tooltip: {
+                    ...tooltipConfig,
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    titleColor: '#fff',
+                    bodyColor: '#cbd5e1',
+                    borderColor: 'rgba(56, 189, 248, 0.3)',
+                    borderWidth: 1,
+                    padding: 12
+                }
+            }
+        };
+
+        const ctxBudget = document.getElementById('budgetChart').getContext('2d');
+        const budgetLabels = [
+            'KI Infrastruktur & Agenten',
+            'Daten-Governance & First-Party',
+            'Generative Content Produktion',
+            'Predictive Analytics',
+            'Manuelles Setup & Testing'
+        ].map(l => wrapLabel(l, 16));
+
+        new Chart(ctxBudget, {
+            type: 'doughnut',
+            data: {
+                labels: budgetLabels,
+                datasets: [{
+                    data: [35, 25, 20, 15, 5],
+                    backgroundColor: ['#06b6d4', '#10b981', '#8b5cf6', '#ec4899', '#475569'],
+                    borderWidth: 0,
+                    hoverOffset: 15
+                }]
+            },
+            options: {
+                ...chartOptionsBase,
+                cutout: '75%',
+                plugins: {
+                    ...chartOptionsBase.plugins,
+                    legend: { position: 'right' }
+                }
+            }
+        });
+
+        const geoLabels = [
+            'Keyword-Dichte & Platzierung',
+            'Backlink-Quantität',
+            'Konversations-Intention',
+            'Zitierfähige Fakten & Daten',
+            'Semantische Entitäts-Nähe',
+            'User Experience & Core Vitals'
+        ].map(l => wrapLabel(l, 16));
+
+        const dataSEO = [90, 85, 30, 20, 40, 70];
+        const dataGEO = [20, 30, 95, 90, 100, 85];
+
+        const ctxGeo = document.getElementById('geoRadarChart').getContext('2d');
+        let geoChart = new Chart(ctxGeo, {
+            type: 'radar',
+            data: {
+                labels: geoLabels,
+                datasets: [
+                    {
+                        label: 'Klassisches SEO (Pre-2024)',
+                        data: dataSEO,
+                        backgroundColor: 'rgba(71, 85, 105, 0.2)',
+                        borderColor: '#64748b',
+                        pointBackgroundColor: '#64748b',
+                        borderWidth: 2,
+                        hidden: true
+                    },
+                    {
+                        label: 'GEO (2026)',
+                        data: dataGEO,
+                        backgroundColor: 'rgba(139, 92, 246, 0.4)',
+                        borderColor: '#a855f7',
+                        pointBackgroundColor: '#a855f7',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#a855f7',
+                        borderWidth: 3
+                    }
+                ]
+            },
+            options: {
+                ...chartOptionsBase,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                        grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                        pointLabels: { color: '#cbd5e1', font: { size: 11, family: "'Inter', sans-serif" } },
+                        ticks: { display: false, min: 0, max: 100 }
+                    }
+                }
+            }
+        });
+
+        const btnSeo = document.getElementById('btn-seo');
+        const btnGeo = document.getElementById('btn-geo');
+        const btnBoth = document.getElementById('btn-both');
+        const insightBox = document.getElementById('geo-insight-box');
+
+        const updateGeoUI = (mode) => {
+            [btnSeo, btnGeo, btnBoth].forEach(b => {
+                b.classList.remove('bg-purple-900/50', 'text-purple-200', 'border-purple-500', 'shadow-[0_0_15px_rgba(168,85,247,0.2)]');
+                b.classList.add('bg-slate-800', 'text-slate-300', 'border-slate-600');
+            });
+
+            if (mode === 'seo') {
+                btnSeo.classList.add('bg-purple-900/50', 'text-purple-200', 'border-purple-500', 'shadow-[0_0_15px_rgba(168,85,247,0.2)]');
+                btnSeo.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-600');
+                geoChart.data.datasets[0].hidden = false;
+                geoChart.data.datasets[1].hidden = true;
+                insightBox.innerHTML = '<strong>Insight (Vergangenheit):</strong> SEO verließ sich stark auf exakte Keyword-Übereinstimmungen und den Aufbau von Massen-Backlinks, oft zu Lasten des tatsächlichen Nutzerkontexts.';
+            } else if (mode === 'geo') {
+                btnGeo.classList.add('bg-purple-900/50', 'text-purple-200', 'border-purple-500', 'shadow-[0_0_15px_rgba(168,85,247,0.2)]');
+                btnGeo.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-600');
+                geoChart.data.datasets[0].hidden = true;
+                geoChart.data.datasets[1].hidden = false;
+                insightBox.innerHTML = '<strong>Insight (Status Quo 2026):</strong> GEO priorisiert semantische Nähe, zitierfähige Fakten (Statistiken, Zitate) und die Einbindung in Wissensgraphen über simple Keyword-Dichte.';
+            } else {
+                btnBoth.classList.add('bg-purple-900/50', 'text-purple-200', 'border-purple-500', 'shadow-[0_0_15px_rgba(168,85,247,0.2)]');
+                btnBoth.classList.remove('bg-slate-800', 'text-slate-300', 'border-slate-600');
+                geoChart.data.datasets[0].hidden = false;
+                geoChart.data.datasets[1].hidden = false;
+                insightBox.innerHTML = '<strong>Direkter Vergleich:</strong> Beobachten Sie die dramatische Verschiebung der Form. Was 2024 erfolgskritisch war, ist heute grundlegende Hygiene. Der Gewinn liegt im Kontext.';
+            }
+            geoChart.update();
+        };
+
+        btnSeo.addEventListener('click', () => updateGeoUI('seo'));
+        btnGeo.addEventListener('click', () => updateGeoUI('geo'));
+        btnBoth.addEventListener('click', () => updateGeoUI('both'));
+
+        const funnelData = {
+            1: {
+                phase: "Phase 1: Akquise",
+                title: "Intent-Erfassung auf Autopilot",
+                text: "Anstatt auf passive Formular-Einsendungen zu warten, analysieren Agenten über APIs soziale Interaktionen, Firmennews und offene Web-Datennetze. Sie erstellen proaktiv Listen von Accounts, die hohe Kaufbereitschaft (Intent) zeigen, bevor diese überhaupt eine Suche starten.",
+                color: "cyan",
+                bullets: ["Wegfall von manuellen Persona-Recherchen", "Autonome Budget-Allokation in Programmatic SEA", "Real-Time Bidding basierend auf Predictive Analytics"]
+            },
+            2: {
+                phase: "Phase 2: Nurturing",
+                title: "Generatives, hyper-personalisiertes Nurturing",
+                text: "Basierend auf den identifizierten Intent-Daten generieren LLMs in Echtzeit E-Mail-Sequenzen, Whitepapers und dynamische Ads, die exakt auf die Schmerzpunkte des spezifischen Nutzers zugeschnitten sind. Keine statischen Drip-Kampagnen mehr.",
+                color: "purple",
+                bullets: ["Echtzeit-Generierung von Text und Bild-Assets", "Individuelle Versandzeitpunkt-Optimierung durch KI", "Automatisierte A/B-Tests von Betreffzeilen und Hooks"]
+            },
+            3: {
+                phase: "Phase 3: Konvertierung",
+                title: "Adaptive Landing Pages & Pricing",
+                text: "Der Moment der Konvertierung wird von KI übernommen. Landing Pages passen ihr Layout, ihre Argumentation (Morphing) und sogar ihre Preismodelle dynamisch an das Profil und die berechnete Zahlungsbereitschaft des Besuchers an.",
+                color: "pink",
+                bullets: ["Dynamisches Content-Morphing in Millisekunden", "KI-gesteuertes, ethisches Dynamic Pricing", "Autonome Chatbots übernehmen den Sales-Abschluss"]
+            },
+            4: {
+                phase: "Phase 4: Retention",
+                title: "Predictive Churn Prevention",
+                text: "Nach dem Kauf analysieren Agenten kontinuierlich Produktnutzung, Support-Tickets und Sentiment. Droht ein Kunde abzuspringen, wird vollautomatisch ein personalisiertes Rückgewinnungs-Angebot oder eine Hilfe-Sequenz initiiert.",
+                color: "emerald",
+                bullets: ["Frühzeitige Erkennung von Abwanderungs-Signalen", "Automatische Generierung von Upsell-Angeboten", "Sentiment-Analyse von Kundeninteraktionen in Echtzeit"]
+            }
+        };
+
+        const funnelSteps = document.querySelectorAll('.funnel-step');
+        const funnelContent = document.getElementById('funnel-detail-content');
+
+        funnelSteps.forEach(step => {
+            step.addEventListener('click', function() {
+                funnelSteps.forEach(s => {
+                    s.classList.remove('active', 'border-cyan-400', 'border-purple-400', 'border-pink-400', 'border-emerald-400');
+                    s.classList.add('border-slate-600');
+                    s.querySelector('h3').classList.remove('text-cyan-400', 'text-purple-400', 'text-pink-400', 'text-emerald-400');
+                    s.querySelector('h3').classList.add('text-white');
+                    const numBadge = s.querySelector('.rounded-full');
+                    if(numBadge) {
+                        numBadge.classList.remove('bg-cyan-900/50', 'border-cyan-400', 'text-cyan-400', 'bg-purple-900/50', 'border-purple-400', 'text-purple-400', 'bg-pink-900/50', 'border-pink-400', 'text-pink-400', 'bg-emerald-900/50', 'border-emerald-400', 'text-emerald-400');
+                        numBadge.classList.add('bg-slate-800', 'border-slate-600', 'text-slate-400');
+                    }
+                });
+
+                this.classList.add('active');
+                this.classList.remove('border-slate-600');
+                
+                const stepId = this.getAttribute('data-step');
+                const data = funnelData[stepId];
+                
+                this.classList.add(`border-${data.color}-400`);
+                this.querySelector('h3').classList.remove('text-white');
+                this.querySelector('h3').classList.add(`text-${data.color}-400`);
+                
+                const badge = this.querySelector('.rounded-full');
+                if(badge) {
+                    badge.classList.remove('bg-slate-800', 'border-slate-600', 'text-slate-400');
+                    badge.classList.add(`bg-${data.color}-900/50`, `border-${data.color}-400`, `text-${data.color}-400`);
+                }
+
+                funnelContent.style.opacity = '0';
+                
+                setTimeout(() => {
+                    let bulletsHtml = data.bullets.map(b => `<li class="flex items-center text-slate-400"><span class="text-${data.color}-500 mr-2">✓</span> ${b}</li>`).join('');
+                    
+                    funnelContent.innerHTML = `
+                        <div class="inline-block px-3 py-1 rounded-full bg-${data.color}-900/50 text-${data.color}-400 text-sm font-semibold mb-4 tracking-wide uppercase transition-colors">${data.phase}</div>
+                        <h3 class="text-3xl font-bold text-white mb-6">${data.title}</h3>
+                        <p class="text-slate-300 leading-relaxed mb-6 text-lg">${data.text}</p>
+                        <ul class="space-y-3">
+                            ${bulletsHtml}
+                        </ul>
+                    `;
+                    funnelContent.style.transition = 'opacity 0.3s ease-in-out';
+                    funnelContent.style.opacity = '1';
+                }, 150);
+            });
+        });
+
+        const ctxDataShift = document.getElementById('dataShiftChart').getContext('2d');
+        const shiftLabels = ['2023', '2024', '2025 (Vor AI Act)', '2026 (Post AI Act)'];
+        
+        new Chart(ctxDataShift, {
+            type: 'bar',
+            data: {
+                labels: shiftLabels,
+                datasets: [
+                    {
+                        label: 'Third-Party Data',
+                        data: [70, 50, 25, 5],
+                        backgroundColor: '#ef4444',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'First-Party Data',
+                        data: [20, 35, 50, 60],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Zero-Party Data',
+                        data: [10, 15, 25, 35],
+                        backgroundColor: '#10b981',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                ...chartOptionsBase,
+                scales: {
+                    x: { stacked: true, grid: { display: false } },
+                    y: { 
+                        stacked: true, 
+                        grid: { color: 'rgba(255, 255, 255, 0.05)' }, 
+                        max: 100,
+                        ticks: {
+                            callback: function(value) { return value + '%' }
+                        }
+                    }
+                },
+                plugins: {
+                    ...chartOptionsBase.plugins,
+                    tooltip: {
+                        ...tooltipConfig,
+                        mode: 'index',
+                        callbacks: {
+                            ...tooltipConfig.callbacks,
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current) && current !== '') {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
