@@ -53,12 +53,12 @@
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| T-1 | Reel-Template: Faceless (Screen-Recording + Text-Overlay) | Sonnet | ⏳ Backlog | `/Content/Templates/Reel-Faceless.md` |
-| T-2 | Reel-Template: Trending-Topic (schnell befüllbar, <15 Min) | Sonnet | ⏳ Backlog | `/Content/Templates/Reel-Trending.md` |
-| T-3 | LinkedIn-Post-Template: Fallstudie / Mythos / Fehler / Frage / Realität | Haiku Two | ⏳ Backlog | `/Content/Templates/LI-Post-Templates.md` |
-| T-4 | Carousel-Template: 5-Slide-Struktur (Branche ausfüllbar) | Sonnet | ⏳ Backlog | `/Content/Templates/Carousel-Template.md` |
-| T-5 | TikTok-Template: Trending-Sound-Hook (Platzhalter-basiert) | Haiku Two | ⏳ Backlog | `/Content/Templates/TikTok-Template.md` |
-| T-6 | n8n Prompt-Template: Trending-Content-Generator (provider-agnostisch) | Sonnet | ⏳ Backlog | `/Content/Templates/n8n-Trending-Prompt.md` |
+| T-1 | Reel-Template: Faceless (Screen-Recording + Text-Overlay) | Sonnet | ✅ Done | `/Content/Templates/Reel-Faceless-Hook-Hold.md` |
+| T-2 | Reel-Template: Trending-Topic (schnell befüllbar, <15 Min) | Sonnet | ✅ Done | `/Content/Templates/Reel-Trending.md` |
+| T-3 | LinkedIn-Post-Template: Fallstudie / Mythos / Fehler / Frage / Realität | Haiku Two | ✅ Done | `/Content/Templates/LI-Post-Templates.md` |
+| T-4 | Carousel-Template: 5-Slide-Struktur (Branche ausfüllbar) | Sonnet | ✅ Done | `/Content/Templates/Carousel-Template.md` |
+| T-5 | TikTok-Template: Trending-Sound-Hook (Platzhalter-basiert) | Haiku Two | ✅ Done | `/Content/Templates/TikTok-Template.md` |
+| T-6 | n8n Prompt-Template: Trending-Content-Generator (provider-agnostisch) | Sonnet | ✅ Done | `/Content/Templates/n8n-Trending-Prompt.md` |
 
 ---
 
