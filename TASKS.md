@@ -1,5 +1,7 @@
 # VIRON — Aktive Task-Liste
-**Stand:** 2026-03-19 | **Pflege:** Täglich aktualisieren nach Task-Abschluss
+**Stand:** 2026-04-01 | **Pflege:** Täglich aktualisieren nach Task-Abschluss
+
+> Zielgruppe per Operator-Pivot (01.04.) geändert von Handwerk/Immobilien/Steuerberater → Lokaler Einzelhandel & Premium-Dienstleister. Siehe ORCHESTRATION_SYSTEM.md für aktualisierte Prompts.
 
 > Abgeschlossenes Archiv (Linear Setup, bis 2026-03-12) → siehe unten.
 > Diese Datei zeigt nur aktive und geplante Tasks.
@@ -20,13 +22,15 @@
 
 ## 🟡 DIESE WOCHE — Content-Produktion
 
-### Content-Serie 1: Nischen-ROI (Handwerk / Immobilien / Steuerberater)
+### Content-Serie 1: Nischen-ROI (Lokaler Einzelhandel / Premium-Dienstleister)
+
+> **Zielgruppe nach Operator-Pivot (01.04.):** Nicht Handwerk, sondern lokale Einzelhändler (Boutiquen, Concept Stores, Specialty Retail) & Premium-Dienstleister (Consultants, Agenturen, Therapeuten, IT-Services). Budget-Bereitschaft: 5.000–15.000 €. Kern-Bedürfnis: "Website als 24/7-Verkäufer" + "Automatisierung für größten Schmerzpunkt".
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| C1-1 | 10 LinkedIn Posts mit ROI-Zahlen (je Branche 3–4) | Haiku Two | ⏳ Pending | `/Content/_wip/LI-Nischen-ROI.md` |
-| C1-2 | 2 Pillar-Artikel: Handwerk + Immobilien ROI-Deep-Dive | Sonnet | ⏳ Pending | `/Content/_wip/Pillar-Nischen.md` |
-| C1-3 | 3 Carousel-Outlines (je Branche 1, 5 Slides) | Haiku Two | ⏳ Pending | in C1-1 |
+| C1-1 | 10 LinkedIn Posts mit ROI-Zahlen (Retail 5 + Services 5) | Haiku Two | ⏳ Pending | `/Content/_wip/LI-Nischen-ROI.md` |
+| C1-2 | 2 Pillar-Artikel: "Website-Automatisierung für Einzelhändler" + "Client-Onboarding-Automation für Dienstleister" | Sonnet | ⏳ Pending | `/Content/_wip/Pillar-Nischen.md` |
+| C1-3 | 3 Carousel-Outlines (Retail ×1, Services ×1, "Einkaufen vs. Selberbauen" ×1, je 5 Slides) | Haiku Two | ⏳ Pending | in C1-1 |
 
 ### Content-Serie 2: Faceless Reels
 

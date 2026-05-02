@@ -26,9 +26,9 @@ Ground-Zero Agency Infrastructure ist eine **Solo-KI-Automatisierungsagentur** m
 
 **An wen wird verkauft (ICP = Ideal Customer Profile):**
 - Unternehmen mit 5–50 Mitarbeitern im DACH-Raum (Deutschland, Österreich, Schweiz)
-- Branchen-Schwerpunkte: Handwerksbetriebe, Immobilienmakler, Steuerkanzleien, Dienstleister
-- Schmerzpunkte der Kunden: manuelle Prozesse fressen Zeit, unstrukturierte Daten, kein funktionierendes CRM, zu wenig Kapazität um Digitalisierung selbst anzugehen
-- Psychografie des Entscheiders: Geschäftsführer, 35–55 Jahre, technisch nicht versiert, aber pragmatisch. Fragt nicht "Was ist KI?" sondern "Was spart mir das konkret und was kostet mich das?"
+- Branchen-Schwerpunkte: Lokaler Einzelhandel (Boutiquen, Concept Stores) & Premium-Dienstleister (Consultants, Agenturen, Therapeuten). Budget-Bereitschaft: 5.000–15.000 €.
+- Schmerzpunkte der Kunden: Website generiert keine Leads (Website als "toter Prospekt"), Termin-Ping-Pong, unstrukturierte Daten, kein funktionierendes CRM, manuelles Inventar/Onboarding-Chaos. Sie wollen eine "Website als 24/7 Verkäufer" und Automatisierung für ihren größten operativen Engpass.
+- Psychografie des Entscheiders: Geschäftsführer, 35–55 Jahre, pragmatisch. Weiß, dass er 5k-15k € investieren muss. Fragt nicht "Was ist KI?" sondern "Wie macht diese Website/Automatisierung mein Leben leichter und bringt Leads?"
 
 **Was VIRON NICHT ist:**
 - Kein SaaS-Produkt
@@ -287,7 +287,7 @@ KI-Automatisierungsagentur (Solo-Betrieb). Wir verkaufen maßgeschneiderte
 Automatisierungs-Workflows (n8n, KI-Agenten, CRM-Integrationen) an KMU in DACH.
 
 Unsere Zielgruppe: Geschäftsführer von Betrieben mit 5–50 Mitarbeitern.
-Branchen-Fokus: Handwerk, Immobilien, Steuerberatung.
+Branchen-Fokus: Lokaler Einzelhandel, Premium-Dienstleister.
 Ton: Direkt, professionell, keine Marketing-Floskeln, keine Emojis.
 Sprache: Deutsch.
 Keine Erwähnungen von OpenAI. n8n = primäres Automatisierungstool.
@@ -298,24 +298,19 @@ Keine Erwähnungen von OpenAI. n8n = primäres Automatisierungstool.
 ```
 [KONTEXT-BLOCK OBEN EINFÜGEN]
 
-AUFGABE: Erstelle Social Content für 3 Branchen basierend auf diesen verifizierten Zahlen.
+AUFGABE: Erstelle Social Content für 2 Branchen basierend auf diesen verifizierten Zahlen.
 
-HANDWERK (Quelle: ZDH-Umfragen + Branchenberichte 2026):
-- 50 Stunden/Woche verloren durch Dokumentensuche pro 10 MA
-- 10 Stunden/Woche durch händische Zeiterfassung
-- ROI-Beispiel: 1.800 €/Monat durch automatisierte Zeiterfassung
-- Haupteinwände: Datenschutzbedenken (96%), Investitionsangst (69%)
+LOKALER EINZELHANDEL / RETAIL:
+- Chaos zwischen Online-Shop (Shopify) und Kassen-System (POS)
+- "Website als toter Prospekt" vs. "Website als 24/7 Verkäufer"
+- ROI-Beispiel: 2.500 €/Monat gerettet durch automatisierte Inventar-Synchronisation und Retargeting verlassener Warenkörbe
+- Haupteinwände: "Wir haben keine IT-Abteilung" (90%), Investitionsangst vor 5-15k € Projekten
 
-IMMOBILIEN (Quelle: Branchenstudien 2026):
-- Leads 21× wahrscheinlicher zu konvertieren wenn Reaktion <5 Minuten
-- 15 Stunden/Woche verloren durch manuelle Portal-Anfragen-Beantwortung
-- ROI-Beispiel: 3.000 €/Monat + 15% mehr Abschlüsse durch Lead-Automatisierung
-- Haupteinwand: Angst persönliche Beziehung zu verlieren
-
-STEUERBERATER (Quelle: DATEV-Berichte + Kanzleistudien):
-- 20 Stunden/Woche für manuelles Belege-Abtippen bei 5-MA-Kanzlei
-- ROI-Beispiel: 4.800 €/Monat Fachkräfte-Kapazität freigesetzt durch OCR-Automatisierung
-- Haupteinwand: DSGVO + DATEV-Ökosystem-Abhängigkeit
+PREMIUM-DIENSTLEISTER (Agenturen, Consultants, Therapeuten):
+- 20 Stunden/Woche verloren durch Termin-Ping-Pong und manuelles Onboarding
+- Leads, die nicht in 5 Minuten kontaktiert werden, sind 21x wahrscheinlicher tot
+- ROI-Beispiel: 4.800 €/Monat freigesetzt durch automatisiertes Lead-Scoring, Auto-Booking und asynchrones Onboarding
+- Haupteinwände: "Wir brauchen den persönlichen Touch", Angst vor standardisiertem "Roboter-Gefühl"
 
 PRO BRANCHE ERSTELLE:
 1. Fünf LinkedIn-Posts (je 150–250 Wörter)
@@ -327,10 +322,10 @@ PRO BRANCHE ERSTELLE:
    - Erste Zeile = Text-Overlay der ohne Ton funktioniert
 3. Ein Carousel-Outline (5 Slides: Slide-Titel + 1-Satz-Inhalt pro Slide)
 
-GESAMT: 9 LinkedIn Posts + 6 Reels + 3 Carousels = 18 Pieces
+GESAMT: 10 LinkedIn Posts + 4 Reels + 2 Carousels = 16 Pieces
 
 OUTPUT FORMAT: Strukturiertes Markdown. Pro Branche ein Abschnitt mit klarer Überschrift.
-Jeden Post mit Kennung beginnen: [LI-Handwerk-01], [REEL-Immo-01], etc.
+Jeden Post mit Kennung beginnen: [LI-Retail-01], [REEL-Services-01], etc.
 ```
 
 ### PROMPT B — Hook-Bibliothek Massenproduktion
@@ -343,23 +338,23 @@ Pro Formel 6 Posts, je 150–200 Wörter. Sprache: Deutsch.
 
 FORMEL 1 — Datengetriebene Fallstudie (6 Posts):
 Format: "[Konkretes Resultat] — [überraschende Einschränkung/Methode]."
-Themen: Handwerk, Immobilien, Steuerberater, n8n-Workflow, Lead-Qualifizierung, CRM-Anbindung
+Themen: Lokaler Einzelhandel, Premium-Dienstleister, n8n-Workflow, Lead-Qualifizierung, E-Commerce-Sync
 
 FORMEL 2 — Konträrer Mythos (6 Posts):
 Format: "Unpopular opinion: [bekannte KI-Behauptung] ist schlechter Rat."
-Themen: ChatGPT für KMU, Prompt-Engineering-Kurse, KI ersetzt Mitarbeiter, Tool-Hype allgemein
+Themen: ChatGPT für KMU, Prompt-Engineering-Kurse, persönliche Beratung stirbt aus, Tool-Hype allgemein
 
 FORMEL 3 — Schmerzhafter Fehler (6 Posts):
 Format: "Wir haben [X Stunden/€] bei [Prozess] verbrannt. Was wir gelernt haben:"
-Themen: Falsche Tool-Auswahl, zu frühe Automatisierung, schlechtes Onboarding, Daten-Chaos
+Themen: Falsche Tool-Auswahl, schlechtes Onboarding, Daten-Chaos zwischen Shopify und POS, Termin-Ping-Pong
 
 FORMEL 4 — Entweder-Oder-Frage (6 Posts):
 Format: "Ist es [positiv] oder [negativ], [KI-Prozess] einzusetzen?"
-Themen: KI im Kundenkontakt, automatisierte Angebotserstellung, KI-Buchhaltung, Lead-Scoring
+Themen: KI im Kundenkontakt, automatisierte Terminbuchung, KI-Buchhaltung, Lead-Scoring
 
 FORMEL 5 — Versteckte Realität (6 Posts):
 Format: "Hör auf, [populäres Verhalten] zu machen. Ernsthaft. Lies das zuerst:"
-Themen: Prompt-Engineering lernen, jedes Tool selbst einrichten, auf KI-Beratung warten, Mitarbeiter schulen
+Themen: Website als Visitenkarte nutzen, jedes Tool selbst einrichten, Leads erst morgen anrufen, manuelle Rechnungen schreiben
 
 REGELN:
 - Kein "Hallo zusammen"
