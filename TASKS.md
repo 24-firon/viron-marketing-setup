@@ -28,22 +28,22 @@
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| C1-1 | 10 LinkedIn Posts mit ROI-Zahlen (Retail 5 + Services 5) | Haiku Two | ⏳ Pending | `/Content/_wip/LI-Nischen-ROI.md` |
-| C1-2 | 2 Pillar-Artikel: "Website-Automatisierung für Einzelhändler" + "Client-Onboarding-Automation für Dienstleister" | Sonnet | ⏳ Pending | `/Content/_wip/Pillar-Nischen.md` |
-| C1-3 | 3 Carousel-Outlines (Retail ×1, Services ×1, "Einkaufen vs. Selberbauen" ×1, je 5 Slides) | Haiku Two | ⏳ Pending | in C1-1 |
+| C1-1 | 10 LinkedIn Posts mit ROI-Zahlen (Retail 5 + Services 5) | Haiku Two | ⏳ In Review | `/Content/_wip/LI-Nischen-ROI.md` |
+| C1-2 | 2 Pillar-Artikel: "Website-Automatisierung für Einzelhändler" + "Client-Onboarding-Automation für Dienstleister" | Sonnet | ⏳ In Review | `/Content/_wip/Pillar-Nischen.md` |
+| C1-3 | 3 Carousel-Outlines (Retail ×1, Services ×1, "Einkaufen vs. Selberbauen" ×1, je 5 Slides) | Haiku Two | ✅ Done | in C1-1 |
 
 ### Content-Serie 2: Faceless Reels
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| C2-1 | 15 Reel-Scripts (15–30 Sek, Faceless, Text-Overlay) | Haiku Two | ⏳ Pending | `/Content/_wip/Reel-Scripts-Batch1.md` |
-| C2-2 | Reel-Template erstellen (Struktur, Platzhalter, Cue-Markers) | Sonnet | ⏳ Pending | `/Content/Templates/Reel-Template.md` |
+| C2-1 | 15 Reel-Scripts (15–30 Sek, Faceless, Text-Overlay) | Haiku Two | ✅ Done | `/Content/_wip/Reel-Scripts-Batch1.md` |
+| C2-2 | Reel-Template erstellen (Struktur, Platzhalter, Cue-Markers) | Sonnet | ✅ Done | `/Content/Templates/Reel-Template.md` |
 
 ### Content-Serie 3: Hook-Bibliothek
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| C3-1 | 30 LinkedIn-Post-Drafts (5 Formeln × 6 Posts) | Extern (Gemini/Open Code) | ⏳ Pending Operator | Prompt B aus ORCHESTRATION_SYSTEM.md |
+| C3-1 | 30 LinkedIn-Post-Drafts (5 Formeln × 6 Posts) | Extern (Gemini/Open Code) | ✅ Done | `/Content/_wip/LI-Hook-Bibliothek-Serie-3.md` |
 
 ---
 
