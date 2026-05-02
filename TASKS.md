@@ -1,91 +1,37 @@
 # VIRON — Aktive Task-Liste
-**Stand:** 2026-04-01 | **Pflege:** Täglich aktualisieren nach Task-Abschluss
+**Stand:** 2026-04-02 | **Pflege:** Täglich aktualisieren nach Task-Abschluss
 
 > Zielgruppe per Operator-Pivot (01.04.) geändert von Handwerk/Immobilien/Steuerberater → Lokaler Einzelhandel & Premium-Dienstleister. Siehe ORCHESTRATION_SYSTEM.md für aktualisierte Prompts.
 
-> Abgeschlossenes Archiv (Linear Setup, bis 2026-03-12) → siehe unten.
-> Diese Datei zeigt nur aktive und geplante Tasks.
+> Abgeschlossenes Archiv (Welle 1-3, Template-Library, Setup) → siehe unten.
+> Diese Datei zeigt nur aktive und geplante Tasks der Welle 4 (Hustle-Marketing & Growth).
 
 ---
 
-## 🔴 DRINGEND — Blocker (sofort)
+## 🚀 WELLE 4: HUSTLE MARKETING & GROWTH (NEU)
 
-| # | Task | Assigned | Status | Notes |
-|---|------|----------|--------|-------|
-| QA-1 | MG-1: OpenAI-Referenz Zeile ~443 entfernen | Sonnet | ✅ Done | 24.03. |
-| QA-2 | Pillars-MG-1: Zapier als Fallback framen (nicht gleichwertig) | Sonnet | ✅ Done | 24.03. |
-| QA-3 | MG-3 + MG-4: QA-Check durchführen | Haiku Three | ✅ Done | 24.03. |
-| QA-4 | INVENTAR.md: Social-Content-Batch-3 einpflegen | Haiku One | ✅ Done | 24.03. |
-| S-0 | Symlinks reparieren (.claude/skills & .agent/skills) | Sonnet | ✅ Done | 24.03. |
+> **Kontext:** Wir haben das Enterprise-Fundament. Jetzt gehen wir in die Offensive. Wir brauchen verrückte, laute und hochkonvertierende Marketing-Hacks, um die Bude bekannt zu machen. Kein Standard-B2B-Content mehr.
 
----
-
-## 🟡 DIESE WOCHE — Content-Produktion
-
-### Content-Serie 1: Nischen-ROI (Lokaler Einzelhandel / Premium-Dienstleister)
-
-> **Zielgruppe nach Operator-Pivot (01.04.):** Nicht Handwerk, sondern lokale Einzelhändler (Boutiquen, Concept Stores, Specialty Retail) & Premium-Dienstleister (Consultants, Agenturen, Therapeuten, IT-Services). Budget-Bereitschaft: 5.000–15.000 €. Kern-Bedürfnis: "Website als 24/7-Verkäufer" + "Automatisierung für größten Schmerzpunkt".
+### Serie 4: Die "Guerrilla Outbound" Kampagne
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| C1-1 | 10 LinkedIn Posts mit ROI-Zahlen (Retail 5 + Services 5) | Haiku Two | ⏳ In Review | `/Content/_wip/LI-Nischen-ROI.md` |
-| C1-2 | 2 Pillar-Artikel: "Website-Automatisierung für Einzelhändler" + "Client-Onboarding-Automation für Dienstleister" | Sonnet | ⏳ In Review | `/Content/_wip/Pillar-Nischen.md` |
-| C1-3 | 3 Carousel-Outlines (Retail ×1, Services ×1, "Einkaufen vs. Selberbauen" ×1, je 5 Slides) | Haiku Two | ✅ Done | in C1-1 |
+| G-1 | 3 freche Outreach-Scripts für Jobportale (Fokus: Automatisierung vs. "Wir suchen eine Tippse") | Extern (Gemini) | ⏳ Pending | `Content/Outreach-Hacks.md` |
+| G-2 | n8n-Workflow Konzept: Scraping von schlechten Google-Reviews (Terminchaos) als Trigger für kalte DMs | Sonnet | ⏳ Pending | `Content/n8n-Growth-Hacks.md` |
 
-### Content-Serie 2: Faceless Reels
-
-| # | Task | Assigned | Status | Output |
-|---|------|----------|--------|--------|
-| C2-1 | 15 Reel-Scripts (15–30 Sek, Faceless, Text-Overlay) | Haiku Two | ✅ Done | `/Content/_wip/Reel-Scripts-Batch1.md` |
-| C2-2 | Reel-Template erstellen (Struktur, Platzhalter, Cue-Markers) | Sonnet | ✅ Done | `/Content/Templates/Reel-Template.md` |
-
-### Content-Serie 3: Hook-Bibliothek
+### Serie 5: Der "Fake-Agency Takedown"
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| C3-1 | 30 LinkedIn-Post-Drafts (5 Formeln × 6 Posts) | Extern (Gemini/Open Code) | ✅ Done | `/Content/_wip/LI-Hook-Bibliothek-Serie-3.md` |
+| G-3 | "Warum euer 3.000€ ChatGPT-Workshop nutzlos war" - Ein provokanter Pillar-Artikel | Sonnet | ⏳ Pending | `Content/Pillar-Takedown.md` |
+| G-4 | 5 aggressive LinkedIn-Posts gegen die "Wir basteln dir ein GPT"-Agenturen | Haiku Two | ⏳ Pending | `Content/LI-Takedown-Posts.md` |
 
----
-
-## 🟢 BACKLOG — Template-Bibliothek (NEU)
-
-> **Kontext:** Templates werden gebraucht damit spontaner/aktueller Content schnell umgesetzt werden kann — ohne jedes Mal von vorne zu planen. Trendinghemen, spontane Ideen oder Reaktionen auf aktuelle Ereignisse müssen in unter 15 Minuten in ein fertiges Format gebracht werden können.
+### Serie 6: Die AI-Act Panik-Welle (Compliance Marketing)
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| T-1 | Reel-Template: Faceless (Screen-Recording + Text-Overlay) | Sonnet | ✅ Done | `/Content/Templates/Reel-Faceless-Hook-Hold.md` |
-| T-2 | Reel-Template: Trending-Topic (schnell befüllbar, <15 Min) | Sonnet | ✅ Done | `/Content/Templates/Reel-Trending.md` |
-| T-3 | LinkedIn-Post-Template: Fallstudie / Mythos / Fehler / Frage / Realität | Haiku Two | ✅ Done | `/Content/Templates/LI-Post-Templates.md` |
-| T-4 | Carousel-Template: 5-Slide-Struktur (Branche ausfüllbar) | Sonnet | ✅ Done | `/Content/Templates/Carousel-Template.md` |
-| T-5 | TikTok-Template: Trending-Sound-Hook (Platzhalter-basiert) | Haiku Two | ✅ Done | `/Content/Templates/TikTok-Template.md` |
-| T-6 | n8n Prompt-Template: Trending-Content-Generator (provider-agnostisch) | Sonnet | ✅ Done | `/Content/Templates/n8n-Trending-Prompt.md` |
-
----
-
-## 📅 CONTENT-KALENDER — Philosophie
-
-**Startdatum:** Ab Montag 2026-03-23 (locker, kein Stress)
-
-**Frequenz-Rampe:**
-- **Woche 1–2:** 2–3x/Woche LinkedIn + 2x Reels (Warm-up, Qualität über Quantität)
-- **Woche 3+:** Täglich 1 LinkedIn + 3–4 Reels/Woche (sobald Workflow läuft)
-- **Ziel-Zustand:** Vollautomatisiert täglich, Operator reviewed + approved nur
-
-**Kalender-Regeln:**
-1. Kein festes Datum pro Video/Post. Wenn fertig → raus. Wenn verzögert → nächster Slot.
-2. Zwischen geplante Batches können jederzeit Trending-Posts eingeschoben werden (dafür Templates T-1 bis T-5)
-3. Trendinghemen haben Vorrang vor Evergreen wenn zeitkritisch
-4. Niemals mehr als 3 Tage Pause auf einem Kanal
-
-**Workflow:**
-```
-Idee (Trending oder Geplant)
-  → Template aufmachen
-  → Haiku/Extern befüllt in <15 Min
-  → Sonnet QA (optional bei Trending, Pflicht bei Serie)
-  → Operator Approve (kurz)
-  → n8n → Metricool → Publishing
-```
+| G-5 | "Ist euer US-Lead-Scoring ab August illegal?" - Compliance-Lead-Magnet (PDF/Checkliste) | Sonnet | ⏳ Pending | `Content/AI-Act-Leadmagnet.md` |
+| G-6 | 3 Schock-Reels zum Thema EU AI Act & US-Tools | Haiku Two | ⏳ Pending | `Content/Reels-AI-Act.md` |
 
 ---
 
@@ -96,18 +42,19 @@ Idee (Trending oder Geplant)
 | S-1 | INVENTAR.md nach jedem Batch aktualisieren | Nach Batch | Ongoing |
 | S-2 | Linear MKT-40 kommentieren nach Content-Milestones | Wöchentlich | Ongoing |
 | S-3 | ORCHESTRATION_SYSTEM.md reviewen + updaten | Nach großen Änderungen | Ongoing |
-| S-4 | Walkthrough_Log.md bei Session-Ende pflegen | Session-Ende | Pflicht |
 
 ---
 
 ## ✅ ARCHIV — Abgeschlossen
 
-**Linear Setup (2026-03-12):** 2 Teams, 5 Projekte, 35 Issues, 5 Dependencies. Vollständig dokumentiert in `/VIRON_Full_Package_v2/`.
+**Template-Bibliothek (T-1 bis T-6) (2026-04-02):** 
+Alle Reaktions-Templates (Reels, LinkedIn, Carousel, TikTok, n8n-RSS) fertiggestellt.
 
-**Content-Pyramide Block 2–4 (2026-03-14):** 4 Mega-Guides + 67 Pillar-Artikel + 41 Social Pieces produziert. Dokumentiert in `/Content/INVENTAR.md`.
+**Nischen-ROI Content Serie 1-3 (2026-04-01):** 
+10 Posts, 2 Pillar-Artikel, 15 Reel-Skripte und 30 Hook-Library-Posts für Retail & Services generiert. 
 
-**Opus One-Shot Review (2026-03-19):** Strategie-Review + 30-Tage-Plan. Dokumentiert in `/Handover/OPUS_REVIEW_19032026.md`.
+**Linear Setup (2026-03-12):** 
+2 Teams, 5 Projekte, 35 Issues, 5 Dependencies. Vollständig dokumentiert in `/VIRON_Full_Package_v2/`.
 
----
-
-*Nächste Aktualisierung: Nach QA-Go vom Operator (QA-1 bis QA-4)*
+**Content-Pyramide Block 2–4 (2026-03-14):** 
+4 Mega-Guides + 67 Pillar-Artikel + 41 Social Pieces produziert. Dokumentiert in `/Content/INVENTAR.md`.

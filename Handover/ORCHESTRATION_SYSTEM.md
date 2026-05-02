@@ -205,9 +205,16 @@ EXTERNER SCHWARM (vom Operator direkt gesteuert)
 
 ---
 
-## 6. WAS WIR AUS DER RESEARCH WISSEN (Zusammenfassung Welle 1 + 2)
+## 6. WAS WIR AUS DER RESEARCH WISSEN (Welle 1 bis 4)
 
-Alle Research-Files liegen unter `/Work-Lab/Handover/research/`. Hier die wichtigsten Erkenntnisse zusammengefasst.
+Alle Research-Files liegen unter `/Handover/research/`. Hier die Erkenntnisse (inklusive Welle 4 Update).
+
+### WELLE 4 (April 2026): Legacy-Falle, AI-Act & Fake-Agenturen
+*(Quelle: `Handover/research/Welle-3/AI-Powered Online Marketing 2026  GEO, Agents, and Autonomous Funnels.md`)*
+- **Die Legacy-Falle:** Der DACH-Einzelhandel leidet massiv unter veralteten POS-Systemen (Vectron, Sage), die nicht mit Shopify synchronisieren. Dienstleister kämpfen mit fehlendem Kalender-Sync bei Treatwell und Doctolib. Dies sind unsere primären Ansatzpunkte für n8n-Architektur.
+- **Die Fake-Agenturen:** Der Markt ist voll von "KI-Agenturen", die ChatGPT-Workshops für 3.000 € oder überteuerte Zapier/Make-Lösungen verkaufen (die durch Volumengebühren extrem teuer werden). VIRON grenzt sich durch "Infrastructure as a Service" (n8n auf Hetzner) ab.
+- **EU AI-Act (August 2026):** Der AI Act tritt am 2. August 2026 voll in Kraft. US-Tools (OpenAI, Zapier) für automatisierte Kundenkommunikation oder Lead-Scoring werden zum massiven Compliance-Risiko (Schatten-IT). Dies ist unser stärkstes Verkaufsargument für selbstgehostete Lösungen.
+- **Outbound Trigger:** Jobportale sind voll von Stellenanzeigen ("Datenpflege in Excel", "Systemabgleich"), die eigentlich fehlende APIs beschreiben. Google Reviews klagen über Doppelbuchungen und Fehlbestände. Dies sind Trigger für kaltes Outbound.
 
 ### Wettbewerber-Landschaft (aus Marketing-research.md, 54KB)
 - 15 Competitor-Profile analysiert
