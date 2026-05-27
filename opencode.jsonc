@@ -1,0 +1,51 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "snapshot": false,
+  "permission": {
+    "edit": "allow",
+    "bash": "ask",
+    "webfetch": "allow",
+    "skill": {
+      "*": "allow"
+    }
+  },
+  "watcher": {
+    "ignore": [
+      ".git/**",
+      "node_modules/**",
+      "**/.DS_Store",
+      ".opencode/snapshots/**",
+      "**/.cursor/**",
+      "DESK/REPORTS/**",
+      "*.xlsx",
+      "*.json",
+      "*.csv"
+    ]
+  },
+  "skills": {
+    "paths": [
+      ".agents/skills"
+    ]
+  },
+  "instructions": [
+    "./AGENTS.md",
+    "./CLAUDE.md",
+    "./DOCS/skill-router.md",
+    "./DOCS/storage-router.md",
+    "./DOCS/brand-voice.md",
+    "./DOCS/icp-summary.md",
+    "./TASKS.md",
+    "./.opencode/rules/00_flow_and_session_hygiene.md",
+    "./.opencode/rules/design.md",
+    "./.opencode/rules/marketing_amnesia_drift.md",
+    "./.opencode/rules/marketing_batching.md",
+    "./.opencode/rules/marketing_funnel_design.md",
+    "./.opencode/rules/marketing_routing_stops.md",
+    "./.opencode/rules/marketing_workflow_dod.md",
+    "./.opencode/rules/sub-agents.md",
+    "./DIRECTOR/PROMPTS/active/P00_BOOTSTRAP.md",
+    "./DIRECTOR/PROMPTS/active/P01_SESSION_INIT.md",
+    "./DIRECTOR/PROMPTS/active/P02_HANDOFF.md",
+    "./DIRECTOR/SESSIONS/2026-05-25/HANDOVER.md"
+  ]
+}
