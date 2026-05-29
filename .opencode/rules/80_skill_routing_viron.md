@@ -1,58 +1,66 @@
 ---
-name: VIRON Marketing Skill Routing — Ergänzungen
-description: VIRON-spezifische Ergänzungen zum Skill-Routing: Marketing-Skills, DACH-Overrides, Content-Sequenzen, VIRON-Tool-Stack.
+name: Viron Skill Routing — Ergänzungen
+description: Viron-spezifische Ergänzungen zum Skill-Routing: Mehrere Skills, Viron-Overrides, Sequenzen, Session-Entscheidungen. Ergänzt die 4 Context-Dispatcher-Regeln.
 trigger: always_on
 scope: alle
 repo: marketing-setup
 ---
 
-# 80_skill_routing_viron.md (VIRON Marketing-Ergänzungen)
+# 80_skill_routing_viron.md (Viron-Ergänzungen)
 
 > **STATUS:** ALWAYS_ON
-> **SCOPE:** Alle Marketing-Domänen (Content, CRO, Social, Research)
+> **SCOPE:** Alle Domänen (Factory, Studio, Lab)
 > **BLOCK:** 80 — Regel-Evolution
 
-## 1. Mehrere Skills
+## 1. Die 3 Entscheidungswege beim Skill-Laden
 
-Wenn mehrere Marketing-Skills in Frage kommen: **Alle lesen** und mit dem User abstimmen, welche wir nutzen.
+Basierend auf `80_skill_routing_reading.md` §1:
 
-Die drei Content-Skills (`copywriting`, `copy-editing`, `content-strategy`) sind ein 3er-Team:
-- `content-strategy` = BASE (Was schreiben wir?)
-- `copywriting` = EXTENDS: Text produzieren (VIRON-eigen)
-- `copy-editing` = EXTENDS: Bestehenden Text verbessern (VIRON-eigen)
+1. **Komplett lesen** — Kleine Skills (< 200 Zeilen, z.B. `find-bugs`, `memory-shrink`, `git-commit`) — monolithisch, keine Router-Struktur nötig.
+2. **YAML + Kern-Sektion** — Große Skills (200-500 Zeilen, z.B. `turborepo`, `p5js`) — welche Sektion steht in `DOCS/SKILL_INDEX.md`.
+3. **YAML + gezielt** — Sehr große Skills (> 500 Zeilen, z.B. `design-taste-frontend`, `ui-ux-pro-max`) — nur die spezifische Sektion nach Task.
 
-Die VIRON-Skills bauen aufeinander auf. Nicht selbst entscheiden, sondern dem User die Wahl lassen.
+**NIEMALS blind auf Zeile 25 oder 50 springen. Jeder Skill hat eine andere Struktur.**
 
-## 2. VIRON-Overrides
+## 2. Mehrere Skills
 
-Die Marketing-Skills sind provider-agnostisch. Bei Konflikt zwischen generischem Skill-Inhalt und VIRON-Regel: **Immer die VIRON-Variante**.
+Wenn mehrere Skills in Frage kommen: **Alle lesen** und mit dem User abstimmen, welche wir nutzen. Entweder sie passen oder sie passen nicht — es gibt keine automatische Priorität die andere Skills ausschließt. Die Lade-Reihenfolge aus `71_skill_routing.md` §1 stellt nur sicher dass Abhängigkeiten korrekt aufgelöst werden.
 
-| Generischer Skill sagt... | VIRON-Regel |
-|:--|:--|
-| "Nutze GPT-4 für Copy" | Provider-agnostisch. n8n wählt via VIRON_TOOL_STACK |
-| "Poste direkt auf LinkedIn" | Immer über n8n → Metricool Webhook |
-| "Speichere Assets lokal" | Airtable Review-Base (nur Thumbnails + URLs) |
-| "Python 3.12+ nutzen" | Python 3.11 zwingend. Docker-ready. |
+Die drei Remotion-Skills sind ein 3er-Team:
+- `remotion-best-practices` = BASE (atomare Syntax)
+- `remotion-studio` = EXTENDS: Art Direction (Viron-eigen)
+- `remotion-architect` = EXTENDS: Infrastructure (Viron-eigen)
 
-## 3. Sequenz-Hinweis
+Nicht selbst entscheiden, sondern dem User die Wahl lassen.
 
-Wenn Skills aufeinander aufbauen: Verweise auf die Sequenz in der Skill Index (`DOCS/SKILL_INDEX.md`). Starte mit dem ersten Skill der Kette. Die vollständige Sequenz steht in der jeweiligen SKILL.md — nicht hier vorwegnehmen.
+## 3. Viron-Overrides
 
-## 4. Scan-Depth
+Die gepatchten Skills (`clean-architecture`, `framer-motion`, `feature-arch`, `shadcn`) enthalten die Viron-Overrides bereits inline. Die konkreten Override-Regeln stehen in `71_skill_routing.md` §2. Bei Konflikt zwischen generischem Skill-Inhalt und Viron-Regel: **Immer die Viron-Variante**.
 
-Die konkrete Lesetiefe pro Skill steht in der Skill Index (`DOCS/SKILL_INDEX.md`) — Scan-Depth-Spalte. Das ist zu befolgen.
+## 4. Sequenz-Hinweis
 
-## 5. Session-Entscheidungen
+Wenn Skills aufeinander aufbauen: Verweise auf die Sequenz in der Skill Index (`DOCS/SKILL_INDEX.md`). Starte mit dem ersten Skill der Kette. Arbeite sequentiell — nutze die Output-Dateien des vorherigen Skills als Input für den nächsten. Die vollständige Sequenz steht dort — nicht hier vorwegnehmen.
+
+## 5. Scan-Depth
+
+Die konkrete Lesetiefe pro Skill steht in der Skill Index (`DOCS/SKILL_INDEX.md`) — Scan-Depth-Spalte. Das ist zu befolgen. Nicht pauschal 30 Zeilen oder 30%. Siehe auch `80_skill_routing_reading.md` §1-2.
+
+## 6. Vendor-Skills und Patches
+
+Vendor-Skills (von `npx skills`) werden regelmäßig aktualisiert. Unsere inline-gepatchten Skills (`clean-architecture`, `framer-motion`, `feature-arch`, `shadcn`) müssen bei Updates neu gepatcht werden. Der Patch-Workflow ist in `STORAGE/SKILL_PATCH_WORKFLOW.md` dokumentiert.
+
+## 7. Session-Entscheidungen
 
 | Entscheidung | Begründung |
 |---|---|
-| `aso` nicht nutzen | Keine Mobile App im VIRON-Angebot |
-| `paywalls` nicht nutzen | Kein SaaS mit In-App Upgrades (Agentur) |
-| `churn-prevention` nicht nutzen | Projekt-basiert, keine Subscriptions |
-| 14 Skills aktiv, 19 archiviert | Token-Effizienz: nur Kernkompetenzen auto-injiziert |
-| Scan-Depth-Konzept | 30%-Scan + konkrete Zeilenangaben in Skill Index |
+| `emilkowal-animations` nicht nutzen | Duplikat von `emil-design-eng`. `emil-design-eng` ist umfassender (43 Regeln + Review-Format + Sonner + clip-path). |
+| `git-policy` gelöscht | Redundant mit `40_git_policy.md` + `git-commit`. |
+| 9 neue Skills aus opencode-core | security-review, agent-batching, find-bugs, memory-shrink, code-review, code-simplifier, git-commit, git-worktree. |
+| Scan-Depth pro Skill in SKILL_INDEX | 3 Entscheidungswege statt pauschal 30% — jeder Skill hat andere Struktur. |
+| 4 Context-Dispatcher-Regeln 1:1 übernommen | Vendor-Regeln bleiben update-safe, Viron-Ergänzungen nur hier. |
 
 ## 🔗 Light Router
 - **WELCHER Skill für WELCHEN Task** → `DOCS/SKILL_INDEX.md` (Decision Matrix mit Scan-Depth)
-- **WIE man Skills liest** → `80_skill_routing_reading.md`
+- **WIE man Skills liest** → `80_skill_routing_reading.md` (3 Entscheidungswege)
 - **Skill-Philosophie** → `80_skill_philosophy_and_workflow.md`
+- **Conflict Resolution + Lade-Reihenfolge** → `71_skill_routing.md`

@@ -9,87 +9,87 @@
 
 ## 1. Foundation (IMMER zuerst)
 
-| Skill | Trigger-Phrasen | Scan-Depth | Kombiniert mit |
-|---|---|---|---|
-| `product-marketing` | "Produktkontext", "Positionierung", "ICP", "Zielgruppe definieren" | YAML + Context (erste ~30%) | Alle Skills |
-| `customer-research` | "Kundenforschung", "Voice of Customer", "Interviews auswerten", "Pain Points" | YAML + Source Guides (erste ~40%) | `product-marketing`, `copywriting` |
-| `competitor-profiling` | "Konkurrenz analysieren", "Competitor Research", "Competitor URLs" | YAML + Templates (erste ~30%) | `product-marketing`, `content-strategy` |
+| Skill | Trigger-Phrasen | Zeilen | Refs | Scan-Depth | Kombiniert mit |
+|---|---|---|---|---|---|
+| `product-marketing` | "Produktkontext", "Positionierung", "ICP", "Zielgruppe definieren" | 241 | 0 | YAML + Sections 1-4 (Zeilen 1-80) | Alle Skills |
+| `customer-research` | "Kundenforschung", "Voice of Customer", "Interviews auswerten", "Pain Points", "Reddit mining" | 270 | 1 (`source-guides.md`) | YAML + Extraction Framework (Z. 58-91) + Persona Template (Z. 176-220) | `product-marketing`, `copywriting` |
+| `competitor-profiling` | "Konkurrenz analysieren", "Competitor Research", "Competitor URLs", "Competitor deep dive" | 411 | 2 (`templates.md`, `tool-reference.md`) | YAML + Tool-Reference komplett (references/tool-reference.md) | `product-marketing`, `content-strategy` |
 
 ---
 
 ## 2. Content & Copy
 
-| Skill | Trigger-Phrasen | Scan-Depth | Kombiniert mit |
-|---|---|---|---|
-| `content-strategy` | "Content Strategie", "Topic Clusters", "Content Planning", "Editorial Calendar" | YAML + Headless CMS Ref (erste ~30%) | `copywriting`, `customer-research` |
-| `copywriting` | "Copy schreiben", "Landing Page", "Hero Section", "CTA Copy", "Value Proposition" | YAML + Quick-Ref (erste ~30%) | `content-strategy`, `cro` |
-| `copy-editing` | "Copy verbessern", "Copy reviewen", "zu wortreich", "Content refresh" | YAML + Checklist Ref (erste ~40%) | `copywriting` |
+| Skill | Trigger-Phrasen | Zeilen | Refs | Scan-Depth | Kombiniert mit |
+|---|---|---|---|---|---|
+| `content-strategy` | "Content Strategie", "Topic Clusters", "Content Planning", "Editorial Calendar" | 365 | 1 (`headless-cms.md`) | YAML + Content Pillars (Z. 125-164) + Prioritizing (Z. 283-316) | `copywriting`, `customer-research` |
+| `copywriting` | "Copy schreiben", "Landing Page", "Hero Section", "CTA Copy", "Value Proposition" | 252 | 2 (`copy-frameworks.md`, `natural-transitions.md`) | YAML + Writing Style Rules (Z. 61-80) + Page Structure (Z. 106-146) | `content-strategy`, `cro` |
+| `copy-editing` | "Copy verbessern", "Copy reviewen", "zu wortreich", "Content refresh" | 457 | 3 (`checklist.md`, `content-refresh.md`, `plain-english-alternatives.md`) | YAML + Seven Sweeps (Z. 27-256 komplett) + Expert Panel (Z. 259-306) | `copywriting` |
 
 ---
 
 ## 3. Conversion & Pages
 
-| Skill | Trigger-Phrasen | Scan-Depth | Kombiniert mit |
-|---|---|---|---|
-| `cro` | "Conversion optimieren", "Landing Page Conversions", "Formular Conversions", "CRO" | YAML + Experiments Ref (erste ~30%) | `copywriting`, `social` |
+| Skill | Trigger-Phrasen | Zeilen | Refs | Scan-Depth | Kombiniert mit |
+|---|---|---|---|---|---|
+| `cro` | "Conversion optimieren", "Landing Page Conversions", "Formular Conversions", "CRO" | 187 | 1 (`experiments.md`), 1 (`form.md`) | YAML + CRO Analysis Framework (Z. 25-104 komplett) | `copywriting`, `social` |
 
 ---
 
 ## 4. Social & Media
 
-| Skill | Trigger-Phrasen | Scan-Depth | Kombiniert mit |
-|---|---|---|---|
-| `social` | "LinkedIn Post", "Social Media", "Content Calendar", "Repurpose Content" | YAML + Platform Limits (erste ~30%) | `copywriting`, `cro` |
-| `image` | "Bild erstellen", "Social Graphic", "Blog Hero", "Product Mockup", "AI Image" | YAML + AI Prompting Ref (erste ~30%) | `social`, `copywriting` |
-| `video` | "Video produzieren", "AI Video", "Erklärvideo", "Video Ad", "Reel" | YAML + AI Video Prompting (erste ~30%) | `social`, `image` |
+| Skill | Trigger-Phrasen | Zeilen | Refs | Scan-Depth | Kombiniert mit |
+|---|---|---|---|---|---|
+| `social` | "LinkedIn Post", "Social Media", "Content Calendar", "Repurpose Content", "Reel" | 409 | 5 (`platforms.md`, `platform-limits.md`, `post-templates.md`, `reverse-engineering.md`, `short-form-video.md`) | YAML + Platform Quick Ref (Z. 41-51) + Hook Formulas (Z. 82-106) + Short-Form Video (Z. 312-389) | `copywriting`, `cro` |
+| `image` | "Bild erstellen", "Social Graphic", "Blog Hero", "Product Mockup", "AI Image" | 340 | 1 (`ai-image-prompting.md`) | YAML + Model Comparison (Z. 54-65) + When to Use Which (Z. 68-93) | `social`, `copywriting` |
+| `video` | "Video produzieren", "AI Video", "Erklärvideo", "Video Ad", "Reel" | 342 | 1 (`ai-video-prompting.md`) | YAML + Choosing Your Approach (Z. 37-46) + AI Video Model Comparison (Z. 129-148) | `social`, `image` |
 
 ---
 
 ## 5. Growth & Launch
 
-| Skill | Trigger-Phrasen | Scan-Depth | Kombiniert mit |
-|---|---|---|---|
-| `pricing` | "Pricing Strategie", "Pricing Tiers", "Freemium", "Value Metric" | YAML + Tier Structure (erste ~30%) | `copywriting`, `cro` |
-| `launch` | "Product Launch", "Product Hunt", "Feature Release", "Launch Checklist" | YAML + Quick-Ref (erste ~30%) | `directory-submissions`, `social` |
-| `directory-submissions` | "Directory Listings", "Submit to directories", "Backlinks", "Product Hunt" | YAML + Directory List (erste ~30%) | `launch` |
+| Skill | Trigger-Phrasen | Zeilen | Refs | Scan-Depth | Kombiniert mit |
+|---|---|---|---|---|---|
+| `pricing` | "Pricing Strategie", "Pricing Tiers", "Freemium", "Value Metric" | 231 | 2 (`tier-structure.md`, `research-methods.md`) | YAML + Three Pricing Axes (Z. 42-56) + Value Metrics (Z. 70-98) + Tier Structure (Z. 101-116) | `copywriting`, `cro` |
+| `launch` | "Product Launch", "Product Hunt", "Feature Release", "Launch Checklist" | 353 | 0 | YAML + ORB Framework (Z. 31-101) + Five-Phase Launch (Z. 105-178) | `directory-submissions`, `social` |
+| `directory-submissions` | "Directory Listings", "Submit to directories", "Backlinks", "Product Hunt" | 381 | 3 (`directory-list.md`, `positioning-variations.md`, `submission-tracker-template.csv`) | YAML + Three Hard Rules (Z. 33-65) + Workflow Step 1-2 (Z. 68-106) + PH Deep Dive (Z. 135-163) | `launch` |
 
 ---
 
 ## 6. Research & Psychology
 
-| Skill | Trigger-Phrasen | Scan-Depth | Kombiniert mit |
-|---|---|---|---|
-| `marketing-psychology` | "Psychologische Trigger", "Cognitive Bias", "Persuasion", "Anchoring" | YAML + Quick-Ref (erste ~30%) | `copywriting`, `cro`, `pricing` |
+| Skill | Trigger-Phrasen | Zeilen | Refs | Scan-Depth | Kombiniert mit |
+|---|---|---|---|---|---|
+| `marketing-psychology` | "Psychologische Trigger", "Cognitive Bias", "Persuasion", "Anchoring" | 455 | 0 | YAML + Quick Reference Tabelle (Z. 424-435) + gezielt einzelne Sektion nach Challenge | `copywriting`, `cro`, `pricing` |
 
 ---
 
 ## 7. Archivierte Skills (on-demand aus ARCHIVE/skills/)
 
-| Skill | Trigger-Phrasen | Scan-Depth | Status |
-|---|---|---|---|
-| `ab-testing` | "A/B Test planen", "Split Test", "Testdauer" | YAML + Sample Size (erste ~30%) | Archiviert |
-| `ad-creative` | "Ad Creatives", "Ad Copy", "RSA Headlines", "Creative Testing" | YAML + Generative Tools (erste ~30%) | Archiviert |
-| `ads` | "Ad Kampagne", "Paid Media", "Google Ads", "Meta Ads" | YAML + Platform Setup (erste ~30%) | Archiviert |
-| `ai-seo` | "AI Search optimieren", "ChatGPT sichtbar", "AI citations" | YAML + Content Types (erste ~30%) | Archiviert |
-| `analytics` | "Tracking einrichten", "GA4", "Event Tracking", "UTM" | YAML + Event Library (erste ~30%) | Archiviert |
-| `cold-email` | "Cold Outreach", "Prospecting Emails", "Follow-Up Sequence" | YAML + Subject Lines (erste ~30%) | Archiviert |
-| `competitors` | "Vergleichsseite", "vs Page", "Alternativen Page" | YAML + Templates (erste ~30%) | Archiviert |
-| `emails` | "Email Sequence", "Welcome Flow", "Drip Campaign" | YAML + Email Types (erste ~30%) | Archiviert |
-| `lead-magnets` | "Lead Magnet", "Ebook", "Checklist", "Downloadable" | YAML + Format Guide (erste ~30%) | Archiviert |
-| `marketing-ideas` | "Marketing Ideen", "Growth Ideas", "Brainstorm" | YAML + Ideas by Category (erste ~30%) | Archiviert |
-| `onboarding` | "Onboarding Flow", "User aktivieren", "Empty States" | YAML + Experiments (erste ~30%) | Archiviert |
-| `popups` | "Popup erstellen", "Exit-Intent", "Lead-Capture Modal" | YAML + Quick-Ref (erste ~30%) | Archiviert |
-| `programmatic-seo` | "SEO Pages bauen", "Location Pages", "Template Pages" | YAML + Playbooks (erste ~30%) | Archiviert |
-| `revops` | "Lead Scoring", "Lead Routing", "MQL Definition" | YAML + Routing Rules (erste ~30%) | Archiviert |
-| `sales-enablement` | "Sales Deck", "Pitch Deck", "Objection Handling" | YAML + Deck Frameworks (erste ~30%) | Archiviert |
-| `schema` | "Schema Markup", "JSON-LD", "Rich Snippets" | YAML + Schema Examples (erste ~30%) | Archiviert |
-| `seo-audit` | "SEO prüfen", "Warum ranken wir nicht", "Technical SEO" | YAML + International SEO (erste ~30%) | Archiviert |
-| `signup` | "Signup Flow", "Registrierungsabbruch", "Trial Signup" | YAML + Quick-Ref (erste ~30%) | Archiviert |
-| `site-architecture` | "Site Struktur", "Sitemap", "Navigation", "URL-Struktur" | YAML + Navigation Patterns (erste ~30%) | Archiviert |
+| Skill | Zeilen | Refs | Scan-Depth | Status |
+|---|---|---|---|---|
+| `ab-testing` | ~266 | 2 | YAML + Sample Size (erste ~30%) | Archiviert |
+| `ad-creative` | ~362 | 2 | YAML + Generative Tools (erste ~30%) | Archiviert |
+| `ads` | ~315 | 3 | YAML + Platform Setup (erste ~30%) | Archiviert |
+| `ai-seo` | ~398 | 3 | YAML + Content Types (erste ~30%) | Archiviert |
+| `analytics` | ~309 | 3 | YAML + Event Library (erste ~30%) | Archiviert |
+| `cold-email` | ~158 | 5 | YAML + Subject Lines (erste ~30%) | Archiviert |
+| `competitors` | ~256 | 2 | YAML + Templates (erste ~30%) | Archiviert |
+| `emails` | ~310 | 3 | YAML + Email Types (erste ~30%) | Archiviert |
+| `lead-magnets` | ~neu | 2 | YAML + Format Guide (erste ~30%) | Archiviert |
+| `marketing-ideas` | ~167 | 1 | YAML + Ideas by Category (erste ~30%) | Archiviert |
+| `onboarding` | ~220 | 1 | YAML + Experiments (erste ~30%) | Archiviert |
+| `popups` | ~454 | 0 | YAML + Quick-Ref (erste ~30%) | Archiviert |
+| `programmatic-seo` | ~238 | 1 | YAML + Playbooks (erste ~30%) | Archiviert |
+| `revops` | ~343 | 4 | YAML + Routing Rules (erste ~30%) | Archiviert |
+| `sales-enablement` | ~349 | 4 | YAML + Deck Frameworks (erste ~30%) | Archiviert |
+| `schema` | ~179 | 1 | YAML + Schema Examples (erste ~30%) | Archiviert |
+| `seo-audit` | ~412 | 3 | YAML + International SEO (erste ~30%) | Archiviert |
+| `signup` | ~359 | 0 | YAML + Quick-Ref (erste ~30%) | Archiviert |
+| `site-architecture` | ~357 | 3 | YAML + Navigation Patterns (erste ~30%) | Archiviert |
 
 ---
 
-## 8. Skill-Sequenzen (Empfohlene Reihenfolge)
+## 8. Skill-Sequenzen (Workflows die aufeinander aufbauen)
 
 | Goal | Reihenfolge |
 |---|---|
@@ -101,6 +101,11 @@
 | Lead Gen | `product-marketing` → `customer-research` → `copywriting` → `cro` |
 | Pricing Page | `product-marketing` → `pricing` → `copywriting` → `cro` |
 | Competitor Analysis | `competitor-profiling` → `content-strategy` → `copywriting` |
+| Copy verbessern | `copy-editing` (allein — Seven Sweeps nacheinander) |
+| Content Refresh | `copy-editing` → `content-strategy` (Content Refresh Sektion) |
+| Research-basiert | `customer-research` → `copywriting` → `cro` |
+| Image Creation | `image` (allein — Model Comparison → Prompting → Optimization) |
+| Video Production | `video` → `social` (Distribution) |
 
 ---
 
