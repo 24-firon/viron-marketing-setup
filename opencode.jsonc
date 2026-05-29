@@ -15,10 +15,15 @@
       "node_modules/**",
       "**/.DS_Store",
       ".opencode/snapshots/**",
+      "**/.claude/**",
       "**/.cursor/**",
-      "DESK/REPORTS/**",
+      "**/.agent/**",
+      "ARCHIVE/**",
+      "IMPORT/**",
+      "DESK/**",
+      "PLAYGROUND/**",
+      "SCRATCH/**",
       "*.xlsx",
-      "*.json",
       "*.csv"
     ]
   },
@@ -30,7 +35,7 @@
   "instructions": [
     "./AGENTS.md",
     "./CLAUDE.md",
-    "./DOCS/skill-router.md",
+    "./DOCS/SKILL_INDEX.md",
     "./DOCS/storage-router.md",
     "./DOCS/brand-voice.md",
     "./DOCS/icp-summary.md",
@@ -43,9 +48,15 @@
     "./.opencode/rules/marketing_routing_stops.md",
     "./.opencode/rules/marketing_workflow_dod.md",
     "./.opencode/rules/sub-agents.md",
+    "./.opencode/rules/60_orchestration_and_sub_agents.md",
+    "./.opencode/rules/71_skill_routing.md",
+    "./.opencode/rules/80_skill_routing_reading.md",
+    "./.opencode/rules/80_skill_routing_viron.md",
+    "./.opencode/rules/80_skill_philosophy_and_workflow.md",
+    "./.opencode/rules/80_anatomy_of_complex_skill.md",
+    "./.opencode/rules/80_skill_construction_law.md",
     "./DIRECTOR/PROMPTS/active/P00_BOOTSTRAP.md",
     "./DIRECTOR/PROMPTS/active/P01_SESSION_INIT.md",
-    "./DIRECTOR/PROMPTS/active/P02_HANDOFF.md",
-    "./DIRECTOR/SESSIONS/2026-05-25/HANDOVER.md"
+    "./DIRECTOR/PROMPTS/active/P02_HANDOFF.md"
   ]
 }
