@@ -28,7 +28,6 @@ dist/
 build/
 
 # WIP Zones (SubAgent Outputs, Session Data)
-DESK/
 DIRECTOR/SESSIONS/
 
 # Python Cache
