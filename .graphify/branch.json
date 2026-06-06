@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "branchName": "main",
+  "worktreePath": "C:\\Workspace\\Repos\\Marketing-Setup",
+  "upstream": "origin/main",
+  "mergeBase": "44d5898710920d0d70e6ad5127d7a29ed2da4b6d",
+  "firstSeenHead": "efac0866f2ac9abebc6aa031740b0d07b0dfe0d1",
+  "lastSeenHead": "efac0866f2ac9abebc6aa031740b0d07b0dfe0d1",
+  "lastAnalyzedHead": "efac0866f2ac9abebc6aa031740b0d07b0dfe0d1",
+  "stale": false,
+  "staleReason": null,
+  "staleSince": null,
+  "lifecycleEvent": null,
+  "createdAt": "2026-06-04T10:09:42.724Z",
+  "updatedAt": "2026-06-04T10:09:42.724Z"
+}

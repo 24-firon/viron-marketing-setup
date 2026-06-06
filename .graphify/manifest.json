@@ -1,0 +1,1118 @@
+{
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\viron_linear_setup.py": {
+    "mtime": 1773285786000,
+    "hash": "4e833986af92369f693ec9140c0adbad"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\competitor-profiling\\SKILL.md": {
+    "mtime": 1779404191954.378,
+    "hash": "fdb7c9d3cf1b75eb512d56cb8a129955"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\competitor-profiling\\references\\templates.md": {
+    "mtime": 1779404191956.3784,
+    "hash": "876add665916e097ce074d82cea9143c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\competitor-profiling\\references\\tool-reference.md": {
+    "mtime": 1779404191957.379,
+    "hash": "f2e6dfcf8a9fcc40b626cee454dc3cbb"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\content-strategy\\SKILL.md": {
+    "mtime": 1779404191961.3772,
+    "hash": "df92708e151c26fb7575045161cde27d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\content-strategy\\references\\headless-cms.md": {
+    "mtime": 1779404191964.3816,
+    "hash": "c23df624d5363c4748fd51f23799520d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copy-editing\\SKILL.md": {
+    "mtime": 1779404191965.3794,
+    "hash": "42a13ec69f9088e6191bf3e665358fa1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copy-editing\\references\\checklist.md": {
+    "mtime": 1779404191967.3801,
+    "hash": "3986170a673518cff60eb1c8e62d3c31"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copy-editing\\references\\content-refresh.md": {
+    "mtime": 1779404191968.38,
+    "hash": "face3e2323118fe5341f1e4507b5a9a1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copy-editing\\references\\plain-english-alternatives.md": {
+    "mtime": 1779404191969.4192,
+    "hash": "af8a6c36bbc3a3f912817e47f150cf58"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copywriting\\SKILL.md": {
+    "mtime": 1779404191970.4187,
+    "hash": "23823aa0e788fd3623278c12a94fd171"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copywriting\\references\\copy-frameworks.md": {
+    "mtime": 1779404191972.4182,
+    "hash": "5c163d9a4f30d1736d83903921ace419"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\copywriting\\references\\natural-transitions.md": {
+    "mtime": 1779404191972.4182,
+    "hash": "08003a7f59fb82bea6121dbdabbfb9cf"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\cro\\SKILL.md": {
+    "mtime": 1779404191974.4163,
+    "hash": "70de95f960a2fd80edd339d83d925dba"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\cro\\references\\experiments.md": {
+    "mtime": 1779404191976.986,
+    "hash": "e2ab36d280622b496311882374993f3e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\cro\\references\\form.md": {
+    "mtime": 1779404191976.986,
+    "hash": "146961cd21222dd49b5958663a348eec"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\customer-research\\SKILL.md": {
+    "mtime": 1779404191978.9963,
+    "hash": "711fa7f389f323b81038a1113c255b82"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\customer-research\\references\\source-guides.md": {
+    "mtime": 1779404191980.996,
+    "hash": "43774e691f1db04255fa319ee2ff459b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\directory-submissions\\SKILL.md": {
+    "mtime": 1779404191982.9946,
+    "hash": "fe1ebb4b9c57f3d18e82ac27944209de"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\directory-submissions\\references\\directory-list.md": {
+    "mtime": 1779404191985.994,
+    "hash": "423bc9624375fc513debbee756236973"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\directory-submissions\\references\\positioning-variations.md": {
+    "mtime": 1779404191985.994,
+    "hash": "53e29b5ea9f84ba484f721e3f4c320f3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\image\\SKILL.md": {
+    "mtime": 1779404191996.9993,
+    "hash": "a14ada4a4d36fab28d372ea6f5ae2879"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\image\\references\\ai-image-prompting.md": {
+    "mtime": 1779404191999.999,
+    "hash": "10eed729178f801775ec6d5a7c84822c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\launch\\SKILL.md": {
+    "mtime": 1779404192000.9998,
+    "hash": "0f6a442b4f1c63933255d5441cc54bf2"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\marketing-psychology\\SKILL.md": {
+    "mtime": 1779404192012.5144,
+    "hash": "bf1744b50baf996dfd17a15aa68ada66"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\pricing\\SKILL.md": {
+    "mtime": 1779404192024.1387,
+    "hash": "5371b23c588f8ebbe6661029a1c5e594"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\pricing\\references\\research-methods.md": {
+    "mtime": 1779404192026.1387,
+    "hash": "a8415d984f125a4308d7c85eb71e2289"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\pricing\\references\\tier-structure.md": {
+    "mtime": 1779404192027.1375,
+    "hash": "d5c223605ccd0a7897f716c8e90fbe26"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\product-marketing\\SKILL.md": {
+    "mtime": 1779404192028.138,
+    "hash": "e4576c57a806f2c410696ca897f9df4a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\social\\SKILL.md": {
+    "mtime": 1779404192062.1428,
+    "hash": "b806b7ef04ba1162723fc8e5afd5b731"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\social\\references\\platform-limits.md": {
+    "mtime": 1779404192065.1436,
+    "hash": "483439ad3e39db1a93eed86fb396258f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\social\\references\\platforms.md": {
+    "mtime": 1779404192066.1438,
+    "hash": "8832bb4316df220f3ea562c707d22b90"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\social\\references\\post-templates.md": {
+    "mtime": 1779404192066.1438,
+    "hash": "bd5696ebbf74043bf9c4a5db8dd69c56"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\social\\references\\reverse-engineering.md": {
+    "mtime": 1779404192067.145,
+    "hash": "50d6ecca601991d172a61fc7e6aedf15"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\social\\references\\short-form-video.md": {
+    "mtime": 1779404192067.145,
+    "hash": "38126530b3ff1474c7d6c5ce33c2e848"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\video\\SKILL.md": {
+    "mtime": 1779404192068.653,
+    "hash": "2f249156340558c1fceb3bd2cc40be86"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agent\\skills\\video\\references\\ai-video-prompting.md": {
+    "mtime": 1779404192071.2217,
+    "hash": "98f515820e22fd79c6b0fe8c584747a0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\product-marketing.md": {
+    "mtime": 1779686763218.041,
+    "hash": "8465e3924e739903d78daf48867cca2f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\competitor-profiling\\SKILL.md": {
+    "mtime": 1779404191954.378,
+    "hash": "fdb7c9d3cf1b75eb512d56cb8a129955"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\competitor-profiling\\references\\templates.md": {
+    "mtime": 1779404191956.3784,
+    "hash": "876add665916e097ce074d82cea9143c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\competitor-profiling\\references\\tool-reference.md": {
+    "mtime": 1779404191957.379,
+    "hash": "f2e6dfcf8a9fcc40b626cee454dc3cbb"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\content-strategy\\SKILL.md": {
+    "mtime": 1779404191961.3772,
+    "hash": "df92708e151c26fb7575045161cde27d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\content-strategy\\references\\headless-cms.md": {
+    "mtime": 1779404191964.3816,
+    "hash": "c23df624d5363c4748fd51f23799520d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copy-editing\\SKILL.md": {
+    "mtime": 1779404191965.3794,
+    "hash": "42a13ec69f9088e6191bf3e665358fa1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copy-editing\\references\\checklist.md": {
+    "mtime": 1779404191967.3801,
+    "hash": "3986170a673518cff60eb1c8e62d3c31"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copy-editing\\references\\content-refresh.md": {
+    "mtime": 1779404191968.38,
+    "hash": "face3e2323118fe5341f1e4507b5a9a1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copy-editing\\references\\plain-english-alternatives.md": {
+    "mtime": 1779404191969.4192,
+    "hash": "af8a6c36bbc3a3f912817e47f150cf58"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copywriting\\SKILL.md": {
+    "mtime": 1779404191970.4187,
+    "hash": "23823aa0e788fd3623278c12a94fd171"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copywriting\\references\\copy-frameworks.md": {
+    "mtime": 1779404191972.4182,
+    "hash": "5c163d9a4f30d1736d83903921ace419"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\copywriting\\references\\natural-transitions.md": {
+    "mtime": 1779404191972.4182,
+    "hash": "08003a7f59fb82bea6121dbdabbfb9cf"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\cro\\SKILL.md": {
+    "mtime": 1779404191974.4163,
+    "hash": "70de95f960a2fd80edd339d83d925dba"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\cro\\references\\experiments.md": {
+    "mtime": 1779404191976.986,
+    "hash": "e2ab36d280622b496311882374993f3e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\cro\\references\\form.md": {
+    "mtime": 1779404191976.986,
+    "hash": "146961cd21222dd49b5958663a348eec"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\customer-research\\SKILL.md": {
+    "mtime": 1779404191978.9963,
+    "hash": "711fa7f389f323b81038a1113c255b82"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\customer-research\\references\\source-guides.md": {
+    "mtime": 1779404191980.996,
+    "hash": "43774e691f1db04255fa319ee2ff459b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\directory-submissions\\SKILL.md": {
+    "mtime": 1779404191982.9946,
+    "hash": "fe1ebb4b9c57f3d18e82ac27944209de"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\directory-submissions\\references\\directory-list.md": {
+    "mtime": 1779404191985.994,
+    "hash": "423bc9624375fc513debbee756236973"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\directory-submissions\\references\\positioning-variations.md": {
+    "mtime": 1779404191985.994,
+    "hash": "53e29b5ea9f84ba484f721e3f4c320f3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\image\\SKILL.md": {
+    "mtime": 1779404191996.9993,
+    "hash": "a14ada4a4d36fab28d372ea6f5ae2879"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\image\\references\\ai-image-prompting.md": {
+    "mtime": 1779404191999.999,
+    "hash": "10eed729178f801775ec6d5a7c84822c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\launch\\SKILL.md": {
+    "mtime": 1779404192000.9998,
+    "hash": "0f6a442b4f1c63933255d5441cc54bf2"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\marketing-psychology\\SKILL.md": {
+    "mtime": 1779404192012.5144,
+    "hash": "bf1744b50baf996dfd17a15aa68ada66"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\pricing\\SKILL.md": {
+    "mtime": 1779404192024.1387,
+    "hash": "5371b23c588f8ebbe6661029a1c5e594"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\pricing\\references\\research-methods.md": {
+    "mtime": 1779404192026.1387,
+    "hash": "a8415d984f125a4308d7c85eb71e2289"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\pricing\\references\\tier-structure.md": {
+    "mtime": 1779404192027.1375,
+    "hash": "d5c223605ccd0a7897f716c8e90fbe26"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\product-marketing\\SKILL.md": {
+    "mtime": 1779404192028.138,
+    "hash": "e4576c57a806f2c410696ca897f9df4a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\social\\SKILL.md": {
+    "mtime": 1779404192062.1428,
+    "hash": "b806b7ef04ba1162723fc8e5afd5b731"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\social\\references\\platform-limits.md": {
+    "mtime": 1779404192065.1436,
+    "hash": "483439ad3e39db1a93eed86fb396258f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\social\\references\\platforms.md": {
+    "mtime": 1779404192066.1438,
+    "hash": "8832bb4316df220f3ea562c707d22b90"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\social\\references\\post-templates.md": {
+    "mtime": 1779404192066.1438,
+    "hash": "bd5696ebbf74043bf9c4a5db8dd69c56"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\social\\references\\reverse-engineering.md": {
+    "mtime": 1779404192067.145,
+    "hash": "50d6ecca601991d172a61fc7e6aedf15"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\social\\references\\short-form-video.md": {
+    "mtime": 1779404192067.145,
+    "hash": "38126530b3ff1474c7d6c5ce33c2e848"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\video\\SKILL.md": {
+    "mtime": 1779404192068.653,
+    "hash": "2f249156340558c1fceb3bd2cc40be86"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.agents\\skills\\video\\references\\ai-video-prompting.md": {
+    "mtime": 1779404192071.2217,
+    "hash": "98f515820e22fd79c6b0fe8c584747a0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\design.md": {
+    "mtime": 1773774635130.4717,
+    "hash": "84e819fb22b8f4a4aac9c30aac68ff6a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\marketing_amnesia_drift.md": {
+    "mtime": 1773774635128.4695,
+    "hash": "07d71a5298a3454642af07011b6354da"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\marketing_batching.md": {
+    "mtime": 1773774635141.51,
+    "hash": "543062c06f434052e325f61a74ccca21"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\marketing_funnel_design.md": {
+    "mtime": 1773774635132.471,
+    "hash": "09d15584258c97b196d466cad0a37e9f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\marketing_routing_stops.md": {
+    "mtime": 1773774635135.9849,
+    "hash": "648ca3bd1e4c2f6d898f5667cad465b0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\marketing_workflow_dod.md": {
+    "mtime": 1773774635127.4644,
+    "hash": "161db6d846fa650064a518c36e4bcb81"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\rules\\sub-agents.md": {
+    "mtime": 1773774635138.488,
+    "hash": "ad2a03185d744b744538efc2328ea818"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills.txt": {
+    "mtime": 1773959080011.0747,
+    "hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\competitor-profiling\\SKILL.md": {
+    "mtime": 1779404191954.378,
+    "hash": "fdb7c9d3cf1b75eb512d56cb8a129955"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\competitor-profiling\\references\\templates.md": {
+    "mtime": 1779404191956.3784,
+    "hash": "876add665916e097ce074d82cea9143c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\competitor-profiling\\references\\tool-reference.md": {
+    "mtime": 1779404191957.379,
+    "hash": "f2e6dfcf8a9fcc40b626cee454dc3cbb"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\content-strategy\\SKILL.md": {
+    "mtime": 1779404191961.3772,
+    "hash": "df92708e151c26fb7575045161cde27d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\content-strategy\\references\\headless-cms.md": {
+    "mtime": 1779404191964.3816,
+    "hash": "c23df624d5363c4748fd51f23799520d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copy-editing\\SKILL.md": {
+    "mtime": 1779404191965.3794,
+    "hash": "42a13ec69f9088e6191bf3e665358fa1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copy-editing\\references\\checklist.md": {
+    "mtime": 1779404191967.3801,
+    "hash": "3986170a673518cff60eb1c8e62d3c31"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copy-editing\\references\\content-refresh.md": {
+    "mtime": 1779404191968.38,
+    "hash": "face3e2323118fe5341f1e4507b5a9a1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copy-editing\\references\\plain-english-alternatives.md": {
+    "mtime": 1779404191969.4192,
+    "hash": "af8a6c36bbc3a3f912817e47f150cf58"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copywriting\\SKILL.md": {
+    "mtime": 1779404191970.4187,
+    "hash": "23823aa0e788fd3623278c12a94fd171"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copywriting\\references\\copy-frameworks.md": {
+    "mtime": 1779404191972.4182,
+    "hash": "5c163d9a4f30d1736d83903921ace419"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\copywriting\\references\\natural-transitions.md": {
+    "mtime": 1779404191972.4182,
+    "hash": "08003a7f59fb82bea6121dbdabbfb9cf"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\cro\\SKILL.md": {
+    "mtime": 1779404191974.4163,
+    "hash": "70de95f960a2fd80edd339d83d925dba"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\cro\\references\\experiments.md": {
+    "mtime": 1779404191976.986,
+    "hash": "e2ab36d280622b496311882374993f3e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\cro\\references\\form.md": {
+    "mtime": 1779404191976.986,
+    "hash": "146961cd21222dd49b5958663a348eec"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\customer-research\\SKILL.md": {
+    "mtime": 1779404191978.9963,
+    "hash": "711fa7f389f323b81038a1113c255b82"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\customer-research\\references\\source-guides.md": {
+    "mtime": 1779404191980.996,
+    "hash": "43774e691f1db04255fa319ee2ff459b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\directory-submissions\\SKILL.md": {
+    "mtime": 1779404191982.9946,
+    "hash": "fe1ebb4b9c57f3d18e82ac27944209de"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\directory-submissions\\references\\directory-list.md": {
+    "mtime": 1779404191985.994,
+    "hash": "423bc9624375fc513debbee756236973"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\directory-submissions\\references\\positioning-variations.md": {
+    "mtime": 1779404191985.994,
+    "hash": "53e29b5ea9f84ba484f721e3f4c320f3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\image\\SKILL.md": {
+    "mtime": 1779404191996.9993,
+    "hash": "a14ada4a4d36fab28d372ea6f5ae2879"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\image\\references\\ai-image-prompting.md": {
+    "mtime": 1779404191999.999,
+    "hash": "10eed729178f801775ec6d5a7c84822c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\launch\\SKILL.md": {
+    "mtime": 1779404192000.9998,
+    "hash": "0f6a442b4f1c63933255d5441cc54bf2"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\marketing-psychology\\SKILL.md": {
+    "mtime": 1779404192012.5144,
+    "hash": "bf1744b50baf996dfd17a15aa68ada66"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\pricing\\SKILL.md": {
+    "mtime": 1779404192024.1387,
+    "hash": "5371b23c588f8ebbe6661029a1c5e594"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\pricing\\references\\research-methods.md": {
+    "mtime": 1779404192026.1387,
+    "hash": "a8415d984f125a4308d7c85eb71e2289"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\pricing\\references\\tier-structure.md": {
+    "mtime": 1779404192027.1375,
+    "hash": "d5c223605ccd0a7897f716c8e90fbe26"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\product-marketing\\SKILL.md": {
+    "mtime": 1779404192028.138,
+    "hash": "e4576c57a806f2c410696ca897f9df4a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\social\\SKILL.md": {
+    "mtime": 1779404192062.1428,
+    "hash": "b806b7ef04ba1162723fc8e5afd5b731"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\social\\references\\platform-limits.md": {
+    "mtime": 1779404192065.1436,
+    "hash": "483439ad3e39db1a93eed86fb396258f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\social\\references\\platforms.md": {
+    "mtime": 1779404192066.1438,
+    "hash": "8832bb4316df220f3ea562c707d22b90"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\social\\references\\post-templates.md": {
+    "mtime": 1779404192066.1438,
+    "hash": "bd5696ebbf74043bf9c4a5db8dd69c56"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\social\\references\\reverse-engineering.md": {
+    "mtime": 1779404192067.145,
+    "hash": "50d6ecca601991d172a61fc7e6aedf15"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\social\\references\\short-form-video.md": {
+    "mtime": 1779404192067.145,
+    "hash": "38126530b3ff1474c7d6c5ce33c2e848"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\video\\SKILL.md": {
+    "mtime": 1779404192068.653,
+    "hash": "2f249156340558c1fceb3bd2cc40be86"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.claude\\skills\\video\\references\\ai-video-prompting.md": {
+    "mtime": 1779404192071.2217,
+    "hash": "98f515820e22fd79c6b0fe8c584747a0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\00_flow_and_session_hygiene.md": {
+    "mtime": 1779684928813.815,
+    "hash": "1d6bf59c1fb616499971dd695c17818d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\60_orchestration_and_sub_agents.md": {
+    "mtime": 1779921578372.61,
+    "hash": "8899fc903b43102e11589af46f3f3b6c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\71_skill_routing.md": {
+    "mtime": 1780022984956.5479,
+    "hash": "fc628f95d2f127cf515f86c0e58d0a54"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\80_anatomy_of_complex_skill.md": {
+    "mtime": 1780022865514.4846,
+    "hash": "186b70dabcf66db023ee2ca82fa32b9b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\80_skill_construction_law.md": {
+    "mtime": 1780022919429.0933,
+    "hash": "79132c7cf052a6802b80b9eca9cf79b7"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\80_skill_philosophy_and_workflow.md": {
+    "mtime": 1780022900703.7021,
+    "hash": "53f9c06161bed8663cac6492dff15db4"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\80_skill_routing_reading.md": {
+    "mtime": 1780022885253.5242,
+    "hash": "693017cd9bd1a6b2a0d04ee7d613edfa"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\80_skill_routing_viron.md": {
+    "mtime": 1780022976661.5269,
+    "hash": "d55f3424b6117c6107059cdd01df8c51"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\design.md": {
+    "mtime": 1773774635130.4717,
+    "hash": "84e819fb22b8f4a4aac9c30aac68ff6a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\marketing_amnesia_drift.md": {
+    "mtime": 1773774635128.4695,
+    "hash": "07d71a5298a3454642af07011b6354da"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\marketing_batching.md": {
+    "mtime": 1773774635141.51,
+    "hash": "543062c06f434052e325f61a74ccca21"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\marketing_funnel_design.md": {
+    "mtime": 1773774635132.471,
+    "hash": "09d15584258c97b196d466cad0a37e9f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\marketing_routing_stops.md": {
+    "mtime": 1773774635135.9849,
+    "hash": "648ca3bd1e4c2f6d898f5667cad465b0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\marketing_workflow_dod.md": {
+    "mtime": 1773774635127.4644,
+    "hash": "161db6d846fa650064a518c36e4bcb81"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\.opencode\\rules\\sub-agents.md": {
+    "mtime": 1773774635138.488,
+    "hash": "ad2a03185d744b744538efc2328ea818"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\AGENTS.md": {
+    "mtime": 1773368715598.267,
+    "hash": "0e93bab2334141bf5da5d30acffc581e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ab-testing\\SKILL.md": {
+    "mtime": 1779404191909.6597,
+    "hash": "aa0ad6f40358b3d0584a8caa5411001b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ab-testing\\references\\sample-size-guide.md": {
+    "mtime": 1779404191911.6597,
+    "hash": "739ed75be56ec33feac82cf384ef2ba9"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ab-testing\\references\\test-templates.md": {
+    "mtime": 1779404191912.66,
+    "hash": "c0b494aec29d8a10c80b064be67e7f87"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ad-creative\\SKILL.md": {
+    "mtime": 1779404191913.66,
+    "hash": "617fab338be32f98bc5dc39f73780da4"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ad-creative\\references\\generative-tools.md": {
+    "mtime": 1779404191916.656,
+    "hash": "4e3958ee14e1551a025c39b9cf6d905c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ad-creative\\references\\platform-specs.md": {
+    "mtime": 1779404191916.656,
+    "hash": "d7ae838b7bc4b985ed5805e653b2d7c1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ads\\SKILL.md": {
+    "mtime": 1779404191918.655,
+    "hash": "6e214e9ea0cbe93ad7662a080c9e9c1a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ads\\references\\ad-copy-templates.md": {
+    "mtime": 1779404191920.7993,
+    "hash": "c747d83a6b61af15e7b1e1cb49268d99"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ads\\references\\audience-targeting.md": {
+    "mtime": 1779404191920.7993,
+    "hash": "355572fdf6e4e906599964a747aa46dd"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ads\\references\\conversion-tracking.md": {
+    "mtime": 1779404191921.8,
+    "hash": "39357596e8a7ab35caf10c0b0c25252f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ads\\references\\platform-setup-checklists.md": {
+    "mtime": 1779404191921.8,
+    "hash": "aa3dc04192a829e01fa76c4e5d59877d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ai-seo\\SKILL.md": {
+    "mtime": 1779404191923.7993,
+    "hash": "755498cec49ca31898d02dcf0b3adde1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ai-seo\\references\\content-patterns.md": {
+    "mtime": 1779404191926.7983,
+    "hash": "1a090d09c6e94e59bad1e8577f0a36f0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ai-seo\\references\\content-types.md": {
+    "mtime": 1779404191926.7983,
+    "hash": "0e63962c93e0cf7fe80aac58d22e3db7"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\ai-seo\\references\\platform-ranking-factors.md": {
+    "mtime": 1779404191927.798,
+    "hash": "21f58129c55a84b99abc8abd458d16d5"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\analytics\\SKILL.md": {
+    "mtime": 1779404191928.8018,
+    "hash": "fdc5be4525cbc49e5e1d336bee7434f3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\analytics\\references\\event-library.md": {
+    "mtime": 1779404191931.3684,
+    "hash": "7339d6b764cb0c1c456cc3711255eaa3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\analytics\\references\\ga4-implementation.md": {
+    "mtime": 1779404191931.3684,
+    "hash": "083be80011598cffd663282b9262ac0d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\analytics\\references\\gtm-implementation.md": {
+    "mtime": 1779404191932.3755,
+    "hash": "d4d2e8a6421685ea43183d25d5d705a3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\cold-email\\SKILL.md": {
+    "mtime": 1779404191945.3784,
+    "hash": "968793c8c001901b11c10c64fac5bdf4"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\cold-email\\references\\benchmarks.md": {
+    "mtime": 1779404191948.3755,
+    "hash": "89805bac471a7d1ab6326c80a4a712d0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\cold-email\\references\\follow-up-sequences.md": {
+    "mtime": 1779404191949.375,
+    "hash": "1359d0f8d7d57e9798f9847e1a327790"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\cold-email\\references\\frameworks.md": {
+    "mtime": 1779404191950.374,
+    "hash": "583479f3c3d870070654d497304765be"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\cold-email\\references\\personalization.md": {
+    "mtime": 1779404191950.374,
+    "hash": "e12c572baec87afc7ee69c4e6225b753"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\cold-email\\references\\subject-lines.md": {
+    "mtime": 1779404191951.3745,
+    "hash": "a9bfcdd230fce155a241612edbd1249c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\competitors\\SKILL.md": {
+    "mtime": 1779404191958.379,
+    "hash": "265b5e234999644d65337c474fe6b3c3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\competitors\\references\\content-architecture.md": {
+    "mtime": 1779404191960.3801,
+    "hash": "01d37d4606f212daceaa96a5ea76817d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\competitors\\references\\templates.md": {
+    "mtime": 1779404191960.3801,
+    "hash": "f2536442337f93c2f6248ab492db5b01"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\emails\\SKILL.md": {
+    "mtime": 1779404191987.9958,
+    "hash": "5d8fff671f76248b1c1c4a5d5051a7ea"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\emails\\references\\copy-guidelines.md": {
+    "mtime": 1779404191990.9932,
+    "hash": "b3f2f368974603dccbfce2b8d457adcc"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\emails\\references\\email-types.md": {
+    "mtime": 1779404191990.9932,
+    "hash": "db04ffbd6f263f63765df7f65541e096"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\emails\\references\\sequence-templates.md": {
+    "mtime": 1779404191991.9922,
+    "hash": "59786a271e4daf5e40a95abd7bc42d9c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\lead-magnets\\SKILL.md": {
+    "mtime": 1779404192003.9995,
+    "hash": "7e9567f257583ca161e6ad25d15625f0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\lead-magnets\\references\\benchmarks.md": {
+    "mtime": 1779404192006.001,
+    "hash": "73f15eab8f98661c75bca89182456a78"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\lead-magnets\\references\\format-guide.md": {
+    "mtime": 1779404192007.0002,
+    "hash": "569ff2a94a7c06f13ae4bf797b6fbcd8"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\marketing-ideas\\SKILL.md": {
+    "mtime": 1779404192009.5117,
+    "hash": "4980faa9fb7c7020cabb0049fc0e183b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\marketing-ideas\\references\\ideas-by-category.md": {
+    "mtime": 1779404192011.5115,
+    "hash": "8778c19522990a2267b4d9bedc4bb405"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\onboarding\\SKILL.md": {
+    "mtime": 1779404192015.51,
+    "hash": "ea0cacc6ace89012974e55cb62f1f203"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\onboarding\\references\\experiments.md": {
+    "mtime": 1779404192017.512,
+    "hash": "6ee5896596680ce6ae6ef7e1b1c04df0"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\popups\\SKILL.md": {
+    "mtime": 1779404192021.5806,
+    "hash": "26186a79800388628ae26a6dfef3fe05"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\programmatic-seo\\SKILL.md": {
+    "mtime": 1779404192030.1414,
+    "hash": "ed76e42812e476ad77484a97bc2dc680"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\programmatic-seo\\references\\playbooks.md": {
+    "mtime": 1779404192032.1394,
+    "hash": "78a581f8e37b8381b10d3b3aa1f68d03"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\revops\\SKILL.md": {
+    "mtime": 1779404192037.1375,
+    "hash": "9423b113ded6d74492589a0cc2d35b5a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\revops\\references\\automation-playbooks.md": {
+    "mtime": 1779404192039.139,
+    "hash": "dce1d22ebbc2a6d337175c3a95f58062"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\revops\\references\\lifecycle-definitions.md": {
+    "mtime": 1779404192040.1382,
+    "hash": "7a003e117368a9ce7d2f4ebee69b117f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\revops\\references\\routing-rules.md": {
+    "mtime": 1779404192041.1377,
+    "hash": "806af103187d3a9f2e0da308c48001ab"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\revops\\references\\scoring-models.md": {
+    "mtime": 1779404192042.1394,
+    "hash": "a8c9f0a21f165dbcbf780726b791c546"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\sales-enablement\\SKILL.md": {
+    "mtime": 1779404192043.141,
+    "hash": "2fc93b9d8855102ceb74e7f7c46fec78"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\sales-enablement\\references\\deck-frameworks.md": {
+    "mtime": 1779404192045.1404,
+    "hash": "0bf47ed201cf79385558a8e27ae26ed6"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\sales-enablement\\references\\demo-scripts.md": {
+    "mtime": 1779404192046.1409,
+    "hash": "0bdc1ad59cf230406d67452dc8666952"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\sales-enablement\\references\\objection-library.md": {
+    "mtime": 1779404192047.1414,
+    "hash": "c823648afd00c2d05573567c3343d430"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\sales-enablement\\references\\one-pager-templates.md": {
+    "mtime": 1779404192047.1414,
+    "hash": "37f43d6a2bb2aafcaf622807ddf06333"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\schema\\SKILL.md": {
+    "mtime": 1779404192048.1394,
+    "hash": "0ffff0f67407232221704886b4cf43df"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\schema\\references\\schema-examples.md": {
+    "mtime": 1779404192051.14,
+    "hash": "824f6ddd8ac68ff7b17fe997a79d2928"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\seo-audit\\SKILL.md": {
+    "mtime": 1779404192052.139,
+    "hash": "b8532581b6992bc2e1031acd9622e492"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\seo-audit\\references\\ai-writing-detection.md": {
+    "mtime": 1779404192053.1392,
+    "hash": "a5489f71fca1525b35d5822d3426fc90"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\seo-audit\\references\\international-seo.md": {
+    "mtime": 1779404192055.1445,
+    "hash": "f98a2faff322c07b79ac99546e7cf523"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\signup\\SKILL.md": {
+    "mtime": 1779404192056.144,
+    "hash": "abdb0d0371cfac7b39f84b97d13a19a4"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\site-architecture\\SKILL.md": {
+    "mtime": 1779404192058.1436,
+    "hash": "641b42939ba072cb62bb76ac48435ea2"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\site-architecture\\references\\mermaid-templates.md": {
+    "mtime": 1779404192060.1436,
+    "hash": "8eaecb02fb9288bfcde35ade1e174535"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\site-architecture\\references\\navigation-patterns.md": {
+    "mtime": 1779404192061.144,
+    "hash": "0a170e183b1240d436aaa430d59bb554"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\ARCHIVE\\skills\\site-architecture\\references\\site-type-templates.md": {
+    "mtime": 1779404192062.1428,
+    "hash": "361004fcc86cc2583d44a0f02ff3fe47"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\CLAUDE.md": {
+    "mtime": 1773445424902.0781,
+    "hash": "f8dc7fe7023a3ad0b33e74d97411a06c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\CONTEXT.md": {
+    "mtime": 1779849812759.9358,
+    "hash": "d99445887a1b75e2b462f975036b4a59"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DECISIONS.md": {
+    "mtime": 1779690195599.785,
+    "hash": "60f685a390371f72ff2c5f332780d5a3"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\HANDOVER_TEMPLATE.md": {
+    "mtime": 1779496745894.4775,
+    "hash": "d90c4a0652fb42ab345068609e328c88"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\IMPLEMENTATION_PLAN_TEMPLATE.md": {
+    "mtime": 1779496769232.431,
+    "hash": "8804fa5ffc0713b412f80e52fde3b537"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\P00_BOOTSTRAP.md": {
+    "mtime": 1779496529860.084,
+    "hash": "acc650842f2892a908ef3b66f4956f62"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\P01_SESSION_INIT.md": {
+    "mtime": 1779496560094.638,
+    "hash": "7afbf6a7dd156d35220df62a78828d87"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\P02_HANDOFF.md": {
+    "mtime": 1779496768138.5688,
+    "hash": "c3fe2157341315c653d8a0a82124318a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\P03_RESERVED.md": {
+    "mtime": 1779496768748.5154,
+    "hash": "2bf65083e49e96e072fb3bc131160d0e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\TEMPLATES\\TASK_ENVELOPE_TEMPLATE.md": {
+    "mtime": 1779496777941.1355,
+    "hash": "cacac54b53b7c200e8c327f448e749db"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\active\\P00_BOOTSTRAP.md": {
+    "mtime": 1779708550062.5808,
+    "hash": "dc8389728c9e15da27afa9416857bb3f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\active\\P01_SESSION_INIT.md": {
+    "mtime": 1779708561649.715,
+    "hash": "6fbbdab14b38d46041f14e28483b8939"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DIRECTOR\\PROMPTS\\active\\P02_HANDOFF.md": {
+    "mtime": 1779708567683.514,
+    "hash": "a8a058933f16eb9dc4c1836f656b1e5f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DOCS\\SKILL_INDEX.md": {
+    "mtime": 1780014791621.8972,
+    "hash": "0611b16bf28f3a1d880ab2ae01238cab"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DOCS\\brand-voice.md": {
+    "mtime": 1779686777945.8586,
+    "hash": "6af22ceccaf08244be6fba00cf521df7"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DOCS\\icp-summary.md": {
+    "mtime": 1779686784150.5198,
+    "hash": "d805dc1f7e79c20fcaf4d0a83bd5afb8"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DOCS\\skill-router.md": {
+    "mtime": 1779404247893.7378,
+    "hash": "30060472fe605979d516353ca17e2204"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\DOCS\\storage-router.md": {
+    "mtime": 1779708491948.3643,
+    "hash": "393e6290321f94dd4806dbe48ebe1cc9"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\00_Master_Executive_Summary.md": {
+    "mtime": 1779547084636.7864,
+    "hash": "1e0dcdc440ccd04f054d9ba16cab4a9c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\01_Marketing_Skill_Bundles_Evaluation.md": {
+    "mtime": 1779547092792.5967,
+    "hash": "a90ae1dd34602b1c91c3bd2d368caab7"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\02_Aktuelle_Marketing_Techniken_2026.md": {
+    "mtime": 1779547095574.6333,
+    "hash": "ee9721d505aed4b6c55c39e4a70087b9"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\03_Agent_Skill_Orchestrierung.md": {
+    "mtime": 1779547099140.0122,
+    "hash": "9372a11a1a94790731d39a487e448fa1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\04_N8N_Integration_Agent_Skills.md": {
+    "mtime": 1779547102613.6401,
+    "hash": "cf7da8c099045db068858977a2f36ded"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\05_DACH_Marketing_Spezifika.md": {
+    "mtime": 1779547105876.6567,
+    "hash": "66e9b89ea22fd48f731f62e4fa52da2f"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\06_Tool_Kategorien_Evaluierung.md": {
+    "mtime": 1779547109215.3564,
+    "hash": "0f39b5a811d2d32ea3c7df350dce2fa1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\VIRON 2026 Go-To-Market Playbook.md": {
+    "mtime": 1779546413270.7473,
+    "hash": "a26e77146932d878fda630b9903cde83"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_orchestrator_bundle\\INITIAL_PROMPT.md": {
+    "mtime": 1773464911656.565,
+    "hash": "e0e19eb8642b67b75fd0c249069af042"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_setup_complete\\AGENT_OPERATING_RULES.md": {
+    "mtime": 1779457788000,
+    "hash": "8352fd4c8215917ff5e36d1a557950f1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_setup_complete\\AGENT_PROMPTS.md": {
+    "mtime": 1779457854000,
+    "hash": "93b2b06845c1285b31841ea53d0aba27"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_setup_complete\\BERICHT_architektur_marketing_setup.md": {
+    "mtime": 1779457950000,
+    "hash": "3b7fd4b2155be24b05a0ff89142979f7"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_setup_complete\\CONTEXT.md": {
+    "mtime": 1779457788000,
+    "hash": "909d849532a26472ab75b88bcd86e095"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_setup_complete\\DECISIONS.md": {
+    "mtime": 1779457788000,
+    "hash": "ed39c7f3abe4230cfcea7df03af9953d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\marketing_setup_complete\\MILESTONES.md": {
+    "mtime": 1779457788000,
+    "hash": "e37ab1f5b679d3f7178a427d00c55eac"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\orchestration_architecture_package\\critical_validation_report.md": {
+    "mtime": 1779457240000,
+    "hash": "14b721cf6ae732560050923d86f28091"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\orchestration_architecture_package\\linear_notion_filesystem_masterplan.md": {
+    "mtime": 1779457240000,
+    "hash": "3d8d51e2023b388e73d65869a145d1ff"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\orchestration_architecture_package\\n8n_linear_notion_rollout_plan.md": {
+    "mtime": 1779457240000,
+    "hash": "9fc1d8e6986fdcaac744f4e75a766324"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\orchestration_architecture_package\\plane_evaluation_and_deployment_guide.md": {
+    "mtime": 1779457240000,
+    "hash": "28937fdd02bb3d27a91bd3797bc9171d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\orchestration_architecture_package\\plane_mcp_and_agent_integration.md": {
+    "mtime": 1779457240000,
+    "hash": "fd68260c167c90451f2240620014b01e"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\IMPORT\\orchestration_architecture_package\\repo_operating_files_templates.md": {
+    "mtime": 1779457240000,
+    "hash": "9907406d4e44f1ec0ee632d1204d3546"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\Linear_Setup_FINAL_CLEAN.md": {
+    "mtime": 1773294969324.9624,
+    "hash": "0b38156f47b999c8c3a130ee845d22fe"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\Linear_Setup_Verification_v2.md": {
+    "mtime": 1773294587133.832,
+    "hash": "7a87ccdaffcbb764c3aa55960a9d561d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\MILESTONES.md": {
+    "mtime": 1779708289600.3748,
+    "hash": "8f61e516b0028084c0a05f42abd412d8"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\MKT-1_MKT-33_Setup_Guide.md": {
+    "mtime": 1773295629205.1113,
+    "hash": "8e1aa5b57387ecf918d3dae52d55d950"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Assets\\Voice-Agent-Reaktivierung.md": {
+    "mtime": 1775061573907.145,
+    "hash": "e311b7297e0d06414773168792011f26"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\INVENTAR.md": {
+    "mtime": 1774321432547.7512,
+    "hash": "22c9f9fab63aa58cd4bc87074a9fab33"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\MG-1_KI-Automatisierung-KMUs.md": {
+    "mtime": 1774320467410.8076,
+    "hash": "9fa6417636bf2e321913a81c0aafc973"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\MG-2_Content-Produktion-mit-KI.md": {
+    "mtime": 1773439768643.7253,
+    "hash": "d662d13c129d99a40d7d8287e61309b5"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\MG-3-4_Outlines.md": {
+    "mtime": 1773456622190.8223,
+    "hash": "f4d644cb082a7aa1b631600221e02490"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\MG-3_KI-Landing-Pages.md": {
+    "mtime": 1773456869218.2915,
+    "hash": "b0c1c92683a34023bfca05250160f3a6"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\MG-4_KI-Strategie-90-Tage.md": {
+    "mtime": 1773456815476.5823,
+    "hash": "2193191c646ef5d67c79c7787d6cc998"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Pillars-MG-1.md": {
+    "mtime": 1774321187614.076,
+    "hash": "82654a4569c0dfe128821db967287f07"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Pillars-MG-2.md": {
+    "mtime": 1773439948884.6062,
+    "hash": "ba66e5d8218df97a04f19087b385b9eb"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Pillars-MG-3.md": {
+    "mtime": 1773458937775.2834,
+    "hash": "36410b61cb5f22e027314fb26d2d53f9"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Pillars-MG-4.md": {
+    "mtime": 1773458969707.505,
+    "hash": "f16b7e7bba1bbb4067d383e678215a03"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Prompt-Templates.md": {
+    "mtime": 1773456648860.1125,
+    "hash": "44120cc1717d725422e6c40e705ad2f1"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\QA-Report.md": {
+    "mtime": 1774330220338.3137,
+    "hash": "2bc076feff468e5543208d66035ed20b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Social-Content-Batch-1.md": {
+    "mtime": 1773439981002.053,
+    "hash": "9dda78a2246fd78dbd97635d85e841ec"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Social-Content-Batch-2.md": {
+    "mtime": 1773456835835.9226,
+    "hash": "eea7d3d04e37deed21cf542d685d2b64"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Social-Content-Batch-3.md": {
+    "mtime": 1773458924123.9133,
+    "hash": "c74290dfdab4a1316c6dcbb131f20b8c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Templates\\Carousel-Template.md": {
+    "mtime": 1777693593323.803,
+    "hash": "bf4f076bf1462a2048c2c1e839b84bff"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Templates\\LI-Post-Templates.md": {
+    "mtime": 1777693593324.8088,
+    "hash": "f1a0eea0a0147cc419c492633bdbd807"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Templates\\Reel-Faceless-Hook-Hold.md": {
+    "mtime": 1777693323682.9558,
+    "hash": "212ec75ad62eb0c1c258dd95f9d547a4"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Templates\\Reel-Trending.md": {
+    "mtime": 1777693593324.8088,
+    "hash": "66dd65cad7a0094d42c3d7e99ed56e76"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Templates\\TikTok-Template.md": {
+    "mtime": 1777693593325.8086,
+    "hash": "e7d50f8ab06a78c19615f331c2f79d0a"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\Templates\\n8n-Trending-Prompt.md": {
+    "mtime": 1777693593327.0757,
+    "hash": "c777554c441fa9a0ac20c8788ba306bb"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\_wip\\LI-Hook-Bibliothek-Serie-3.md": {
+    "mtime": 1777693323683.9607,
+    "hash": "e6ea31c6a66a73d8f4f6499ff01635f7"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\_wip\\LI-Nischen-ROI.md": {
+    "mtime": 1777693323684.9607,
+    "hash": "0470e05b999ebc9e8f377ca34b9627f8"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\_wip\\Pillar-Nischen.md": {
+    "mtime": 1777693323685.96,
+    "hash": "ec1a523836c66c910f8709d45c3ef541"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\_wip\\Reel-Scripts-Batch1.md": {
+    "mtime": 1777693323685.96,
+    "hash": "31cdf3ce8d7f70c7a8efb982379aa1c2"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\research\\architecture-paperclip-stack.md": {
+    "mtime": 1777720818491.4377,
+    "hash": "a6d6894a1b2f1f052fd2a774496c4329"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\CONTENT\\research\\meta-bericht-paperclip-stack.md": {
+    "mtime": 1777720790174.0566,
+    "hash": "445fac5e9d7834b193bd9a67f4b9878b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\INDEX.md": {
+    "mtime": 1779849824364.6958,
+    "hash": "4c5d04facbe5f929d3335034569fce5b"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\SKILL_PATCH_WORKFLOW.md": {
+    "mtime": 1779926311751.5825,
+    "hash": "6e8f5230679060f0d1a96284408f5a82"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\TOOLS\\tool-decisions.md": {
+    "mtime": 1779690018933.0054,
+    "hash": "7588312cd301eb2153e3215db6267e32"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\marketingskills-integration-bericht.md": {
+    "mtime": 1779685163859.6296,
+    "hash": "57e971ddcabd317b989d2dd6f91c9d43"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\STORAGE\\skill-creation-knowledge.md": {
+    "mtime": 1779926312498.911,
+    "hash": "38828e3ea76a7c1cc27cac38a31fcd4c"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\TASKS.md": {
+    "mtime": 1779708356619.732,
+    "hash": "a2968ec1eb511a4cebb4bad3fc2be093"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\VIRON_GOD_MODE_Report.md": {
+    "mtime": 1773079098000,
+    "hash": "01f62640073349d90c56279b64196a6d"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\VIRON_Linear_Verbatim_Blueprint.md": {
+    "mtime": 1773080238000,
+    "hash": "c8feffff07d3f3b44ced132e1b680e39"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\VIRON_Marketing_Linear_Campaign_Full.md": {
+    "mtime": 1773082056000,
+    "hash": "054d9a4c35f0fc2b1d661d07e3038d88"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\VIRON_Marketing_Masterplan_2026.md": {
+    "mtime": 1773079652000,
+    "hash": "1331b2af08efafea45c50bca2cda81e2"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\ai_agency_tech_stack_2026.md": {
+    "mtime": 1773079098000,
+    "hash": "07e474afa85de2f9ba57002f655d67e6"
+  },
+  "C:\\Workspace\\Repos\\Marketing-Setup\\VIRON_Full_Package_v2\\linear_mcp_master_prompt.md": {
+    "mtime": 1773079098000,
+    "hash": "3ec222554e3bf4458a4702672de1f814"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "version": 1,
+  "timestamp": "2026-06-04T11:49:30.358Z",
+  "nodes": [
+    {
+      "id": "viron_linear_setup_py",
+      "label": "viron_linear_setup.py",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L1",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_gql",
+      "label": "gql()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L18",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_get_organization_id",
+      "label": "get_organization_id()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L32",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_create_teams",
+      "label": "create_teams()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L66",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_create_labels",
+      "label": "create_labels()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L103",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_create_projects",
+      "label": "create_projects()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L170",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_get_existing_teams",
+      "label": "get_existing_teams()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L881",
+      "community": 0,
+      "community_name": "Community 0"
+    },
+    {
+      "id": "viron_linear_setup_create_issues",
+      "label": "create_issues()",
+      "file_type": "code",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L885",
+      "community": 0,
+      "community_name": "Community 0"
+    }
+  ],
+  "edges": [
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_gql",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L18",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_get_organization_id",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L32",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_get_organization_id",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_create_teams",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L66",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_create_teams",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_create_labels",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L103",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_create_labels",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_create_projects",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L170",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_create_projects",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_get_existing_teams",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L881",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_get_existing_teams",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_py",
+      "target": "viron_linear_setup_create_issues",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L885",
+      "weight": 1,
+      "_src": "viron_linear_setup_py",
+      "_tgt": "viron_linear_setup_create_issues",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_get_organization_id",
+      "target": "viron_linear_setup_gql",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L41",
+      "weight": 1,
+      "_src": "viron_linear_setup_get_organization_id",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_create_teams",
+      "target": "viron_linear_setup_gql",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L70",
+      "weight": 1,
+      "_src": "viron_linear_setup_create_teams",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_create_labels",
+      "target": "viron_linear_setup_gql",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L109",
+      "weight": 1,
+      "_src": "viron_linear_setup_create_labels",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_create_projects",
+      "target": "viron_linear_setup_gql",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L178",
+      "weight": 1,
+      "_src": "viron_linear_setup_create_projects",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_get_existing_teams",
+      "target": "viron_linear_setup_gql",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L882",
+      "weight": 1,
+      "_src": "viron_linear_setup_get_existing_teams",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    },
+    {
+      "source": "viron_linear_setup_create_issues",
+      "target": "viron_linear_setup_gql",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "VIRON_Full_Package_v2/viron_linear_setup.py",
+      "source_location": "L908",
+      "weight": 1,
+      "_src": "viron_linear_setup_create_issues",
+      "_tgt": "viron_linear_setup_gql",
+      "confidence_score": 1
+    }
+  ]
+}

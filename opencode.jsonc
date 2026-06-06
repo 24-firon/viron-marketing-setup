@@ -41,6 +41,7 @@
     "./DOCS/icp-summary.md",
     "./TASKS.md",
     "./.opencode/rules/00_flow_and_session_hygiene.md",
+    "./.opencode/rules/file_operation_safety.md",
     "./.opencode/rules/design.md",
     "./.opencode/rules/marketing_amnesia_drift.md",
     "./.opencode/rules/marketing_batching.md",
