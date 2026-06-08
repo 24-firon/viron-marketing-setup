@@ -1,16 +1,200 @@
-# AGENTS.md – VIRON Linear Setup
+# AGENTS.md — VIRON Marketing-Setup
 
-## 1. Build / Lint / Test Befehle
+**Stand:** 2026-06-07 | **Version:** 3.0
 
-### Python-Ausführung
+> **Zweck:** Diese Datei ist die kanonische Root-Readme für das Repo. Sie orchestriert alle Session-Prompts (P00 → P01 → P02), Steuerdateien, SubAgent-Workflows und Provider-Konventionen. Agents und Operatoren starten hier.
+
+---
+
+## 1. Was ist VIRON Marketing-Setup
+
+VIRON ist eine AI-Automatisierungsagentur (Ground-Zero Agency Infrastructure) für KMU im DACH-Raum. Kernleistungen: Custom n8n-Workflows, KI-Agenten, CRM-Integrationen, Content- und Marketing-Automatisierung.
+
+- **ICP:** 5–50 MA, DACH-Raum, Branchen lokaler Einzelhandel & Premium-Dienstleister, Budget 5–15 k EUR pro Projekt
+- **Tool-Stack:** n8n (Automation), Gemini/Vertex AI (LLM-Default), PostgreSQL 16 (DB), Linear (Tasks, Source-of-Truth), Notion (Wissen, read-only für Agenten), Metricool (Publishing)
+- **Tone:** Direkt, deutsch, kein Buzzword-Bullshit. Vollständige Brand-Voice: [DOCS/brand-voice.md](./DOCS/brand-voice.md)
+- **ICP-Detail:** [DOCS/icp-summary.md](./DOCS/icp-summary.md)
+
+---
+
+## 2. Die 3 Modi (Schnell / Normal / Ausführlich)
+
+Der Operator wählt pro Session einen Modus. Folge EXAKT dem passenden Modus. **Bei Unsicherheit: frag den Operator.**
+
+| Modus | Wann | Dateien (Beispiel) |
+|:------|:-----|:-------------------|
+| 🔵 **Schnell** | Session-Wechsel, nur Daten + kurzer Plan | P00 → Implementation Plan → HANDOVER |
+| 🟡 **Normal** | Standard-Session mit Tier-1-Leseliste | P00 → P01-Leseliste → Implementation Plan → HANDOVER |
+| 🟢 **Ausführlich** | Forensic / Sub-Agents / Planungs-Session | Modus 2 + Operator-Workflow, Orchestrator-Workflow, Konservierungs-Manifest, Comprehension-Gate |
+
+**Vollständige Modi-Definition (30 Dateien, 17 Ordner):** [STORAGE/TEMPLATES/HANDOVER_BUNDLE/README.md](./STORAGE/TEMPLATES/HANDOVER_BUNDLE/README.md)
+
+---
+
+## 3. Root-Level-Steuerdateien (kanonisch)
+
+| Datei | Zweck | Liest wann? |
+|:------|:------|:------------|
+| **AGENTS.md** (diese) | Repo-Orchestrierung | IMMER zuerst |
+| **CONTEXT.md** | Repo-Status, Phase, Blocker | Session-Start |
+| **MILESTONES.md** | M1–M5 Status, Erfolgskriterien | Nach AGENTS.md |
+| **TASKS.md** | Aktive Tasks, Welle 4 | Nach MILESTONES |
+| **DECISIONS.md** | ADRs, Architektur-Wahrheit | Bei "warum"-Fragen |
+| **CLAUDE.md** | VIRON AI OS Context, Tool-Stack | Bei Tool-Fragen |
+| **DOCS/brand-voice.md** | Tone of Voice, Beispiel-Hooks | Bei Copy-Tasks |
+| **DOCS/icp-summary.md** | ICP, Pain Points, Anti-ICP | Bei Strategie-Tasks |
+| **DOCS/skill-router.md** | Welcher Skill wofür | Bei Skill-Auswahl |
+| **DOCS/storage-router.md** | Wann STORAGE/ laden | Bei Wissens-Loader |
+| **DOCS/SKILL_INDEX.md** | Aktive Skills, Scan-Depth | Bei Skill-Erstellung |
+
+**Lese-Reihenfolge Session-Start:** AGENTS → CONTEXT → MILESTONES → TASKS → DECISIONS → DOCS/ (nur was gebraucht wird).
+
+---
+
+## 4. Session-Lebenszyklus (P00 → P01 → P02)
+
+### 4.1 Kanonische Pfade
+
+| Stufe | Datei | Inhalt |
+|:------|:------|:-------|
+| **P00** | `DIRECTOR/PROMPTS/active/P00_BOOTSTRAP.md` | Kontrollfragen, I/O-Lock, READ-ONLY |
+| **P01** | `DIRECTOR/PROMPTS/active/P01_SESSION_INIT.md` | SSoT-Leseliste, Prioritätskette, Stops |
+| **P02** | `DIRECTOR/PROMPTS/active/P02_HANDOFF.md` | Session-Abschluss, Übergabe |
+| **P03** | `DIRECTOR/PROMPTS/TEMPLATES/P03_RESERVED.md` | Spezial-Sessions (Security, Research, Incident) |
+
+### 4.2 Workflow
+
+```
+1. P00 (READ-ONLY) → Kontrollfragen beantworten → P00 bestanden?
+        ↓ (Operator GO)
+2. P01 (EXECUTION) → SSoT-Leseliste laden → Prioritätskette abarbeiten
+        ↓ (nach jedem P0.x: STOPP, Report, GO warten)
+3. [Arbeit M1–M5]
+        ↓
+4. P02 → Session-Handover befüllen → Commit
+        ↓
+5. P03 (nur bei Spezial-Sessions)
+```
+
+**Regel:** P01 NIEMALS vor P00. Nach jedem Meilenstein STOPP, Bericht, GO warten.
+
+---
+
+## 5. SubAgent-Workflow (4-Pfeiler-Briefing)
+
+**Wann SubAgent spawnen:** Tasks > 50 LoC, multi-step, isolierbar. Bei < 50 LoC: direkt im Haupt-Chat.
+
+**4-Pfeiler-Prompt:**
+
+1. **SCOPE** — Exakte Datei-Liste (was darf Agent anfassen, was nicht)
+2. **GOAL** — Klares Ergebnis (kein "adapt", "migrate", "clean up" — exakt was rauskommen soll)
+3. **CONSTRAINTS** — Verbote: TodoWrite FORBIDDEN, Opus FORBIDDEN, scope-violation FORBIDDEN
+4. **REPORT** — Pfad zur Report-Datei (z.B. `DESK/REPORTS/[task-id].md`) + Regel: "MUST NOT begin step N+1 before marking step N as DONE"
+
+**Report-Format:**
+
+```
+| # | Step | Status |
+|---|------|--------|
+| 1 | Create file X | DONE |
+| 2 | Edit file Y | PENDING |
+```
+
+**Vollständige Regel:** [.opencode/rules/sub-agents.md](./.opencode/rules/sub-agents.md)
+
+---
+
+## 6. Provider-Stack (KEIN Anthropic ohne Approval)
+
+| Provider | Use Case | Tag |
+|:---------|:---------|:----|
+| **OpenCode ZEN** | Copy-Writing, Kampagnen, Strategie, komplexe Tasks | Standard |
+| **OpenCode Go** | Research, Evals, Katalogisierung, Bulk-Reads | Light |
+| **NVIDIA NIM** | Fallback wenn Go/ZEN nicht verfügbar | Fallback |
+
+**Verboten ohne explizite Operator-Freigabe:**
+
+- Anthropic (Opus, Haiku, Sonnet) — Provider-Stack verbietet (DECISIONS.md ADR-005)
+- OpenAI — absolut verboten (CLAUDE.md §2)
+- Proprietäre Modellnamen hardcoden — Prompts müssen provider-agnostisch sein
+
+**Modell-Routing-Pflicht:** Bei Modell-Wechsel immer HARD STOP + GO vom Operator.
+
+---
+
+## 7. Verboten
+
+| Verboten | Quelle | Wann erlaubt |
+|:---------|:-------|:-------------|
+| OpenAI | CLAUDE.md §2 | Niemals |
+| Zapier | CLAUDE.md §2 | Nie (n8n ersetzt) |
+| Anthropic | DECISIONS.md ADR-005 | Nur mit Operator-GO |
+| Python 3.12 Features | CLAUDE.md §2 | Immer Python 3.11 |
+| File-Löschung ohne ARCHIVE | Konservierungs-Manifest | Immer archivieren |
+| Notion schreiben (Agent) | CLAUDE.md §2 | Nur Operator schreibt |
+| Linear ohne SoT-Pflege | CLAUDE.md §2 | Immer updaten |
+| Provider-Namen hardcoden | DECISIONS.md | Provider-agnostisch prompten |
+| Tasks ohne Plan | Marketing-Rules | Erst 3–7 Steps, dann GO, dann execute |
+
+---
+
+## 8. Contributing & Commits
+
+### 8.1 Commit-Format
+
+```
+<type>(<scope>): <subject> [LINEAR-XXX]
+
+<body>
+```
+
+**Types:** `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `style`
+**Scope:** Skill-Name, Datei-Pfad oder Domain (mkt, sal, ful, ops, ground0)
+**Subject:** Imperativ, max 50 Zeichen, kein Punkt am Ende
+
+### 8.2 Linear-Referenz
+
+Jeder Commit mit Task-Bezug MUSS `[LINEAR-XXX]` (z.B. `[MKT-35]`) am Subject-Ende haben.
+
+### 8.3 Branching
+
+- `main` — produktiv, nur via PR
+- `feat/<scope>-<short-desc>` — Feature-Branches
+- `fix/<scope>-<short-desc>` — Fix-Branches
+- `docs/<scope>-<short-desc>` — Doku-Branches
+
+### 8.4 Was nicht committed wird
+
+- Secrets, API-Keys, .env-Dateien
+- Base64-Bilder in Airtable
+- WIP-Content aus `STORAGE/CONTENT/_wip/` (nur finaler Content in `STORAGE/CONTENT/`)
+
+---
+
+## 9. Build / Lint / Test (VIRON Linear Setup)
+
+### 9.0 OpenCode TUI starten (MCP-Server: Linear + Notion)
+
+```bash
+# Empfohlen: Startscript laedt ENV aus .env.local, dann TUI
+pwsh -NoProfile -File scripts/start-opencode.ps1
+
+# Oder manuell in aktueller Session:
+. .\scripts\load-env.ps1
+opencode
+```
+
+ENV-Variablen aus `.env.local` werden in die Process-Scope geladen, damit MCP-Server sie via `{env:VAR}` in `opencode.jsonc` aufloesen koennen.
+
+MCP-Status pruefen: `opencode mcp list` (erwartet: `notionApi` + `linear` connected)
+
+### 9.1 Python-Ausführung
+
 ```bash
 # Hauptskript ausführen (erfordert LINEAR_API_KEY)
 python VIRON_Full_Package_v2/viron_linear_setup.py
-```
 
-### Einzelne Funktion ausführen
-```bash
-# Python REPL starten und Funktion importieren
+# Einzelne Funktion
 python -c "
 import sys
 sys.path.insert(0, 'VIRON_Full_Package_v2')
@@ -19,168 +203,71 @@ get_organization_id()
 "
 ```
 
-### Linting (falls installiert)
+### 9.2 Linting (falls installiert)
+
 ```bash
-# Black Formatierung
 black VIRON_Full_Package_v2/
-
-# Flake8 Prüfung
 flake8 VIRON_Full_Package_v2/
-
-# isort Import-Sortierung
 isort VIRON_Full_Package_v2/
 ```
 
-### Testen
+### 9.3 Testen
+
 ```bash
-# Keine Tests vorhanden. Bei Bedarf pytest verwenden:
 pytest tests/
-pytest tests/test_file.py::test_function  # Einzelner Test
+pytest tests/test_file.py::test_function
 ```
 
----
+### 9.4 Codestil
 
-## 2. Codestil Richtlinien
-
-### Imports
-- Standardbibliothek → Third-Party → Lokale Module
-- Immer `import os`, `import json` etc. (keine Kurzformen)
-- Alphabetisch sortieren innerhalb jeder Gruppe
-
-### Formatierung
-- **4 Leerzeichen** für Einrückung (keine Tabs)
-- Maximale Zeilenlänge: **100 Zeichen**
-- Leerzeilen: 2 zwischen Top-Level-Definitionen, 1 zwischen Methoden
+- 4 Leerzeichen Einrückung (keine Tabs)
+- 100 Zeichen max Zeilenlänge
+- 2 Leerzeilen zwischen Top-Level, 1 zwischen Methoden
 - Keine trailing whitespaces
-
-### Typen
-- Python 3.x (type hints empfohlen für neue Funktionen)
-- Bei GraphQL: Klar dokumentierte Query/Mutation-Strings
+- Imports: stdlib → third-party → lokal, alphabetisch
 - Konstanten: UPPER_SNAKE_CASE
-- Variablen/Funktionen: snake_case
+- Funktionen/Variablen: snake_case
+- Klassen: PascalCase
+- `try/except` mit spezifischen Exceptions, `r.raise_for_status()` bei HTTP
 
-### Namenskonventionen
-| Element | Konvention | Beispiel |
-|---------|------------|----------|
-| Dateien | snake_case | `viron_linear_setup.py` |
-| Funktionen | snake_case | `def get_organization_id()` |
-| Klassen | PascalCase | `class LinearClient:` |
-| Konstanten | UPPER_SNAKE_CASE | `API_KEY`, `HEADERS` |
-| Variablen | snake_case | `team_id`, `created_teams` |
+### 9.5 Wichtige ENV-Variablen
 
-### Fehlerbehandlung
-- `try/except` mit spezifischen Exceptions
-- Immer Fehlermeldung ausgeben: `print(f"⚠️  Fehler: {e}")`
-- GraphQL Errors: `raise Exception(f"GraphQL Error: {data['errors']}")`
-- `r.raise_for_status()` bei HTTP-Requests
+| Variable | Beschreibung |
+|:---------|:-------------|
+| `LINEAR_API_KEY` | Linear API Token (erforderlich) |
+| `VIRON-OpenCode-ReadOnly` | Notion Token (read-only) |
+| `OPENROUTER_API_KEY` | LLM-Routing |
+| `NVIDIA_NIM_API_KEY` | NVIDIA NIM Fallback |
+| `OPENCODE_GO` | OpenCode Go Provider |
 
-### GraphQL
-- Queries/Mutations als Triple-String-Variablen oben im Modul
-- Descriptive Kommentare bei komplexen Queries
-- Variablen als Dictionary übergeben
+### 9.6 Wichtige Funktionen (Viron Linear Setup Script)
 
-### Allgemeine Regeln
-- Deutsche Kommentare für deutsche Projektdokumentation
-- Englische Funktionsnamen (API-bezogen)
-- Keine magic numbers – als Konstanten definieren
-- ENV-Variablen mit Defaults: `os.environ.get("VAR", "default")`
+| Funktion | Beschreibung |
+|:---------|:-------------|
+| `gql(query, variables)` | Führt GraphQL-Request aus |
+| `get_organization_id()` | Holt Workspace-ID |
+| `create_teams()` | Erstellt Teams |
+| `create_labels()` | Erstellt Labels |
+| `create_issues()` | Erstellt Issues |
 
----
+### 9.7 Debugging
 
-## 3. Projektstruktur
-
-```
-Work-Lab/
-├── VIRON_Full_Package_v2/
-│   └── viron_linear_setup.py   # Hauptskript (946 Zeilen)
-├── *.md                        # Dokumentation
-└── *.xlsx                      # Daten/Export
-```
+- API-Key prüfen: `echo %LINEAR_API_KEY%` (Windows)
+- Response debuggen: `print(r.text)` nach Request
+- GraphQL Playground: https://api.linear.app/graphql
+- Linear Rate Limits: bei Fehlern Pausen einbauen
 
 ---
 
-## 4. Wichtige ENV-Variablen
+## 10. Versions-Hinweis
 
-| Variable | Beschreibung | Erforderlich |
-|----------|--------------|--------------|
-| `LINEAR_API_KEY` | Linear API Token | Ja |
-
----
-
-## 5. Nützliche Hinweise
-
-- Das Skript nutzt die **Linear GraphQL API** (`https://api.linear.app/graphql`)
-- API-Dokumentation: https://developers.linear.app/docs/graphql/working-with-the-graphql-api
-- Vor Ausführung: `export LINEAR_API_KEY="dein_key"`
-
----
-
-## 6. Code-Beispiele
-
-### GraphQL Query ausführen
-```python
-from viron_linear_setup import gql, HEADERS, URL
-
-query = """
-query {
-  organization {
-    id
-    name
-  }
-}
-"""
-result = gql(query)
-print(result)
-```
-
-### HTTP-Request mit Fehlerbehandlung
-```python
-import requests
-
-try:
-    r = requests.post(URL, headers=HEADERS, json=payload)
-    r.raise_for_status()
-    data = r.json()
-except requests.exceptions.RequestException as e:
-    print(f"⚠️  HTTP Fehler: {e}")
-except Exception as e:
-    print(f"⚠️  Unerwarteter Fehler: {e}")
-```
-
-### ENV-Variablen sicher abrufen
-```python
-import os
-
-API_KEY = os.environ.get("LINEAR_API_KEY")
-if not API_KEY:
-    raise ValueError("LINEAR_API_KEY nicht gesetzt")
-```
-
----
-
-## 7. Wichtige Funktionen
-
-| Funktion | Beschreibung | Zeile |
-|----------|--------------|-------|
-| `gql(query, variables)` | Führt GraphQL-Request aus | 18 |
-| `get_organization_id()` | Holt Workspace-ID | 32 |
-| `create_teams()` | Erstellt Teams | 66 |
-| `create_labels()` | Erstellt Labels | - |
-| `create_issues()` | Erstellt Issues | - |
-
----
-
-## 8. Debugging Tipps
-
-- **API-Key prüfen:** `echo $LINEAR_API_KEY` (Linux/Mac) oder `echo %LINEAR_API_KEY%` (Windows)
-- **Response debuggen:** `print(r.text)` nach einem Request
-- **GraphQL Playground:** https://api.linear.app/graphql (mit API-Key Header)
-- **Rate Limits:** Linear hat Rate Limits – bei Fehlern Pausen einbauen
-
----
-
-## 9. Wartung
-
-- Regelmäßig API-Version prüfen: https://developers.linear.app/changelog
-- Bei Änderungen an der Linear-GraphQL-API: Skript entsprechend anpassen
-- Backup der existierenden Teams/Labels vor Neuerstellung machen
+- **Version:** 3.0 (2026-06-07)
+- **Vorherige:** 2.0 (VIRON Linear Setup only, 2026-03-12)
+- **Änderungen v3.0:**
+  - AGENTS.md ist jetzt kanonische Root-Readme (vorher: nur Linear-Setup-Doku)
+  - P00-P02-Kanones definiert: `DIRECTOR/PROMPTS/active/`
+  - Provider-Stack: OpenCode Go / OpenCode ZEN / NVIDIA NIM (KEIN Anthropic ohne Approval)
+  - P00-P03 Workflow + 3-Modi-System (Schnell/Normal/Ausführlich) zentral
+  - Build/Lint/Test (vormals §1-§9) jetzt §9 als Sektion
+- **Quellen-Integration:** HANDOVER/README.md (3-Modi), DECISIONS.md (Provider), STORAGE/TEMPLATES/HANDOVER_BUNDLE/ (Master-Bundle)
+- **Compacted from:** HANDOVER/README.md, .opencode/rules/sub-agents.md, CLAUDE.md, DECISIONS.md ADR-005+006

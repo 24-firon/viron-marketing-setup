@@ -59,6 +59,8 @@ STORAGE/
 
 ## Router-Regeln
 
+**Hinweis: 4 Zonen vs. 3 Zonen** — In diesem Repo gibt es zwei Zonen-Konzepte: Die **4-Zonen-Architektur** (DOCS/STORAGE/ARCHIVE/DESK) beschreibt das Repo-Top-Level-Layout für auto-injiziertes Wissen, Payload, Archiv und WIP. Das **3-Zonen-Content-Modell** (Brain/WIP/Final) beschreibt den Content-Erstellungs-Workflow (siehe .opencode/rules/marketing_workflow_dod.md). Beide nutzen "Zone" für unterschiedliche Konzepte — nicht verwechseln.
+
 1. **Docs first, Storage second** — Prüfe zuerst ob die Info in Docs/ steht (CLAUDE.md, AGENTS.md, skill-router.md, storage-router.md). Erst wenn nicht dort: Storage laden.
 2. **Inaktive Skills nicht automatisch laden** — Skills in `STORAGE/archive/skills/` sind bewusst deaktiviert. Nur laden wenn der User explizit danach fragt oder eine Aufgabe diesen Skill erfordert.
 3. **Tool-Evaluations on demand** — `STORAGE/tools/` enthält Vergleiche und Entscheidungsgrundlagen. Nur laden bei Tool-Entscheidungen.

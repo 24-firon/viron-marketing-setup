@@ -1,6 +1,6 @@
 # CLAUDE.md — VIRON AI Operating System Context & Guidelines
 
-**Status:** Active | **Last Updated:** 2026-03-14 | **Version:** 1.0
+**Status:** Active | **Last Updated:** 2026-06-07 | **Version:** 2.0
 
 ---
 
@@ -23,8 +23,8 @@ VIRON ist ein **AI Operating System** für eine KI-Automatisierungsagentur (Grou
 
 **Operatoren:**
 - **Operator (Mensch):** Inspektor — technisch versiert, Zeitdruck, kein Fluff, lösungsorientiert
-- **Orchestrator (KI):** Claude Haiku — schnell, kostengünstig, Koordination
-- **Specialized Agents (KI):** Claude Sonnet — hochwertige Inhalte, Strategie, Komplexes
+- **Orchestrator (KI):** OpenCode ZEN — Standard-Modell, Koordination
+- **Specialized Agents (KI):** OpenCode Go — Research, Bulk-Reads, Light-Tasks
 
 ---
 
@@ -53,9 +53,9 @@ VIRON ist ein **AI Operating System** für eine KI-Automatisierungsagentur (Grou
 ```
 Operator (Mensch — Inspektor)
     │
-    └── Orchestrator (Claude Haiku)
+    └── Orchestrator (OpenCode Go)
             │
-            └── Content Engine (Claude Sonnet)
+            └── Content Engine (OpenCode ZEN)
                     │
                     ├── VIDEO SPECIALIST
                     │   ├── MKT-4: Organic Faceless Video Engine
@@ -72,7 +72,7 @@ Operator (Mensch — Inspektor)
 | **Layer** | **Tool** | **Use Case** | **Constraints** |
 |-----------|----------|-------------|-----------------|
 | **Orchestrierung** | n8n (self-hosted Hetzner) | Alle Workflows, Automatisierung | STANDARD. Immer. Keine Alternativen. |
-| **LLM-Routing** | Gemini/Vertex AI (DEFAULT) | Erste Wahl, $300 Credit, kosteneffizient | Fallback: Claude Haiku / Sonnet |
+| **LLM-Routing** | Gemini/Vertex AI (DEFAULT) | Erste Wahl, $300 Credit, kosteneffizient | Fallback: OpenCode Go / OpenCode ZEN |
 | **Datenbank** | PostgreSQL 16 (Hetzner) | Produktivdaten, Workflows, Logs | Primary DB. Persistenz. Backups täglich. |
 | **Metadaten** | Supabase (Free Tier) | Metadata-Sync, ggf. Realtime-Events | Optional, nicht kritisch. |
 | **Review-Interface** | Airtable (Free Tier) | Visual Review, Content-Staging | Max 1.000 Records pro Base. Archivierungsregeln bei 700+. |
@@ -81,12 +81,14 @@ Operator (Mensch — Inspektor)
 | **Dokumentation** | Notion | Wissensbasis, Architecture Docs, Foundation Blocks | Lesen, nicht updaten (nur Operator). |
 | **Code-Runtime** | Python 3.11 + Docker | Scripts, Custom-Logik in n8n | NICHT 3.12. Immer Docker-ready. |
 | **MCP-First** | Model Context Protocol Server Stack | Zentrale Kommunikation zwischen Agenten | Zentraler Koordinationspunkt. |
+| **Provider-Auswahl** | OpenCode ZEN (default) + OpenCode Go (light) + NVIDIA NIM (fallback). Anthropic VERBOTEN ohne Operator-Approval. | DECISIONS.md ADR-005 |
 
 **ABSOLUT VERBOTEN:**
-- ❌ OpenAI (Claude only für Komplexes)
+- ❌ OpenAI (OpenCode ZEN only für Komplexes)
 - ❌ Zapier (n8n is standard)
 - ❌ Proprietäre LLMs hardcoden
 - ❌ Manuelle Datei-Transfers
+- ❌ Anthropic (Opus/Haiku/Sonnet) ohne Operator-Approval — DECISIONS.md ADR-005
 
 ---
 
@@ -145,7 +147,7 @@ Operator (Mensch — Inspektor)
 | **Task** | **Primary Tool** | **Secondary** | **Review** |
 |----------|-----------------|---------------|-----------|
 | Content Generator starten | n8n Workflow | Vertex AI / Gemini | Airtable |
-| Prompt verfeinern | Claude Sonnet (this session) | — | — |
+| Prompt verfeinern | OpenCode ZEN (this session) | — | — |
 | Video-Thumbnail generieren | n8n → Vertex AI | — | Airtable |
 | Social Posts schedulen | n8n → Metricool Webhook | — | Metricool Dashboard |
 | Kampagnen-Tracking | n8n → PostgreSQL | Supabase Sync (optional) | Linear Reports |
@@ -170,7 +172,9 @@ Operator (Mensch — Inspektor)
 
 ---
 
-## 5. LLM-ROUTING (Wann welches Modell?)
+## 5. LLM-ROUTING (KEIN Anthropic ohne Approval — ADR-005)
+
+**Provider-Stack (siehe DECISIONS.md ADR-005):** OpenCode ZEN (default) → OpenCode Go (light) → NVIDIA NIM (fallback). Anthropic (Opus/Haiku/Sonnet) ist VERBOTEN ohne explizite Operator-Freigabe.
 
 **Entscheidungsalgorithmus:**
 
@@ -181,23 +185,23 @@ Task kommt rein
     │    │
     │    ├─ Bulk-Content-Gen (100+ Posts)? → Vertex AI
     │    │
-    │    └─ Echtzeit-Scheduling? → Claude Haiku
+    │    └─ Echtzeit-Scheduling? → OpenCode Go
     │
-    ├─ Strategisch + komplex? → Claude Sonnet
+    ├─ Strategisch + komplex? → OpenCode ZEN
     │    │
-    │    ├─ Mega-Guides schreiben? → Sonnet + n8n
+    │    ├─ Mega-Guides schreiben? → OpenCode ZEN + n8n
     │    │
-    │    ├─ System-Prompt verfeinern? → Sonnet (lokal)
+    │    ├─ System-Prompt verfeinern? → OpenCode ZEN (lokal)
     │    │
-    │    └─ Video-Skripte? → Sonnet
+    │    └─ Video-Skripte? → OpenCode ZEN
     │
-    └─ Ultra-schnelle Orchestrierung? → Claude Haiku
+    └─ Ultra-schnelle Orchestrierung? → OpenCode Go
          │
          └─ Workflow-Koordination
          └─ Task-Delegation
 
 → NIEMALS: OpenAI hardcoden
-→ FALLBACK: Wenn Gemini-Credit aufgebraucht → Haiku
+→ FALLBACK: Wenn Gemini-Credit aufgebraucht → OpenCode Go
 ```
 
 ### Modell-Profile
@@ -205,8 +209,8 @@ Task kommt rein
 | **Modell** | **Use Case** | **Speed** | **Quality** | **Cost** |
 |-----------|------------|---------|----------|----------|
 | **Gemini/Vertex** | Bulk Content Gen, Media Gen | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | $0 (Credit) |
-| **Claude Sonnet** | Strategy, Writing, Complex Logic | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | $$ (geplant) |
-| **Claude Haiku** | Orchestrierung, Quick Tasks | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | $ (günstig) |
+| **OpenCode ZEN** | Strategy, Writing, Complex Logic | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | $$ (geplant) |
+| **OpenCode Go** | Orchestrierung, Quick Tasks | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | $ (günstig) |
 
 ---
 
@@ -395,7 +399,7 @@ model = "gpt-4-turbo"
 
 # RICHTIG:
 prompt = "Generate high-quality image. Model selection via n8n config."
-# n8n entscheidet dann: Vertex AI vs. Claude vs. Gemini
+# n8n entscheidet dann: Vertex AI vs. Gemini vs. OpenCode ZEN
 ```
 
 ❌ **Airtable mit File-Attachments füllen**
@@ -441,8 +445,8 @@ if task_type == "video":
 - ✅ "n8n Workflow triggert Airtable-Review mit Thumbnails, nach Approval publiziert Metricool via Webhook"
 
 ❌ **Über Modelle reden statt arbeiten**
-- ❌ "Sollen wir Gemini oder Claude nehmen?"
-- ✅ "Gemini ist cheaper, Sonnet für Qualität — welche Metrik ist wichtiger für diesen Task?"
+- ❌ "Sollen wir Gemini oder OpenCode ZEN nehmen?"
+- ✅ "Gemini ist cheaper, OpenCode ZEN für Qualität — welche Metrik ist wichtiger für diesen Task?"
 
 ---
 
@@ -546,7 +550,7 @@ Beispiel: MKT-CCE-Layer1-v2.0
 Trigger
   └─ Input Validation (Airtable / PostgreSQL)
   └─ Provider Selection (Logic basierend auf VIRON_TOOL_STACK)
-  └─ API Call (Gemini / Vertex AI / Claude)
+  └─ API Call (Gemini / Vertex AI / OpenCode ZEN)
   └─ Output Transform (Standardformat)
   └─ Database Update (PostgreSQL / Airtable)
   └─ Webhook Trigger (falls Publishing nötig, z.B. Metricool)

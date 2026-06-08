@@ -1,5 +1,8 @@
 # P00 — BOOTSTRAP & COGNITIVE STRESS TEST
 
+> ⚠️ WARNUNG: Viron V6 Phase Gamma Template. NICHT kanonisch für Marketing-Setup-Repo.
+> Für dieses Repo: `DIRECTOR/PROMPTS/active/P00_BOOTSTRAP.md` nutzen (10 Marketing-Setup-Fragen).
+
 > **SYSTEM-DOKTRIN OVERRIDE**
 > Du betrittst eine Viron-V6-Session. Bevor du auch nur einen Finger rührst, musst du beweisen, dass dein Kontextfenster die injizierte Architektur-Realität durchdrungen hat.
 >

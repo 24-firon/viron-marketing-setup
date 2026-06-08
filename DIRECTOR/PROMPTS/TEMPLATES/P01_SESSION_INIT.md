@@ -1,5 +1,8 @@
 # P01 — SESSION INIT & EXECUTION INSTRUCTIONS
 
+> ⚠️ WARNUNG: Viron V6 Phase Gamma Template. NICHT kanonisch für Marketing-Setup-Repo.
+> Für dieses Repo: `DIRECTOR/PROMPTS/active/P01_SESSION_INIT.md` nutzen (Marketing-Setup-SSoT-Leseliste).
+
 > **P00 BESTANDEN.** Du hast den kognitiven Stresstest bestanden. Jetzt beginnt die operative Arbeit.
 >
 > **P01 ist EXECUTION-MODE.** Lesen, Schreiben, Bash — alles erlaubt, aber diszipliniert. Kein Blindflug.

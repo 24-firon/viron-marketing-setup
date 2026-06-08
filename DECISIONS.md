@@ -1,6 +1,6 @@
 # DECISIONS.md — VIRON Marketing-Setup
 
-**Stand:** 2026-05-25
+**Stand:** 2026-06-07
 
 ---
 
@@ -83,6 +83,50 @@
 - **Warum diese Entscheidung:** Upstream-Support für v1.x endet. Neue v2.0-Skills (marketing-psychology, competitor-profiling, image, video) sind für VIRON hochrelevant. Konsolidierung von `page-cro` + `form-cro` → `cro` reduziert Redundanz.
 - **Tradeoffs:** Alle internen Referenzen und Workflows mussten auf v2.0-Namen umgestellt werden. Kurze Downtime während des Upgrades. skills-lock.json enthält noch v1.x-Hashes (32 Einträge, teils mit v1-Namen) — muss bereinigt werden.
 - **Folgen:** `DOCS/skill-router.md` enthält Mapping-Tabelle v1→v2 für zukünftige Referenzen. Bei erneutem Upstream-Upgrade muss der Integrationsbericht als Vergleich herangezogen werden. Keine v1.x-Skills mehr im Repo (weder aktiv noch archiviert).
+
+---
+
+### ADR-005: Provider-Stack — NVIDIA NIM / OpenCode Go / OpenCode ZEN, KEIN Anthropic
+
+- **Titel:** LLM-Provider-Stack für VIRON-Agenten ohne Anthropic-Abhängigkeit
+- **Datum:** 2026-06-07
+- **Status:** Akzeptiert
+- **Kontext:** `CLAUDE.md` (Stand 2026-03-14) erwähnt Claude Haiku und Claude Sonnet als primäre Modelle. Realität in `.env.local` (Stand 2026-06-07): KEIN `ANTHROPIC_API_KEY`, dafür `OPENROUTER_API_KEY`, `NVIDIA_NIM_API_KEY`, `VERTEX_PROJECT`, `OPENCODE_GO`. User-Präferenz explizit: "Wir nutzen kein Anthropic." Es muss klargestellt werden, welche Provider authorisiert sind.
+- **Entscheidung:** Drei Provider verfügbar und authorisiert:
+  - **NVIDIA NIM** (Multi-Model via `NVIDIA_NIM_API_KEY`) — Universell einsetzbar, primärer Fallback
+  - **OpenCode Go** (schnell, günstig via `OPENCODE_GO`) — Standardtasks, Research, Evals
+  - **OpenCode ZEN** (stark, via OpenCode) — Strategie, SKILL.md-Schriften, qualitativ kritische Tasks
+
+  Anthropic-Modelle (Opus, Haiku, Sonnet) sind **explizit ausgeschlossen** — auch wenn sie in CLAUDE.md noch referenziert werden. Bei jedem SubAgent-Prompt MUSS `FORBIDDEN: TodoWrite, Anthropic-Modelle (Opus/Haiku/Sonnet), scope-violation` enthalten sein.
+
+  SubAgent-Modell-Empfehlungen: OpenCode Go für strukturierte Tasks (Research, Evals, Listen-Arbeit), OpenCode ZEN für Schreib-Tasks (SKILL.md, Copy, Strategie), NVIDIA NIM als Fallback. MCP-Calls (Linear/Notion lesen) brauchen kein Model-Token.
+
+- **Verworfene Alternative:** Anthropic (Claude Opus/Haiku/Sonnet) wie in CLAUDE.md §2 vorgeschlagen.
+- **Warum diese Entscheidung:** User-Preference + `.env.local` Realität. Kein Anthropic-Account, keine Anthropic-Billing-Relationship. NVIDIA NIM bietet multi-model Flexibilität. OpenCode Go/ZEN sind auf VIRON zugeschnitten.
+- **Tradeoffs:** CLAUDE.md §2 ist jetzt veraltet und referenziert nicht-existente Modelle. Bei nächstem CLAUDE.md-Refresh muss §2 bereinigt werden. SubAgents müssen Model-Auswahl pro Task selbst entscheiden (Operator gibt Header mit).
+- **Folgen:** `DESK/HANDOVER/lessons/2026-06-07-provider-stack.md` dokumentiert Details (Token-Mapping, MCP-Timeout, Escalation-Pattern, Naming-Convention für SubAgent-Header). HANDOVER.md §8 enthält Model-Orchestrierungs-Matrix. CLAUDE.md §2 muss bei nächstem Refresh angepasst werden.
+
+---
+
+### ADR-006: MCP-Setup — Linear + Notion, local mode, 60s Timeout
+
+- **Titel:** Model Context Protocol Server für Linear und Notion in OpenCode integriert
+- **Datum:** 2026-06-07
+- **Status:** Akzeptiert
+- **Kontext:** VIRON-Agenten brauchen Live-Zugriff auf Linear (Source of Truth für Tasks) und Notion (Wissensbasis, read-only). MCP-Server bieten standardisierte Schnittstelle. Es gibt zwei Modi: local (npx-basierte Server) und remote (HTTP-OAuth). Die initiale Frage war: welcher Server, welcher Modus, welche Token-Quelle.
+- **Entscheidung:** Zwei MCP-Server in `opencode.jsonc` konfiguriert:
+
+  - **Linear** (`mcp.linear`): `@tacticlaunch/mcp-linear` v1.1.2, local mode (`npx -y`). Voller read+write Zugriff. Token-Mapping: `LINEAR_API_TOKEN` ← `{env:LINEAR_API_KEY}` (Naming-Mismatch zwischen User-Env-Var und MCP-Expected-Var).
+  - **Notion** (`mcp.notionApi`): `@notionhq/notion-mcp-server` v2.2.1, local mode. **Read-only** via dediziertem Token `VIRON-OpenCode-ReadOnly` (NICHT `NOTION_API_KEY`). Token-Mapping: `NOTION_TOKEN` ← `{env:VIRON-OpenCode-ReadOnly}`.
+
+  Timeout auf **60000ms** (default 10s reicht nicht für ersten `npx -y`-Download der Pakete). Verifiziert via `opencode mcp list` — beide zeigen `✓ connected`.
+
+  ENV-Loader `scripts/load-env.ps1` macht Backslash-Unescape der `.env.local`-Werte (`lin\_api\_...` → `lin_api_...`) weil Tokens Shell-Escapes haben. Ohne Unescape scheitert JSONC-Parse in `opencode.jsonc`.
+
+- **Verworfene Alternative:** Remote-MCP mit OAuth (Notion), Anthropic-Claude-Code-MCP, direkter `linear` CLI ohne MCP.
+- **Warum diese Entscheidung:** Local MCP ist schneller eingerichtet (kein OAuth-Flow), nutzt existierende Tokens, OpenCode-MCP-Integration ist nativ. Linear-MCP von `@tacticlaunch` ist die modernste Option (MCP-native resources + prompts). Notion-MCP offiziell von Notion. Read-only-Token enforces CLAUDE.md §3 (Notion read-only für Agenten).
+- **Tradeoffs:** Bei Notion-MCP-Updates muss opencode.jsonc angepasst werden. Token-Quelle ist `.env.local` — bei zentraler Secret-Management-Migration (z.B. Vault) muss Loader angepasst werden. `npx -y`-Downloads bei Erstinstallation brauchen Netzwerk.
+- **Folgen:** `HANDOVER/HANDOVER.md` §2 dokumentiert MCP-Status, Token-Mapping, 3-Zonen-Modell-Policy. `scripts/load-env.ps1` + `scripts/start-opencode.ps1` müssen VOR jeder OpenCode-Session geladen werden. `AGENTS.md` Sektion 0 enthält den Start-Befehl. SubAgent-Prompts dürfen `use linear` / `use notionApi` triggern, aber Notion-Mutationen sind durch Token-Policy blockiert.
 
 ---
 

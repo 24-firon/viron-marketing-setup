@@ -1,5 +1,8 @@
 # P02 — HANDOFF: ZUSTANDSÜBERGABE AN NÄCHSTEN AGENTEN
 
+> ⚠️ WARNUNG: Viron V6 Phase Gamma Template. NICHT kanonisch für Marketing-Setup-Repo.
+> Für dieses Repo: `DIRECTOR/PROMPTS/active/P02_HANDOFF.md` nutzen (Marketing-Setup-Session-Übergabe).
+
 > **P01 abgeschlossen.** Diese Datei dokumentiert den vollständigen Zustand der abgeschlossenen Session für den nahtlosen Übergang an den nächsten Agenten.
 
 ---

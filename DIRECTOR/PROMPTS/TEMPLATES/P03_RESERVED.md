@@ -1,5 +1,8 @@
 # P03 — RESERVED: SPEZIAL-SESSIONEN
 
+> ⚠️ WARNUNG: Viron V6 Phase Gamma Template. NICHT kanonisch für Marketing-Setup-Repo.
+> Für dieses Repo: `DIRECTOR/PROMPTS/TEMPLATES/P03_RESERVED.md` — aber nur bei Spezial-Sessions.
+
 > **RESERVIERT FÜR SPEZIAL-EINSATZZWECKE.** Dieses Template wird NUR für folgende Session-Typen verwendet:
 
 ---

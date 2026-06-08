@@ -1,6 +1,6 @@
 # CONTEXT.md — VIRON Marketing-Setup
 
-**Stand:** 2026-05-25 | **Version:** 2.0
+**Stand:** 2026-06-07 | **Version:** 2.1
 
 ---
 
@@ -14,7 +14,7 @@
 ---
 
 ## Current status
-- **Status summary:** Aufbauphase. Skills v2.0.1 installiert, 14 aktiv, 19 archiviert. `opencode.jsonc` konfiguriert (15 instructions). DOCS/- und STORAGE/-Struktur steht. Linear-Tickets für aktive Marketing-Arbeitspakete existieren.
+- **Status summary:** Aufbauphase. Skills v2.0.1 installiert, 14 aktiv, 19 archiviert. `opencode.jsonc` konfiguriert (16 instructions). DOCS/- und STORAGE/-Struktur steht. Linear-Tickets für aktive Marketing-Arbeitspakete existieren.
 - **Current phase:** Phase 1 (Foundation) abgeschlossen. Phase 2 (Task-Checklisten) in Arbeit — SubAgent-Reports laufen in DESK/REPORTS/.
 - **Active branch or release line:** main
 - **Last major verified milestone:** M1 Foundation Stand (DOCS/, STORAGE/, opencode.jsonc, Skills-Priorisierung)
@@ -49,7 +49,7 @@ marketing-setup/
 ├── TASKS.md                ← Aktive Task-Liste
 ├── AGENTS.md               ← Agent-Setup-Dokumentation
 ├── CLAUDE.md               ← VIRON AI OS Context & Guidelines
-├── opencode.jsonc          ← 19 instructions, .agents/skills Pfad
+├── opencode.jsonc          ← 16 instructions, .agents/skills Pfad
 ├── DIRECTOR/               ← Session-Steuerung & Prompt-System
 │   ├── PROMPTS/
 │   │   ├── active/         ← Aktuelle Session-Prompts (auto-injiziert)
@@ -133,6 +133,7 @@ marketing-setup/
 ---
 
 ## Last completed items
+0. 2026-06-07 — AGENTS.md als kanonische Root-Readme restrukturiert (v3.0). MCP-Server Linear+Notion konfiguriert (ADR-006). Provider-Stack finalisiert (ADR-005). 4 No-Touch-Lessons angelegt (DESK/HANDOVER/lessons/).
 1. 2026-05-25 — Phase 2 Reports erstellt: 3 SubAgent-Reports (N8N-MCP, Tool-Decisions, DACH-Skills) + 3 Steuerdateien (CONTEXT/MILESTONES/DECISIONS).
 2. 2026-05-25 — Handover-Session angelegt: DESK/HANDOVER/sessions/session-2026-05-25.md, Implementation Plan, Task-Envelope für P0-DACH-Skills.
 3. 2026-05-22 — Skills v2.0.1 aus coreyhaines31/marketingskills installiert: 14 aktiv, 19 archiviert, 7 aussortiert.
