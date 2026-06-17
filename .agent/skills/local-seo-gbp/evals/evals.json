@@ -1,0 +1,83 @@
+{
+  "skill_name": "local-seo-gbp",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Wir haben ein Café in Hamburg-Altona, sind aber bei Google Maps kaum zu finden. Wir haben ein GBP-Profil aber das ist seit 2 Jahren nicht aktualisiert worden. Was sollen wir tun?",
+      "expected_output": "Should diagnose the obvious problem: stale GBP signals inactivity to the algorithmus. Should propose: (1) immediate profile refresh (hours, photos, description with local keywords like 'Café Hamburg Altona'), (2) start weekly GBP-Posts (What's New, Events), (3) systematic review acquisition via QR-code on receipts, (4) submission to local directories (Das Örtliche, Gelbe Seiten — Yelp ist US-zentrisch, in DACH weniger relevant, TODO M2b ob empfohlen). Should mention NAP consistency check across all listings. Should NOT promise specific timeline (8-12 weeks is Spec-Drift, marked as TODO in SKILL.md).",
+      "assertions": [
+        "Diagnoses stale GBP as primary issue",
+        "Proposes immediate profile refresh",
+        "Suggests weekly GBP-Posts cadence",
+        "Proposes review acquisition via QR-code",
+        "Does NOT promise specific ranking timeline"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Wir expandieren von Deutschland nach Österreich und Schweiz. Brauchen wir separate GBP-Profile?",
+      "expected_output": "Should clarify GBP is country-specific: yes, separate profiles per country (DE, AT, CH) and ideally per Standort. Should mention hreflang implementation across website versions (de-de, de-at, de-ch). Should mention local directories by country (Herold.at for AT, local.ch for CH). Should warn about NAP consistency challenge when expanding. Should recommend staggered rollout: 1 country at a time.",
+      "assertions": [
+        "Recommends separate GBP profiles per country",
+        "Mentions hreflang implementation",
+        "Lists country-specific directories",
+        "Warns about NAP consistency challenge",
+        "Recommends staggered rollout"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Wir haben 47 Google-Reviews mit Schnitt 4.2. 8 davon sind 1-Stern. Was machen wir mit den negativen?",
+      "expected_output": "Should never recommend deleting or hiding reviews. Should classify reviews into 4.2 baseline (good), 1-star (8 = 17% — manageable but needs attention). Should propose professional response templates per type: positive (4-5 stars), neutral (3 stars), negative (1-2 stars). Should emphasize that the response itself signals to future readers. Should suggest root-cause analysis: are 8 negative reviews about same issue? Should propose systematic review-acquisition to dilute negative ratio (target 100+ reviews over 6 months).",
+      "assertions": [
+        "Does NOT recommend deleting negative reviews",
+        "Calculates negative ratio (8/47 = 17%)",
+        "Proposes response templates per type",
+        "Emphasizes response as signal to future readers",
+        "Suggests root-cause analysis of 1-stars"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Kunde ist Handwerksbetrieb in Köln, 8 Mitarbeiter, will 'ganz oben bei Google' für 'Klempner Köln'. Was kostet das?",
+      "expected_output": "Should explain local ranking factors per SKILL.md Step 2 (GBP completeness, reviews, NAP, etc.). Should NOT make ranking guarantees. Should NOT promise specific timeline (3-6 months is Spec-Drift). Should explain that 'ganz oben' depends on competition density in Köln. Should refer to the Local Visibility Booster service idea (Spec-Wortlaut) but flag that concrete package with deliverables is TODO. Should acknowledge that pricing depends on scope (one-time optimization vs. ongoing Pflege).",
+      "assertions": [
+        "Does NOT make ranking guarantees",
+        "References SKILL.md Step 2 ranking factors",
+        "Does NOT promise specific timeline",
+        "Acknowledges local competition dependency",
+        "Flags Local Visibility Booster package as TODO"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Unser Kunde ist Steuerberater. Macht es Sinn, ein eigenes GBP-Profil pro Kanzlei-Standort zu haben (er hat 3 in Bayern)?",
+      "expected_output": "Should recommend separate GBP profiles per physical location (Google policy: one profile per location, unless co-located). Should clarify that GBP is for physical businesses; Steuerberater typically qualifies as local service. Should warn against using single profile for multiple locations (against Google guidelines, gets suspended). Should recommend consistent NAP across all 3 profiles. Should mention that each profile can rank independently for '[Standort] + Steuerberater' queries.",
+      "assertions": [
+        "Recommends separate profiles per physical location",
+        "Cites Google one-profile-per-location policy",
+        "Warns against single profile misuse",
+        "Recommends NAP consistency across profiles",
+        "Explains per-location ranking opportunity"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Wir wollen Branchenverzeichnis-Submissions outsourcen. Worauf müssen wir achten damit wir keinen Schaden anrichten?",
+      "expected_output": "Should warn about: (1) NAP-consistency #1 risk, (2) low-quality directories that look spammy, (3) duplicate submissions creating fragmentation, (4) paid-only directories with no real traffic. Should recommend quality over quantity: 8-12 high-quality DACH directories > 50 random ones. Should suggest manual submission or vetted service (Yext, localo). Should require monthly audit of existing listings for accuracy. Should never recommend mass-submission tools.",
+      "assertions": [
+        "Warns about NAP-consistency risk",
+        "Warns about low-quality directories",
+        "Recommends 8-12 quality over 50 random",
+        "Suggests vetted services (Yext, localo)",
+        "Never recommends mass-submission tools"
+      ],
+      "files": []
+    }
+  ]
+}

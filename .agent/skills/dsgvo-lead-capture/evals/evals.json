@@ -1,0 +1,83 @@
+{
+  "skill_name": "dsgvo-lead-capture",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Ich brauche ein Kontaktformular auf meiner Website. Aktuell hab ich ein einfaches Name + Email + Nachricht Feld und einen 'Ich akzeptiere die Datenschutzerklärung'-Checkbox. Reicht das?",
+      "expected_output": "Should flag the single-checkbox design as non-compliant with DSGVO Art. 7 (granular consent required). Should propose: split consent into 3+ granular options (email marketing, analytics, third-party sharing), add retention period disclosure, add purpose text per field. Should ask whether the form lives on a B2B site (lower GDPR friction) or B2C (stricter rules). Should reference IMPORT/05_DACH_Marketing_Spezifika.md section 5.3.1.",
+      "assertions": [
+        "Flags single-checkbox as non-DSGVO-compliant",
+        "References DSGVO Art. 7 for granular consent",
+        "Proposes 3+ granular consent options",
+        "Distinguishes B2B vs B2C consent strictness",
+        "References IMPORT/05_DACH_Marketing_Spezifika.md"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Wir wollen GA4 und Meta Pixel nutzen um unsere LinkedIn Ads zu tracken. Was müssen wir datenschutzrechtlich beachten?",
+      "expected_output": "Should recommend server-side tracking via N8N as proxy instead of client-side pixels. Should require explicit consent before any tracking fires. Should warn that GA4 with personalized ads requires consent under TTDSG. Should suggest storing all events in PostgreSQL for portability (Tabellennamen TODO M2b). Should reference EU regulator guidance on Google/Facebook tracking. Should output a tracking architecture diagram with consent gates.",
+      "assertions": [
+        "Recommends server-side tracking via N8N",
+        "Requires explicit consent before pixel fires",
+        "Cites TTDSG for personalized tracking",
+        "Suggests PostgreSQL event storage (Tabellennamen open)",
+        "Outputs architecture with consent gates"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Wir wollen mit unserem alten PDF-Whitepaper auf LinkedIn Leads generieren — einfach Email-Feld im Gating-Formular. Geht das so?",
+      "expected_output": "Should reference the value-first framework from IMPORT/05 section 5.3.1: PDF gating alone is not enough, must be combined with granular consent (email marketing, optional newsletter signup, analytics tracking) and double opt-in. Should warn that a single 'Email-Feld + Häkchen' violates DSGVO Art. 7 (granular consent required). Should propose the full flow: landing page with value proposition, form with granular consent, double opt-in confirmation email, then PDF access. Should reference the ICP pain point 'unstrukturierte Daten' from icp-summary.md as the deeper problem the form must solve.",
+      "assertions": [
+        "References IMPORT/05 section 5.3.1 framework",
+        "Flags single-checkbox as Art. 7 violation",
+        "Proposes granular consent + double opt-in flow",
+        "References icp-summary.md pain point",
+        "Outlines full value-first capture flow"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Wir bauen einen Lead-Magneten — ein PDF mit 'Die 10 größten Fehler bei der KI-Implementierung'. Wie gestalten wir das DSGVO-konform?",
+      "expected_output": "Should outline a DSGVO-konforme lead magnet flow: (1) Landing page with value proposition + form, (2) granular consent checkboxes (email + optional newsletter signup + analytics tracking), (3) double opt-in confirmation email after form submit, (4) PDF download link only after opt-in confirmed, (5) automated welcome sequence after confirmation. Should recommend progressive profiling (capture only email first, company/role on confirmation page or later). Should reference value-first approach from IMPORT/05 section 5.3.1.",
+      "assertions": [
+        "Outlines complete form-to-download flow",
+        "Requires granular consent on form",
+        "Requires double opt-in",
+        "Recommends progressive profiling",
+        "References IMPORT/05 section 5.3.1"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Kunde fragt: 'Ich will keine Cookie-Banner. Kann ich nicht einfach fragen ob die User einverstanden sind und dann weitermachen?'",
+      "expected_output": "Should explain that 'just asking' is the cookie-banner alternative (Preference Center) but must meet specific requirements: (1) clear purpose statement before consent, (2) equal access to content regardless of choice, (3) granular choices not bundled, (4) easy withdrawal. Should warn that 'continue browsing = consent' is illegal in DACH (Planet49 ruling). Should propose N8N-mediated preference center that gates scripts based on consent state. Should reference E-Privacy-Verordnung.",
+      "assertions": [
+        "Acknowledges Preference Center as alternative",
+        "Lists 4+ specific requirements for valid consent",
+        "References Planet49 ruling on browse-consent",
+        "Proposes N8N-mediated preference gating",
+        "Cites E-Privacy-Verordnung"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Wie gehen wir mit dem Widerruf der Einwilligung um? Ein Lead möchte aus dem Newsletter ausgetragen werden UND alle seine Daten gelöscht haben.",
+      "expected_output": "Should design a withdrawal flow: (1) one-click unsubscribe link in every email, (2) confirmation page after click, (3) N8N workflow triggers deletion across all systems (PostgreSQL, email tool, analytics), (4) audit log entry in PostgreSQL consent table with timestamp (Tabellennamen TODO M2b), (5) confirmation email sent within 72h as required by DSGVO Art. 17. Should distinguish soft opt-out (newsletter only) from hard opt-out (full data deletion). Should reference right to be forgotten under Art. 17 DSGVO.",
+      "assertions": [
+        "Designs one-click unsubscribe flow",
+        "Lists N8N workflow steps for deletion",
+        "Requires audit log in PostgreSQL (Tabellennamen open)",
+        "References 72h response window under Art. 17",
+        "Distinguishes soft vs hard opt-out"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "linkedin-dach-b2b",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Wir sind eine 12-Mann IT-Beratung in München. Unser Geschäftsführer will auf LinkedIn mehr Sichtbarkeit, postet aber nur alle 2 Wochen was und wir haben eine eigene Firmen-Seite die wir auch bespielen wollen. Was empfehlt ihr?",
+      "expected_output": "Should clearly recommend Personal Brand of Geschäftsführer as primary channel — explain why Unternehmensseite doesn't convert in DACH B2B. Should propose posting cadence of 3-4x/week with 5-10 substanzielle Kommentare/Tag. Should ask whether the audience expects Sie or Du tone (IT-Beratung München = likely Sie). Should reference IMPORT/05 section 5.2.1 and the 360-Brew model adaptation. Should warn against posting 1-2x/month (algorithmus-kill).",
+      "assertions": [
+        "Recommends Personal Brand over Unternehmensseite",
+        "Proposes 3-4 posts/week cadence",
+        "Asks about Sie/Du tone decision",
+        "References IMPORT/05 section 5.2.1",
+        "Warns against low-frequency posting"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Wir posten seit 6 Monaten auf unserer Firmen-LinkedIn-Seite. Impressions: 2.000/Monat. Engagement: minimal. Sollen wir aufgeben?",
+      "expected_output": "Should NOT recommend giving up but should diagnose root cause: (1) likely Personal Brand vs. Firmenseite mismatch, (2) algorithm favors Personal Profiles, (3) 2k impressions is normal for inactive company pages. Should propose migration to Personal Brand of a named decision-maker, with company page as secondary amplifier. Should recommend repurposing existing content for Personal Brand. Should set realistic expectations: 3-6 months to meaningful reach.",
+      "assertions": [
+        "Does NOT recommend giving up",
+        "Diagnoses Personal Brand vs Firmenseite issue",
+        "Proposes migration to Personal Brand",
+        "Recommends content repurposing",
+        "Sets 3-6 month realistic timeline"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Schreibe mir 5 LinkedIn-Post-Hooks für unsere KI-Automatisierungs-Agentur. Zielgruppe: Geschäftsführer 5-50 MA KMU.",
+      "expected_output": "Should produce 5 DACH-specific hooks following the Hook → Rehook → Payoff → CTA pattern from brand-voice.md. Should use the documented example patterns (Zahl/Schmerz, konträres Statement, Konkreter Schmerz). Should write in Sie-form for B2B. Should avoid buzzwords from brand-voice.md verbotene Liste. Should save them or present them numbered 1-5. Each hook should be 150-250 words total if expanded.",
+      "assertions": [
+        "Produces 5 distinct hooks",
+        "Follows Hook → Rehook → Payoff → CTA pattern",
+        "Uses Sie-form for B2B",
+        "Avoids brand-voice.md verbotene buzzwords",
+        "Hits ICP (Geschäftsführer 5-50 MA)"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Was ist der Unterschied zwischen LinkedIn Ads und organischen Posts bei uns? Wir haben 8.000€ monatlich für Marketing — wie allokieren wir das auf LinkedIn?",
+      "expected_output": "Should explain organic vs paid distinction: organic builds Personal Brand long-term, paid amplifies existing messages. Should NOT recommend specific budget splits (50€/Tag minimum, 80/20) — those are TODOs in the SKILL.md and not in the spec. Should ask Operator-Approval before giving budget recommendations. Should clarify that paid reach without good content is wasted money. Should mention DSGVO-Anforderungen für LinkedIn Lead-Gen Forms (handoff to dsgvo-lead-capture).",
+      "assertions": [
+        "Explains organic vs paid distinction clearly",
+        "Does NOT recommend specific budget split (TODO)",
+        "Asks for Operator-Approval on budget",
+        "Warns against paid without good content",
+        "References DSGVO for Lead-Gen Forms"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Unser Zielkunde ist 55+, traditionsbewusst, Steuerberater-Kanzlei. Die sagen 'LinkedIn ist nur was für junge Leute.' Wie überzeugen wir die?",
+      "expected_output": "Should acknowledge the misconception with empathy. Should explain that XING was German, but LinkedIn has won B2B in DACH since 2020. Should cite specific stat: 78% Social Sellers outperform peers. Should propose low-effort start: 2x/week posts + daily Kommentare (30 Min). Should suggest one specific use case relevant to Steuerberater (e.g. Mitarbeitergewinnung, Mandanten-Akquise). Should NOT push XING — clarify it lost B2B relevance.",
+      "assertions": [
+        "Acknowledges misconception with empathy",
+        "Cites 78% Social Sellers outperform stat",
+        "Proposes low-effort entry (2x posts + 30min/day)",
+        "Suggifts Steuerberater-specific use case",
+        "Does NOT recommend XING as primary"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Wir posten schon, aber die Kommentare sind mies. 'Guter Beitrag!' oder 'Daumen hoch!' von unseren Mitarbeitern. Was machen wir falsch?",
+      "expected_output": "Should diagnose 'comment inflation' — empty Kommentare signal the algorithmus doesn't see engagement depth. Should propose substanzielle Kommentar-Strategie: (1) add new info or counter-perspective, (2) ask follow-up question, (3) share personal experience, (4) minimum 3-4 sentences. Should reference the 360-Brew 'Pour' phase. Should warn against coordinating mass-likes among team (looks fake). Should suggest team training on kommentar-Etikette.",
+      "assertions": [
+        "Diagnoses empty Kommentare as algorithmus-kill",
+        "Proposes 4 substanzielle Kommentar-Patterns",
+        "References 360-Brew Pour phase",
+        "Warns against mass-like coordination",
+        "Suggests team training on Kommentar-Etikette"
+      ],
+      "files": []
+    }
+  ]
+}
