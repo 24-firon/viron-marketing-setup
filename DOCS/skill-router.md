@@ -161,6 +161,34 @@ Wenn der User [X sagt/macht] → Nutze Skill [Y]
 | "Pipeline Management" | revops | Deal Desk, CRM Automation |
 | "MQL Definition" | revops | Lead Lifecycle, Pipeline Stages |
 
+## DACH Custom Skills (VIRON-spezifisch, KW 22-23)
+
+| User sagt/macht | Skill | Warum |
+|---|---|---|
+| "DSGVO-konformes Formular erstellen" | dsgvo-lead-capture | Granulare Consent-Optionen, Server-Side Tracking, DSGVO-by-Design |
+| "Consent-Management einrichten" | dsgvo-lead-capture | Granulare Einwilligungen statt gebündelter Checkboxen |
+| "Cookie-Banner Alternative" | dsgvo-lead-capture | Preference Center statt Cookie-Wall |
+| "Server-Side-Tracking DSGVO" | dsgvo-lead-capture | GA4 / Meta CAPI via N8N, kein Client-Side vor Consent |
+| "Double Opt-in Lead Form" | dsgvo-lead-capture | DSGVO Art. 7 konformer Bestätigungs-Flow |
+| "Datenschutzkonforme Lead Generation" | dsgvo-lead-capture | First-Party Data Capture, Progressive Profiling |
+| "LinkedIn Strategie DACH" | linkedin-dach-b2b | Personal Brand vor Unternehmensseite, Sie-Ton, MEZ-Posting-Zeiten |
+| "LinkedIn B2B Deutschland" | linkedin-dach-b2b | DACH-Algorithmus-Adaption, 360-Brew-Model deutsch |
+| "Social Selling DACH" | linkedin-dach-b2b | Substanzielle Kommentare > Likes, Thought Leadership > Pitching |
+| "LinkedIn Content Kalender" | linkedin-dach-b2b | MEZ-Posting-Zeiten 08-09 + 17-18, 3-4 Posts/Woche |
+| "LinkedIn Thought Leadership" | linkedin-dach-b2b | Personal Brand als Convertier-Treiber |
+| "360-Brew LinkedIn" | linkedin-dach-b2b | DACH-Adaption des 360-Brew-Algorithmus |
+| "Google Business Profile optimieren" | local-seo-gbp | GBP-Audit, Vollständigkeit, Posts, Q&A, Reviews |
+| "Local SEO Deutschland" | local-seo-gbp | Local Keywords [Dienst] + [Stadt], NAP-Konsistenz |
+| "Google Maps Ranking verbessern" | local-seo-gbp | GBP-Signale + Reviews + On-Page Schema |
+| "Branchenverzeichnis eintragen" | local-seo-gbp | Gelbe Seiten, Das Örtliche, Herold (AT), local.ch (CH) |
+| "Lokale Keywords recherchieren" | local-seo-gbp | Long-Tail-Recherche für DE/AT/CH |
+| "Review-Management Google" | local-seo-gbp | Antwort-Strategien für 1-5 Sterne |
+| "Hreflang de-de de-at de-ch" | local-seo-gbp | Multi-Region-Setup für DACH-Expansion |
+| "LocalBusiness Schema" | local-seo-gbp | Schema.org LocalBusiness Markup für SERPs |
+| "Google Q&A beantworten" | local-seo-gbp | GBP-Q&A als Content-Hebel |
+
+Diese 3 Skills sind die ersten DACH-Custom-Builds (Phase 1, KW 22-23). Sie füllen Lücken die das US-zentrische marketingskills-Repo nicht abdeckt. Weitere DACH-Skills in Planung: `german-email-marketing` (P1), `whatsapp-business` (P1), `content-authority-dach` (P2).
+
 ## Skill-Abhängigkeiten (Reihenfolge matters!)
 
 ```
