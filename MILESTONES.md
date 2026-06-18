@@ -16,7 +16,19 @@
 
 ---
 
-## Aktiver Meilenstein: M2 — Task-Checklisten
+## Meilenstein-Übersicht
+
+| Meilenstein | Status | Ziel-Outcome | Blocker | Erfolgskriterium |
+|---|---|---|---|---|
+| M1: Foundation Stand | ✅ Abgeschlossen | DOCS/, STORAGE/, opencode.jsonc, Skills-Priorisierung | — | Alle 4 DOCS/-Dateien vorhanden, 14 Skills aktiv, 19 archiviert |
+| M2: Task-Checklisten | ✅ Abgeschlossen (2026-06-17) | SubAgent-Reports in DESK/REPORTS/, Tool-Entscheidungen, N8N-MCP-Vorbereitung, P0-DACH-Skills gebaut | — (n8n-Deployment blockiert M3) | Reports ausgewertet, Tool-Matrix finalisiert, MCP-Server-Plan steht, 3 DACH-Skills + Router in `.agents/skills/` |
+| M3: N8N-Integration | 🔲 Geplant | MCP-Server konfiguriert, erster Workflow läuft | Wartet auf Hetzner-Deployment | Mindestens 1 funktionierender n8n-Workflow mit MCP-Anbindung |
+| M4: DACH-Custom-Skills | 🔲 Geplant | VIRON-eigene Skills für DACH-Besonderheiten (DSGVO, AI Act, DACH-ICP) | Phase 1 (3 P0-Skills) abgeschlossen | Min. 3 Custom-Skills in .agents/skills/ |
+| M5: Erste Kundenkampagne | 🔲 Geplant | Eine vollständige Kampagne (Brief → Copy → Asset → Metricool) deployed | M4 muss abgeschlossen sein | Kampagne live, Ergebnisse in PostgreSQL dokumentiert |
+
+---
+
+## Abgeschlossener Meilenstein: M2 — Task-Checklisten
 
 ### Ziel
 SubAgent-Reports auswerten, Tool-Entscheidungen finalisieren, N8N-MCP-Vorbereitung abschließen. Agent kann nach M2-Abschluss strukturierte Task-Checklisten für jede Marketing-Disziplin abarbeiten.
@@ -45,8 +57,11 @@ SubAgent-Reports auswerten, Tool-Entscheidungen finalisieren, N8N-MCP-Vorbereitu
 - [x] Agent kann M3-Aufgaben ohne externe Rückfragen beginnen (Implementation Plan in DESK/TASKS/)
 
 ### Aktuelle Blocker
-- P0-DACH-Skills müssen noch gebaut werden (Task-Envelope in DESK/TASKS/dach-p0-skills/)
+- ~~P0-DACH-Skills müssen noch gebaut werden~~ ✅ Erledigt (Commits 666a6a3 + 80391bb, 3 Skills + Router in `.agents/skills/`)
 - n8n-Deployment steht aus (M3 startet erst nach Deployment)
+
+### Abgeschlossen am
+2026-06-17 — Planungs-Phase abgeschlossen, 3 DACH-P0-Skills gebaut, Tool-Matrix finalisiert. N8N-MCP wartet auf Hetzner-Deployment (M3).
 
 ### Verknüpfte Linear Issues
 - (Bitte aktuelle Issue-IDs aus Linear eintragen)

@@ -43,10 +43,10 @@
 
 | # | Task | Assigned | Status | Output |
 |---|------|----------|--------|--------|
-| D-1 | dsgvo-lead-capture Skill bauen (SKILL.md + evals/) | SubAgent | ⏳ Ready | `.agents/skills/dsgvo-lead-capture/` |
-| D-2 | linkedin-dach-b2b Skill bauen (SKILL.md + evals/) | SubAgent | ⏳ Ready | `.agents/skills/linkedin-dach-b2b/` |
-| D-3 | local-seo-gbp Skill bauen (SKILL.md + evals/) | SubAgent | ⏳ Ready | `.agents/skills/local-seo-gbp/` |
-| D-4 | DOCS/skill-router.md um 3 neue Skills erweitern | SubAgent | ⏳ Ready | `DOCS/skill-router.md` |
+| D-1 | dsgvo-lead-capture Skill bauen (SKILL.md + evals/) | SubAgent | ✅ Done (Commit 666a6a3, 80391bb — 7 Spec-TODOs offen, siehe `DESK/REPORTS/dach-p0-skills-build.md`) | `.agents/skills/dsgvo-lead-capture/` |
+| D-2 | linkedin-dach-b2b Skill bauen (SKILL.md + evals/) | SubAgent | ✅ Done (Commit 666a6a3, 80391bb — Spec-TODOs zu Cadence/Budget) | `.agents/skills/linkedin-dach-b2b/` |
+| D-3 | local-seo-gbp Skill bauen (SKILL.md + evals/) | SubAgent | ✅ Done (Commit 666a6a3, 80391bb — Spec-TODOs zu Verzeichnissen/Antwort-Zeit) | `.agents/skills/local-seo-gbp/` |
+| D-4 | DOCS/skill-router.md um 3 neue Skills erweitern | SubAgent | ✅ Done (Commit 80391bb — neue Sektion „DACH Custom Skills" eingefügt) | `DOCS/skill-router.md` |
 
 **Task-Envelope:** `DESK/TASKS/dach-p0-skills/` (PROMPT_INITIAL.md, STATE.md, SUMMARY.md)
 **Spezifikation:** `DESK/REPORTS/dach-custom-skills.md`

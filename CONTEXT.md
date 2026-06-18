@@ -133,10 +133,9 @@ marketing-setup/
 ---
 
 ## Last completed items
-0. 2026-06-07 — AGENTS.md als kanonische Root-Readme restrukturiert (v3.0). MCP-Server Linear+Notion konfiguriert (ADR-006). Provider-Stack finalisiert (ADR-005). 4 No-Touch-Lessons angelegt (DESK/HANDOVER/lessons/).
-1. 2026-05-25 — Phase 2 Reports erstellt: 3 SubAgent-Reports (N8N-MCP, Tool-Decisions, DACH-Skills) + 3 Steuerdateien (CONTEXT/MILESTONES/DECISIONS).
-2. 2026-05-25 — Handover-Session angelegt: DESK/HANDOVER/sessions/session-2026-05-25.md, Implementation Plan, Task-Envelope für P0-DACH-Skills.
-3. 2026-05-22 — Skills v2.0.1 aus coreyhaines31/marketingskills installiert: 14 aktiv, 19 archiviert, 7 aussortiert.
+0. 2026-06-17 — M2 abgeschlossen: 3 DACH-P0-Skills gebaut (`dsgvo-lead-capture`, `linkedin-dach-b2b`, `local-seo-gbp`) + Router-Update in DOCS/. 7 Spec-TODOs dokumentiert in `DESK/REPORTS/dach-p0-skills-build.md`. Commits 666a6a3 + 80391bb auf main, gepusht.
+1. 2026-06-07 — AGENTS.md als kanonische Root-Readme restrukturiert (v3.0). MCP-Server Linear+Notion konfiguriert (ADR-006). Provider-Stack finalisiert (ADR-005). 4 No-Touch-Lessons angelegt (DESK/HANDOVER/lessons/).
+2. 2026-05-25 — Phase 2 Reports erstellt: 3 SubAgent-Reports (N8N-MCP, Tool-Decisions, DACH-Skills) + 3 Steuerdateien (CONTEXT/MILESTONES/DECISIONS).
 
 ---
 
