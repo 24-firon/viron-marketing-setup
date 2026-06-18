@@ -24,8 +24,11 @@ Beweise, dass dein Kontextfenster die Marketing-Setup-Realität durchdrungen hat
 6. **Brand Voice:** Was sind die 3 verbotenen Formulierungen? Was ist der erlaubte Ton?
 7. **ICP:** Wer ist der ideale Kunde? Was ist das Budget?
 8. **n8n-Status:** Warum blockiert N8N-MCP? Was muss zuerst passieren? Hinweis: Linear + Notion MCP sind bereits konfiguriert (siehe DECISIONS.md ADR-006, 2026-06-07).
-9. **DACH-Skills:** Welche 3 P0-Skills sollen gebaut werden? Wo steht die Spezifikation?
-10. **Tool-Stack:** Welches Tool ist VERBOTEN? Welches ist der primäre Automatisierungsstandard?
+9. **DACH-Skills (gebaut):** Welche 3 DACH-P0-Skills wurden in Session 2026-06-17 gebaut? Wo steht der Build-Report mit den 7 Spec-TODOs?
+10. **Git-Push:** Welcher GitHub-Account muss aktiv sein, damit `git push` auf `24-firon/viron-marketing-setup` funktioniert? Was passiert wenn der falsche Account aktiv ist?
+11. **M2-Status:** Ist M2 abgeschlossen? Was blockiert M3?
+12. **Session-Handover:** Wo liegt die Handover-Datei der letzten Session? Was war die wichtigste Operator-Korrektur?
+13. **Spec-Drift:** Was bedeutet „Spec-Drift = TODO markieren" in der Praxis? Wo findet man die Spec?
 
 ---
 
